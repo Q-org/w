@@ -1,0 +1,10 @@
+{
+    "position": 2,
+    "label": "2.1.2 收款凭证的填制",
+    "collapsible": true,
+    "collapsed": true,
+    "className": "red",
+    "customProps": {
+        "description": "This description can be used in the swizzled DocCard"
+    }
+}
