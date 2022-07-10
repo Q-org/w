@@ -18,7 +18,7 @@ const features = [
     imageUrl: 'img/undraw_docusaurus_mountain.svg',
     description: (
       <>
-        阅读，优化和设计课程，简单直观，可轻松扩展。易于安装。
+        阅读，优化和设计微课程，简单直观，可轻松扩展。易于安装。
       </>
     ),
   },
@@ -27,7 +27,7 @@ const features = [
     imageUrl: 'img/undraw_docusaurus_tree.svg',
     description: (
       <>
-        <em>小易</em> 让您专注于您的课程，而我们会做这些家务。只需将您的课程移动到<code>docs</code>目录中,并发布。
+        <em>微微</em> 让您专注于您的课程，而我们会做这些家务。只需将您的课程移动到<code>docs</code>目录中,并发布。
         并用于让课程快速启动和运行
       </>
     ),
@@ -37,7 +37,7 @@ const features = [
     imageUrl: 'img/undraw_docusaurus_react.svg',
     description: (
       <>
-        通过新的技术 扩展或自定义您的课程布局。<em>小易</em> 可以在重用相同的页面同时进行扩展.
+        通过新的技术 扩展或自定义您的课程布局。<em>微微</em> 可以在重用相同的页面同时进行扩展.
       </>
     ),
   },

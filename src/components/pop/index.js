@@ -9,12 +9,7 @@ import logger from '@docusaurus/logger';
 
 export default function ({ pp }) {
     const [state, setState] = useState(pp);
-
-
-    logger.info`Hello name=${state}! You have number=${'money'} dollars. Here are the ${'items'.length > 1 ? 'items' : 'item'
-        } on the shelf: ${'items'}
-To buy anything, enter code=${'buy x'} where code=${'x'} is the item's name; to quit, press code=${'Ctrl + C'}.`
-        ;
+    ;
     return (
 
         <Popup

@@ -57,8 +57,8 @@ const isI18nStaging = process.env.I18N_STAGING === 'true';
 const isVersioningDisabled = !!process.env.DISABLE_VERSIONING || isI18nStaging;
 
 const config = {
-  title: '小易',
-  tagline: '课程很酷',
+  title: '微微',
+  tagline: '微课程很酷',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
 
@@ -66,17 +66,15 @@ const config = {
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   customFields: {
-    admin: 'endi',
+    admin: 'q-org',
     superman: 'lol',
-    role: '',
+    user: 'q-org',
+    role: 'devlop',
   },
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'Q-org', // Usually your GitHub org/user name.
-  projectName: '小易', // Usually your repo name.
-
-
-
+  projectName: '微微', // Usually your repo name.
   i18n: {
     defaultLocale: "zh",
     locales: ["zh"],
@@ -168,13 +166,13 @@ const config = {
       },
       announcementBar: {
         id: 'announcementBar-2', // Increment on change
-        content: `⭐️ If you like Docusaurus, give it a star on <a target="_blank" rel="noopener noreferrer" href="https://github.com/facebook/docusaurus">GitHub</a> and follow us on <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/docusaurus">Twitter</a>`,
+        content: `⭐️ 如果你喜欢微微, 请给个❤ <a target="_blank" rel="noopener noreferrer" href="https://github.com/Q-org/w">GitHub</a>关注我们<a target="_blank" rel="noopener noreferrer" href="https://twitter.com/docusaurus">公众号</a>`,
       },
       navbar: {
         hideOnScroll: true,
-        title: '小易',
+        title: '微课程',
         logo: {
-          alt: '小易 项目 Logo',
+          alt: '微微 项目 Logo',
           src: 'img/logo.svg',
         },
         items: [
@@ -222,6 +220,20 @@ const config = {
     }),
 
   plugins: ['docusaurus-plugin-sass',
+    async function myPlugin(context, options) {
+      // ...
+      return {
+        name: 'my-plugin',
+        async loadContent() {
+          return 1 + 1;
+        },
+
+        async contentLoaded({ content, actions }) {
+          // ...
+        },
+        /* 其他生命周期 API */
+      };
+    },
     [
       '@docusaurus/plugin-pwa',
       {
