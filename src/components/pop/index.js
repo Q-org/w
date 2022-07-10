@@ -4,11 +4,17 @@ import Popup from 'reactjs-popup';
 import './modal.css';
 const pp = ['0']
 import Frame from 'react-frame-component';
+import logger from '@docusaurus/logger';
+
 
 export default function ({ pp }) {
     const [state, setState] = useState(pp);
-    console.log(pp)
-    console.log(state)
+
+
+    logger.info`Hello name=${state}! You have number=${'money'} dollars. Here are the ${'items'.length > 1 ? 'items' : 'item'
+        } on the shelf: ${'items'}
+To buy anything, enter code=${'buy x'} where code=${'x'} is the item's name; to quit, press code=${'Ctrl + C'}.`
+        ;
     return (
 
         <Popup
@@ -17,54 +23,54 @@ export default function ({ pp }) {
             position="right center"
             closeOnDocumentClick={false}
             nested
-            
+
         >
             {close => (
 
-                    <div className="modal">
-                        <button className="close button--primary" onClick={close}>
-                            &times;
-                        </button>
-                        <div className="header"> {state} </div>
-                        <div className="content">
-                            {' '}
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, a nostrum.
-                            Dolorem, repellat quidem ut, minima sint vel eveniet quibusdam voluptates
-                            delectus doloremque, explicabo tempore dicta adipisci fugit amet dignissimos?                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, a nostrum.
-                            Dolorem, repellat quidem ut, minima sint vel eveniet quibusdam voluptates
-                            delectus doloremque, explicabo tempore dicta adipisci fugit amet dignissimos?
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, a nostrum.
-                            Dolorem, repellat quidem ut, minima sint vel eveniet quibusdam voluptates
-                            delectus doloremque, explicabo tempore dicta adipisci fugit amet dignissimos?
-                            <br />
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur sit
-                            commodi beatae optio voluptatum sed eius cumque, delectus saepe repudiandae
-                            explicabo nemo nam libero ad, doloribus, voluptas rem alias. Vitae?
-                        </div>
-                        <div className="actions">
-                            <Popup
-                                trigger={<button className="button"> Trigger </button>}
-                                position="right center"
-                                nested
-                            >
-                                <span>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae
-                                    magni omnis delectus nemo, maxime molestiae dolorem numquam
-                                    mollitia, voluptate ea, accusamus excepturi deleniti ratione
-                                    sapiente! Laudantium, aperiam doloribus. Odit, aut.
-                                </span>
-                            </Popup>
-                            <button
-                                className="button"
-                                onClick={() => {
-                                    console.log('modal closed ');
-                                    close();
-                                }}
-                            >
-                                关闭
-                            </button>
-                        </div>
+                <div className="modal">
+                    <button className="close button--primary" onClick={close}>
+                        &times;
+                    </button>
+                    <div className="header"> {state} </div>
+                    <div className="content">
+                        {' '}
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, a nostrum.
+                        Dolorem, repellat quidem ut, minima sint vel eveniet quibusdam voluptates
+                        delectus doloremque, explicabo tempore dicta adipisci fugit amet dignissimos?                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, a nostrum.
+                        Dolorem, repellat quidem ut, minima sint vel eveniet quibusdam voluptates
+                        delectus doloremque, explicabo tempore dicta adipisci fugit amet dignissimos?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, a nostrum.
+                        Dolorem, repellat quidem ut, minima sint vel eveniet quibusdam voluptates
+                        delectus doloremque, explicabo tempore dicta adipisci fugit amet dignissimos?
+                        <br />
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur sit
+                        commodi beatae optio voluptatum sed eius cumque, delectus saepe repudiandae
+                        explicabo nemo nam libero ad, doloribus, voluptas rem alias. Vitae?
                     </div>
+                    <div className="actions">
+                        <Popup
+                            trigger={<button className="button"> Trigger </button>}
+                            position="right center"
+                            nested
+                        >
+                            <span>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae
+                                magni omnis delectus nemo, maxime molestiae dolorem numquam
+                                mollitia, voluptate ea, accusamus excepturi deleniti ratione
+                                sapiente! Laudantium, aperiam doloribus. Odit, aut.
+                            </span>
+                        </Popup>
+                        <button
+                            className="button"
+                            onClick={() => {
+                                console.log('modal closed ');
+                                close();
+                            }}
+                        >
+                            关闭
+                        </button>
+                    </div>
+                </div>
             )}
         </Popup>
     );
