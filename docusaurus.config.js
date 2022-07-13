@@ -74,7 +74,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'Q-org', // Usually your GitHub org/user name.
-  projectName: '微微', // Usually your repo name.
+  projectName: 'w', // Usually your repo name.
   i18n: {
     defaultLocale: "zh",
     locales: ["zh"],
@@ -157,7 +157,7 @@ const config = {
 
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      metadata: [{ name: 'keywords', content: '基础会计, 课程设计' }],
+      metadata: [{ name: 'keywords', content: '微课程,基础会计, 课程设计,社交，校园交流' }],
       docs: {
         sidebar: {
           hideable: true,
@@ -166,7 +166,7 @@ const config = {
       },
       announcementBar: {
         id: 'announcementBar-2', // Increment on change
-        content: `⭐️ 如果你喜欢微微, 请给个❤ <a target="_blank" rel="noopener noreferrer" href="https://github.com/Q-org/w">GitHub</a>关注我们<a target="_blank" rel="noopener noreferrer" href="https://twitter.com/docusaurus">公众号</a>`,
+        content: `🎉如果您喜欢微微, 👋请在 <a target="_blank" rel="noopener noreferrer" href="https://github.com/Q-org/w">GitHub</a>给一个⭐️&😃关注我们<a target="_blank" rel="noopener noreferrer" href="https://github.com/Q-org/w">公众号</a>🎉`,
       },
       navbar: {
         hideOnScroll: true,
@@ -206,8 +206,8 @@ const config = {
           },
           // Please keep GitHub link to the right for consistency.
           {
-            href: 'https://github.com/facebook/docusaurus',
-            'aria-label': 'GitHub repository',
+            href: 'https://github.com/Q-org/w',
+            'aria-label': 'GitHub 仓',
             className: 'header-github-link',
             position: 'right',
           },

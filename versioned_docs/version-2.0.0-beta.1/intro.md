@@ -2,11 +2,11 @@
 sidebar_position: 1
 ---
 
-# 小易 介绍
+# 微微 介绍
 
-用很少的时间了解 **小易**.
+用很少的时间了解 **微微**.
 
-**小易** 容易使用的课程
+**微微** 容易使用的课程
 
 <li>快速响应</li>
 <li>简单容易</li>
@@ -16,7 +16,7 @@ sidebar_position: 1
 
 打开**我的课程**.
 
-或者 **试用小易** 点击 **[小易.new](https://小易.new)**.
+或者 **试用微微** 点击 **[微微.new](https://微微.new)**.
 
 ###  需要什么
 
@@ -26,18 +26,18 @@ sidebar_position: 1
 ##  使用课程
 
 :::tip 
-登录小易,点击**我的课程**.
+登录微微,点击**我的课程**.
 :::
 
 The classic template will automatically be added to your project after you run the command:
 
 ```bash
-npm init 小易@latest my-website classic
+npm init 微微@latest my-website classic
 ```
 
 You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
 
-The command also installs all necessary dependencies you need to run 小易.
+The command also installs all necessary dependencies you need to run 微微.
 
 ## 开始您的课程
 
@@ -48,7 +48,7 @@ cd my-website
 npm run start
 ```
 
-The `cd` command changes the directory you're working with. In order to work with your newly created 小易 site, you'll need to navigate the terminal there.
+The `cd` command changes the directory you're working with. In order to work with your newly created 微微 site, you'll need to navigate the terminal there.
 
 The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
 

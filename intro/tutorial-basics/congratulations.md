@@ -4,9 +4,9 @@ sidebar_position: 6
 
 # 恭喜!
 
-您已经浏览完**小易的基本操作** and made some changes to the **initial template**.
+您已经浏览完**微微的基本操作** and made some changes to the **initial template**.
 
-小易还有**更多功能**!
+微微还有**更多功能**!
 
 用 **5分钟**? 体验 **[版本控制](../tutorial-extras/manage-docs-versions.md)** and **[i18n](../tutorial-extras/translate-your-site.md)**.
 
