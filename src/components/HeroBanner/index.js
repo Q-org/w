@@ -33,7 +33,7 @@ export default function HeroBanner() {
                             __html: translate({
                                 id: 'homepage.hero.title',
                                 message:
-                                    '快速<b>构建</b><br/>以<b>实训</b>为核心的<b>课程</b>',
+                                    '快速<b>构建</b><br/>以<b>微课程</b>为核心的<b>APP</b>',
                                 description:
                                     'Home page hero title, can contain simple html tags',
                             }),
