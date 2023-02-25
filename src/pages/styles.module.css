@@ -3,50 +3,7 @@
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
- *
- * @format
  */
-
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
-
-.heroBanner {
-  padding: 4rem 0;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
-  }
-}
-
-.heroTitleTextHtml b {
-  color: var(--ifm-color-primary);
-}
-
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.features {
-  display: flex;
-  align-items: center;
-  padding: 2rem 0;
-  width: 100%;
-  text-align: center;
-}
-
-.featureImage {
-  height: 200px;
-  width: 200px;
-}
 
 .section {
   padding: 72px 0;
@@ -64,13 +21,11 @@
   width: auto;
   max-height: 128px;
   margin: 0 auto;
-  text-align: center;
 }
 
 .featureHeading {
   font-size: var(--ifm-h3-font-size);
   padding-top: 1rem;
-  text-align: center;
 }
 
 .announcement {
@@ -94,20 +49,57 @@
   max-width: 768px;
 }
 
-.banner {
-  font-weight: bold;
+.topBanner {
   font-size: 20px;
   padding: 20px;
-  max-width: 768px;
+  max-width: 900px;
   margin: 0 auto;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.topBannerTitle {
+  font-size: 54px;
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .topBannerTitle {
+    font-size: 34px;
+  }
+}
+
+.topBannerTitleText {
+  background: linear-gradient(45deg, #399cff, #00c775 80%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.topBannerTitleText:hover {
+  border-bottom: solid 2px;
+}
+
+html[data-theme='dark'] .topBannerTitleText {
+  background: linear-gradient(45deg, #399cff, #00ff95 80%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.topBannerDescription {
+  font-size: 20px;
+}
+@media only screen and (max-width: 768px) {
+  .topBannerDescription {
+    font-size: 16px;
+    white-space: normal;
+  }
 }
 
 .hero {
-  background-color: rgb(30, 73, 118);
-  /*rgb(0, 127, 255);
-   #2b3137 */
-  ;
+  background-color: #2b3137;
   padding: 48px;
 }
 
@@ -128,7 +120,7 @@
 }
 
 @keyframes jack-in-the-box {
-  from {
+  0% {
     opacity: 0;
     transform: scale(0.1) rotate(30deg);
     transform-origin: center bottom;
@@ -142,7 +134,7 @@
     transform: rotate(3deg);
   }
 
-  to {
+  100% {
     opacity: 1;
     transform: scale(1);
   }
@@ -220,18 +212,18 @@
   }
 }
 
-.tweetsSection> :global(.col)>* {
+.tweetsSection > :global(.col) > * {
   margin-bottom: 2rem;
 }
 
 @media (max-width: 996px) {
-  .tweetsSection> :global(.col:last-child)>*:last-child {
+  .tweetsSection > :global(.col:last-child) > *:last-child {
     margin-bottom: 0;
   }
 }
 
 @media (min-width: 997px) {
-  .tweetsSection> :global(.col)>*:last-child {
+  .tweetsSection > :global(.col) > *:last-child {
     margin-bottom: 0;
   }
 }

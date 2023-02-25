@@ -1,0 +1,18 @@
+{
+  "version.label": {
+    "message": "2.0.0-beta.1",
+    "description": "The label for version 2.0.0-beta.1"
+  },
+  "sidebar.intro.category.微微 - 基础": {
+    "message": "微微 - 基础",
+    "description": "The label for category 微微 - 基础 in sidebar intro"
+  },
+  "sidebar.intro.category.微微 - 基础.link.generated-index.description": {
+    "message": "了解微微操作.",
+    "description": "The generated-index page description for category 微微 - 基础 in sidebar intro"
+  },
+  "sidebar.intro.category.微微 - 扩展": {
+    "message": "微微 - 扩展",
+    "description": "The label for category 微微 - 扩展 in sidebar intro"
+  }
+}

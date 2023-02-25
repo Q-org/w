@@ -1,0 +1,290 @@
+{
+  "version.label": {
+    "message": "2.0.0-beta.2",
+    "description": "The label for version current"
+  },
+  "sidebar.courses.category.1 原始凭证的填制与审核": {
+    "message": "1 原始凭证的填制与审核",
+    "description": "The label for category 1 原始凭证的填制与审核 in sidebar courses"
+  },
+  "sidebar.courses.category.1.1 原始凭证的填制": {
+    "message": "1.1 原始凭证的填制",
+    "description": "The label for category 1.1 原始凭证的填制 in sidebar courses"
+  },
+  "sidebar.courses.category.1.1.2 金额、日期的书写实训": {
+    "message": "1.1.2 金额、日期的书写实训",
+    "description": "The label for category 1.1.2 金额、日期的书写实训 in sidebar courses"
+  },
+  "sidebar.courses.category.1.1.3 日常原始凭证填制实训": {
+    "message": "1.1.3 日常原始凭证填制实训",
+    "description": "The label for category 1.1.3 日常原始凭证填制实训 in sidebar courses"
+  },
+  "sidebar.courses.category.1.1.4 增值税专用发票的实训": {
+    "message": "1.1.4 增值税专用发票的实训",
+    "description": "The label for category 1.1.4 增值税专用发票的实训 in sidebar courses"
+  },
+  "sidebar.courses.category.1.1.5 现金银行原始凭证实训": {
+    "message": "1.1.5 现金银行原始凭证实训",
+    "description": "The label for category 1.1.5 现金银行原始凭证实训 in sidebar courses"
+  },
+  "sidebar.courses.category.1.1.6 与收支有关的原始单据填制": {
+    "message": "1.1.6 与收支有关的原始单据填制",
+    "description": "The label for category 1.1.6 与收支有关的原始单据填制 in sidebar courses"
+  },
+  "sidebar.courses.category.1.1.7 其他原始单据填制实训": {
+    "message": "1.1.7 其他原始单据填制实训",
+    "description": "The label for category 1.1.7 其他原始单据填制实训 in sidebar courses"
+  },
+  "sidebar.courses.category.1.2 原始凭证的审核": {
+    "message": "1.2 原始凭证的审核",
+    "description": "The label for category 1.2 原始凭证的审核 in sidebar courses"
+  },
+  "sidebar.courses.category.1.2.2 金额、日期审核的实训": {
+    "message": "1.2.2 金额、日期审核的实训",
+    "description": "The label for category 1.2.2 金额、日期审核的实训 in sidebar courses"
+  },
+  "sidebar.courses.category.1.2.3 日常原始凭证审核实训": {
+    "message": "1.2.3 日常原始凭证审核实训",
+    "description": "The label for category 1.2.3 日常原始凭证审核实训 in sidebar courses"
+  },
+  "sidebar.courses.category.1.2.4 银行原始凭证审核实训": {
+    "message": "1.2.4 银行原始凭证审核实训",
+    "description": "The label for category 1.2.4 银行原始凭证审核实训 in sidebar courses"
+  },
+  "sidebar.courses.category.1.2.5 销售原始单据审核实训": {
+    "message": "1.2.5 销售原始单据审核实训",
+    "description": "The label for category 1.2.5 销售原始单据审核实训 in sidebar courses"
+  },
+  "sidebar.courses.category.2 记账凭证的编制与审核": {
+    "message": "2 记账凭证的编制与审核",
+    "description": "The label for category 2 记账凭证的编制与审核 in sidebar courses"
+  },
+  "sidebar.courses.category.2.1 记账凭证的填制": {
+    "message": "2.1 记账凭证的填制",
+    "description": "The label for category 2.1 记账凭证的填制 in sidebar courses"
+  },
+  "sidebar.courses.category.2.1.2 收款凭证的填制": {
+    "message": "2.1.2 收款凭证的填制",
+    "description": "The label for category 2.1.2 收款凭证的填制 in sidebar courses"
+  },
+  "sidebar.courses.category.2.1.3 付款凭证的填制": {
+    "message": "2.1.3 付款凭证的填制",
+    "description": "The label for category 2.1.3 付款凭证的填制 in sidebar courses"
+  },
+  "sidebar.courses.category.2.1.4 转账凭证的填制": {
+    "message": "2.1.4 转账凭证的填制",
+    "description": "The label for category 2.1.4 转账凭证的填制 in sidebar courses"
+  },
+  "sidebar.courses.category.2.2 记账凭证的审核": {
+    "message": "2.2 记账凭证的审核",
+    "description": "The label for category 2.2 记账凭证的审核 in sidebar courses"
+  },
+  "sidebar.courses.category.2.2.2 收款凭证的审核": {
+    "message": "2.2.2 收款凭证的审核",
+    "description": "The label for category 2.2.2 收款凭证的审核 in sidebar courses"
+  },
+  "sidebar.courses.category.2.2.3 付款凭证的审核": {
+    "message": "2.2.3 付款凭证的审核",
+    "description": "The label for category 2.2.3 付款凭证的审核 in sidebar courses"
+  },
+  "sidebar.courses.category.2.2.4 转账凭证的审核": {
+    "message": "2.2.4 转账凭证的审核",
+    "description": "The label for category 2.2.4 转账凭证的审核 in sidebar courses"
+  },
+  "sidebar.courses.category.4 账簿的设置和登记": {
+    "message": "4 账簿的设置和登记",
+    "description": "The label for category 4 账簿的设置和登记 in sidebar courses"
+  },
+  "sidebar.courses.category.4.1 账簿的设置": {
+    "message": "4.1 账簿的设置",
+    "description": "The label for category 4.1 账簿的设置 in sidebar courses"
+  },
+  "sidebar.courses.category.4.1.1 总账的建账": {
+    "message": "4.1.1 总账的建账",
+    "description": "The label for category 4.1.1 总账的建账 in sidebar courses"
+  },
+  "sidebar.courses.category.4.1.2 明细账的建账": {
+    "message": "4.1.2 明细账的建账",
+    "description": "The label for category 4.1.2 明细账的建账 in sidebar courses"
+  },
+  "sidebar.courses.category.4.1.3 日记账的建账": {
+    "message": "4.1.3 日记账的建账",
+    "description": "The label for category 4.1.3 日记账的建账 in sidebar courses"
+  },
+  "sidebar.courses.category.4.2 会计账簿的启用": {
+    "message": "4.2 会计账簿的启用",
+    "description": "The label for category 4.2 会计账簿的启用 in sidebar courses"
+  },
+  "sidebar.courses.category.4.3 账簿的登记": {
+    "message": "4.3 账簿的登记",
+    "description": "The label for category 4.3 账簿的登记 in sidebar courses"
+  },
+  "sidebar.courses.category.4.3.1 明细账的登记": {
+    "message": "4.3.1 明细账的登记",
+    "description": "The label for category 4.3.1 明细账的登记 in sidebar courses"
+  },
+  "sidebar.courses.category.4.3.2 日记账的登记": {
+    "message": "4.3.2 日记账的登记",
+    "description": "The label for category 4.3.2 日记账的登记 in sidebar courses"
+  },
+  "sidebar.courses.category.4.3.3 总分类账的登记1": {
+    "message": "4.3.3 总分类账的登记1",
+    "description": "The label for category 4.3.3 总分类账的登记1 in sidebar courses"
+  },
+  "sidebar.courses.category.4.3.4 总分类账的登记2": {
+    "message": "4.3.4 总分类账的登记2",
+    "description": "The label for category 4.3.4 总分类账的登记2 in sidebar courses"
+  },
+  "sidebar.courses.category.4.4 账簿结账处理综合判断": {
+    "message": "4.4 账簿结账处理综合判断",
+    "description": "The label for category 4.4 账簿结账处理综合判断 in sidebar courses"
+  },
+  "sidebar.courses.category.5 对账、错账更正与结账": {
+    "message": "5 对账、错账更正与结账",
+    "description": "The label for category 5 对账、错账更正与结账 in sidebar courses"
+  },
+  "sidebar.courses.category.5.2 错账更正": {
+    "message": "5.2 错账更正",
+    "description": "The label for category 5.2 错账更正 in sidebar courses"
+  },
+  "sidebar.courses.category.5.2.2 红字更正": {
+    "message": "5.2.2 红字更正",
+    "description": "The label for category 5.2.2 红字更正 in sidebar courses"
+  },
+  "sidebar.courses.category.5.2.3 补充更正": {
+    "message": "5.2.3 补充更正",
+    "description": "The label for category 5.2.3 补充更正 in sidebar courses"
+  },
+  "sidebar.courses.category.6 会计报表的编制": {
+    "message": "6 会计报表的编制",
+    "description": "The label for category 6 会计报表的编制 in sidebar courses"
+  },
+  "sidebar.courses.category.6.1 资产负债表": {
+    "message": "6.1 资产负债表",
+    "description": "The label for category 6.1 资产负债表 in sidebar courses"
+  },
+  "sidebar.courses.category.6.1.2 资产负债表实训": {
+    "message": "6.1.2 资产负债表实训",
+    "description": "The label for category 6.1.2 资产负债表实训 in sidebar courses"
+  },
+  "sidebar.courses.category.6.2 编制利润表": {
+    "message": "6.2 编制利润表",
+    "description": "The label for category 6.2 编制利润表 in sidebar courses"
+  },
+  "sidebar.courses.category.6.2.2 利润表实训": {
+    "message": "6.2.2 利润表实训",
+    "description": "The label for category 6.2.2 利润表实训 in sidebar courses"
+  },
+  "sidebar.courses.category.7 特殊项目实训": {
+    "message": "7 特殊项目实训",
+    "description": "The label for category 7 特殊项目实训 in sidebar courses"
+  },
+  "sidebar.courses.category.7.1 库存现金清查处理": {
+    "message": "7.1 库存现金清查处理",
+    "description": "The label for category 7.1 库存现金清查处理 in sidebar courses"
+  },
+  "sidebar.courses.category.7.2 实物资产的清查": {
+    "message": "7.2 实物资产的清查",
+    "description": "The label for category 7.2 实物资产的清查 in sidebar courses"
+  },
+  "sidebar.courses.category.7.2.2 财产清查实训": {
+    "message": "7.2.2 财产清查实训",
+    "description": "The label for category 7.2.2 财产清查实训 in sidebar courses"
+  },
+  "sidebar.courses.category.7.3 银行存款余额调节表实训": {
+    "message": "7.3 银行存款余额调节表实训",
+    "description": "The label for category 7.3 银行存款余额调节表实训 in sidebar courses"
+  },
+  "sidebar.courses.category.8 工业企业会计核算": {
+    "message": "8 工业企业会计核算",
+    "description": "The label for category 8 工业企业会计核算 in sidebar courses"
+  },
+  "sidebar.courses.category.8.1 工业企业资金筹集的核算": {
+    "message": "8.1 工业企业资金筹集的核算",
+    "description": "The label for category 8.1 工业企业资金筹集的核算 in sidebar courses"
+  },
+  "sidebar.courses.category.8.2 工业企业采购过程的核算": {
+    "message": "8.2 工业企业采购过程的核算",
+    "description": "The label for category 8.2 工业企业采购过程的核算 in sidebar courses"
+  },
+  "sidebar.courses.category.8.3 工业企业生产过程的核算": {
+    "message": "8.3 工业企业生产过程的核算",
+    "description": "The label for category 8.3 工业企业生产过程的核算 in sidebar courses"
+  },
+  "sidebar.courses.category.8.4 工业企业销售过程业务的核算": {
+    "message": "8.4 工业企业销售过程业务的核算",
+    "description": "The label for category 8.4 工业企业销售过程业务的核算 in sidebar courses"
+  },
+  "sidebar.courses.category.8.5 工业企业财务成果业务的核算": {
+    "message": "8.5 工业企业财务成果业务的核算",
+    "description": "The label for category 8.5 工业企业财务成果业务的核算 in sidebar courses"
+  },
+  "sidebar.courses.category.8.6 工业企业资金调整和退出的核算": {
+    "message": "8.6 工业企业资金调整和退出的核算",
+    "description": "The label for category 8.6 工业企业资金调整和退出的核算 in sidebar courses"
+  },
+  "sidebar.courses.category.9 商品流通企业会计核算": {
+    "message": "9 商品流通企业会计核算",
+    "description": "The label for category 9 商品流通企业会计核算 in sidebar courses"
+  },
+  "sidebar.courses.category.9.1 商品流通企业批发商品购进核算": {
+    "message": "9.1 商品流通企业批发商品购进核算",
+    "description": "The label for category 9.1 商品流通企业批发商品购进核算 in sidebar courses"
+  },
+  "sidebar.courses.category.9.2 商品流通企业批发商品销售核算": {
+    "message": "9.2 商品流通企业批发商品销售核算",
+    "description": "The label for category 9.2 商品流通企业批发商品销售核算 in sidebar courses"
+  },
+  "sidebar.courses.category.9.3 商品流通企业批发商品购进核算": {
+    "message": "9.3 商品流通企业批发商品购进核算",
+    "description": "The label for category 9.3 商品流通企业批发商品购进核算 in sidebar courses"
+  },
+  "sidebar.courses.category.9.4 商品流通企业进价金额核算方法": {
+    "message": "9.4 商品流通企业进价金额核算方法",
+    "description": "The label for category 9.4 商品流通企业进价金额核算方法 in sidebar courses"
+  },
+  "sidebar.courses.category.9.5 商品流通企业商品流通费用核算": {
+    "message": "9.5 商品流通企业商品流通费用核算",
+    "description": "The label for category 9.5 商品流通企业商品流通费用核算 in sidebar courses"
+  },
+  "sidebar.courses.category.9.6 商品流通企业利润和利润分配核算": {
+    "message": "9.6 商品流通企业利润和利润分配核算",
+    "description": "The label for category 9.6 商品流通企业利润和利润分配核算 in sidebar courses"
+  },
+  "sidebar.courses.category.9.7 综合实训": {
+    "message": "9.7 综合实训",
+    "description": "The label for category 9.7 综合实训 in sidebar courses"
+  },
+  "sidebar.courses.category.9.7.1 经济事项": {
+    "message": "9.7.1 经济事项",
+    "description": "The label for category 9.7.1 经济事项 in sidebar courses"
+  },
+  "sidebar.courses.category.9.7.2 科目汇总": {
+    "message": "9.7.2 科目汇总",
+    "description": "The label for category 9.7.2 科目汇总 in sidebar courses"
+  },
+  "sidebar.courses.category.9.7.3 日记账登记": {
+    "message": "9.7.3 日记账登记",
+    "description": "The label for category 9.7.3 日记账登记 in sidebar courses"
+  },
+  "sidebar.courses.category.9.7.4 总账登记": {
+    "message": "9.7.4 总账登记",
+    "description": "The label for category 9.7.4 总账登记 in sidebar courses"
+  },
+  "sidebar.courses.category.9.7.5 报表编制": {
+    "message": "9.7.5 报表编制",
+    "description": "The label for category 9.7.5 报表编制 in sidebar courses"
+  },
+  "sidebar.intro.category.微微 - 基础": {
+    "message": "微微 - 基础",
+    "description": "The label for category 微微 - 基础 in sidebar intro"
+  },
+  "sidebar.intro.category.微微 - 基础.link.generated-index.description": {
+    "message": "了解微微操作.",
+    "description": "The generated-index page description for category 微微 - 基础 in sidebar intro"
+  },
+  "sidebar.intro.category.微微 - 扩展": {
+    "message": "微微 - 扩展",
+    "description": "The label for category 微微 - 扩展 in sidebar intro"
+  }
+}

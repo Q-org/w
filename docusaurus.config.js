@@ -10,9 +10,10 @@
 // Note: type annotations allow type checking and IDEs autocompletion
 
 /** @type {import('@docusaurus/types').Config} */
+// @ts-ignore
 const isDev = process.env.NODE_ENV === 'development';
-const isBuildFast = !!process.env.BUILD_FAST;
-const math = require('remark-math');
+const isBuildFast = !!process.env.BUILD_FAST
+const math = import('remark-math');
 const npm2yarn = require('@docusaurus/remark-plugin-npm2yarn');
 const VersionsArchived = require('./versions.json');
 
@@ -20,7 +21,8 @@ const VersionsArchived = require('./versions.json');
 const versions = require('./versions.json');
 
 
-const ArchivedVersionsDropdownItems = VersionsArchived/* .splice(
+const ArchivedVersionsDropdownItems = VersionsArchived
+/* .splice(
   0,
   5,
 ); */
@@ -55,16 +57,27 @@ function reverseSidebarItems(items) {
 }
 const isI18nStaging = process.env.I18N_STAGING === 'true';
 const isVersioningDisabled = !!process.env.DISABLE_VERSIONING || isI18nStaging;
+const isDeployPreview =
+  !!process.env.NETLIFY && process.env.CONTEXT === 'deploy-preview';
+
+// Netlify branch deploy like "docusaurus-v2"
+const isBranchDeploy =
+  !!process.env.NETLIFY && process.env.CONTEXT === 'branch-deploy';
 
 const config = {
-  title: '微微',
+  title: '微课程',
   tagline: '微课程很酷',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
-
+  stylesheets: [
+    {
+      href: '/katex/katex.min.css',
+      type: 'text/css',
+    },
+  ],
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: '/img/favicon.ico',
   customFields: {
     admin: 'q-org',
     superman: 'lol',
@@ -75,21 +88,26 @@ const config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'Q-org', // Usually your GitHub org/user name.
   projectName: 'w', // Usually your repo name.
+  deploymentBranch: 'gh-pages',
+  trailingSlash: true,
   i18n: {
-    defaultLocale: "zh",
-    locales: ["zh"],
-    localeConfigs: {
-      zh: {
-        label: "中文简体",
-        direction: "ltr",
-        htmlLang: "zh-CN",
-      },
-    },
+    defaultLocale: 'zh-CN',
+
+    locales:
+      isDeployPreview || isBranchDeploy
+        ? // Deploy preview and branch deploys: keep them fast!
+        ['zh-CN']
+        : isI18nStaging
+          ? // Staging locales: https://docusaurus-i18n-staging.netlify.app/
+          ['zh-CN']
+          : // Production locales
+          ['zh-CN'],
   },
   themes: [
     // ... Your other themes.
-    // "docusaurus-theme-frontmatter",
+    // "@docusaurus-theme-frontmatter",
     // "@docusaurus/theme-live-codeblock",
+    //'@docusaurus/theme-search-algolia',
     [
       require.resolve("@easyops-cn/docusaurus-search-local"),
       {
@@ -132,19 +150,18 @@ const config = {
             },
           },
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'http://127.0.0.1:81/',
         },
         blog: {
           showReadingTime: true,
           // eslint-disable-next-line no-dupe-keys
-          showReadingTime: true,
           readingTime: ({ content, frontMatter, defaultReadingTime }) =>
             frontMatter.hide_reading_time ? undefined : defaultReadingTime({ content }),
           editUrl:
             // Please change this to your repo.
             // Remove this to remove the "edit this page" links.
 
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'http://127.0.0.1:81/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -166,7 +183,7 @@ const config = {
       },
       announcementBar: {
         id: 'announcementBar-2', // Increment on change
-        content: `🎉如果您喜欢微微, 👋请在 <a target="_blank" rel="noopener noreferrer" href="https://github.com/Q-org/w">GitHub</a>给一个⭐️&😃关注我们<a target="_blank" rel="noopener noreferrer" href="https://github.com/Q-org/w">公众号</a>🎉`,
+        content: `🎉如果您喜欢微微, 请在 <a target="_blank" rel="noopener noreferrer" href="https://github.com/Q-org/w">GitHub</a>给一个⭐️关注我们<a target="_blank" rel="noopener noreferrer" href="https://github.com/Q-org/w">公众号</a>🎉`,
       },
       navbar: {
         hideOnScroll: true,
@@ -175,51 +192,110 @@ const config = {
           alt: '微微 项目 Logo',
           src: 'img/logo.svg',
         },
-        items: [
-          {
-            type: 'docSidebar',
-            position: 'left',
-            sidebarId: 'courses',
-            label: '课程',
-          },
-          {
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
-            label: '文档',
-          },
-          { to: 'blog', label: '博客', position: 'left' },
 
-          // right
-          {
-            type: 'docsVersionDropdown',
-            position: 'right',
-            dropdownActiveClassDisabled: true,
-            dropdownItemsAfter: [
-              ...ArchivedVersionsDropdownItems.map(
-                ([versionName, versionUrl]) => ({
-                  label: versionName,
-                  href: versionUrl,
-                }),
-              ),
-            ],
-          },
-          // Please keep GitHub link to the right for consistency.
-          {
-            href: 'https://github.com/Q-org/w',
-            'aria-label': 'GitHub 仓',
-            className: 'header-github-link',
-            position: 'right',
-          },
+        items: [
+          // {
+          //   type: 'dropdown',
+          //   position: 'left',
+          //   label: "课程",
+          //   /*             dropdownActiveClassDisabled: true, */
+          //   items: [
+          //     {
+          //       type: 'docSidebar',
+          //       sidebarId: 'courses',
+          //       label: '基础会计',
+          //     },
+          //   ],
+
+
+          // },
+          { label: '操作指南', type: 'docSidebar', sidebarId: 'manu', position: 'left', className: 'signup dev-portal-link', },
+          //{ label: '参照', type: 'docSidebar', sidebarId: 'intro', position: 'left', className: 'signup dev-portal-link', },
+          // { label: '操作手册', to: '/productes', position: 'left', className: 'signup dev-portal-link', },
+
+          //  { type: 'docSidebar', sidebarId: 'manu', label: '基础会计', },
+
+          // {
+          //   type: 'doc',
+          //   docId: 'intro',
+          //   position: 'left',
+          //   label: '文档',
+          // },
+          // { to: 'blog', label: '动态', position: 'left' },
+          // { type: 'doc', docId: 'intro', label: '表单', position: 'left' },
+          // {
+          //   type: 'dropdown',
+          //   position: 'left',
+          //   label: "测试",
+          //   /*             dropdownActiveClassDisabled: true, */
+          //   items: [
+
+          //     { to: '/test/b', label: 'useRef' },
+          //     { to: '/test/githubuser', label: '查询用户' },
+          //     { to: '/test/dbtools', label: 'dbtools' },
+          //     { to: '/test/Calculator', label: 'useRCalculatoref' },
+          //   ],
+          // },
+          // { to: '/test/b', label: 'useRef' },
+
+          // // Please keep GitHub link to the right for consistency.
+          // {
+          //   href: 'https://github.com/Q-org/w',
+          //   'aria-label': 'GitHub 仓',
+          //   className: 'header-github-link',
+          //   position: 'right',
+          // },
+          // { to: '/t/t', label: 't' },
+
+          // { label: '注册', to: '/sign/SignUp', position: 'right', className: 'signup dev-portal-link', },
+          { label: '登录', to: '/sign/SignIn', position: 'right', className: 'login', },
+
         ],
+      },
+      algolia: {
+        // Algolia 提供的应用 ID
+        appId: 'YOUR_APP_ID',
+
+        //  公开 API 密钥：提交它没有危险
+        apiKey: 'YOUR_SEARCH_API_KEY',
+
+        indexName: 'YOUR_INDEX_NAME',
+
+        // 可选：见下文
+        contextualSearch: true,
+
+        // 可选：声明哪些域名需要用 window.location 型的导航而不是 history.push。 适用于 Algolia 配置会爬取多个文档站点，而我们想要用 window.location.href 在它们之间跳转时。
+        externalUrlRegex: 'external\\.com|domain\\.com',
+
+        // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
+        replaceSearchResultPathname: {
+          from: '/docs/', // or as RegExp: /\/docs\//
+          to: '/',
+        },
+
+        // Optional: Algolia search parameters
+        searchParameters: {},
+
+        // Optional: path for search page that enabled by default (`false` to disable it)
+        searchPagePath: 'search',
+
+        //... other Algolia params
       },
       footer: {
         style: "dark",
         copyright: `版权 © ${new Date().getFullYear()} Q-org.`,
       },
+      colorMode: {
+        defaultMode: "dark",
+      },
     }),
 
-  plugins: ['docusaurus-plugin-sass',
+  plugins: [
+    /*  './packages/docusaurus-friends-plugin',
+     
+     './packages/docusaurus-copy-plugin', */
+    "@graphql-markdown/docusaurus",
+    'docusaurus-plugin-sass',
     async function myPlugin(context, options) {
       // ...
       return {
@@ -264,8 +340,6 @@ const config = {
     ],
 
   ],
-
-
 };
 
 module.exports = config;

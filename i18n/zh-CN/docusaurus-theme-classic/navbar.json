@@ -1,0 +1,54 @@
+{
+  "title": {
+    "message": "微课程",
+    "description": "The title in the navbar"
+  },
+  "item.label.课程": {
+    "message": "课程",
+    "description": "Navbar item with label 课程"
+  },
+  "item.label.文档": {
+    "message": "文档",
+    "description": "Navbar item with label 文档"
+  },
+  "item.label.动态": {
+    "message": "动态",
+    "description": "Navbar item with label 动态"
+  },
+  "item.label.表单": {
+    "message": "表单",
+    "description": "Navbar item with label 表单"
+  },
+  "item.label.测试": {
+    "message": "测试",
+    "description": "Navbar item with label 测试"
+  },
+  "item.label.useRef": {
+    "message": "useRef",
+    "description": "Navbar item with label useRef"
+  },
+  "item.label.注册": {
+    "message": "注册",
+    "description": "Navbar item with label 注册"
+  },
+  "item.label.登录": {
+    "message": "登录",
+    "description": "Navbar item with label 登录"
+  },
+  "item.label.基础会计": {
+    "message": "基础会计",
+    "description": "Navbar item with label 基础会计"
+  },
+  "item.label.查询用户": {
+    "message": "查询用户",
+    "description": "Navbar item with label 查询用户"
+  },
+  "item.label.dbtools": {
+    "message": "dbtools",
+    "description": "Navbar item with label dbtools"
+  },
+  "item.label.useRCalculatoref": {
+    "message": "useRCalculatoref",
+    "description": "Navbar item with label useRCalculatoref"
+  }
+}
