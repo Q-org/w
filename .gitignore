@@ -16,7 +16,6 @@ node_modules/@docusaurus/theme-classic/lib/theme/*
 
 # Production
 /build
-
 # Generated files
 .docusaurus
 .cache-loader
