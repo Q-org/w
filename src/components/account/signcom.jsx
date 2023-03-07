@@ -29,7 +29,7 @@ function SignIn() {
 
     const data = new FormData(event.currentTarget);
 
-    data.append('action', "登陆")
+    data.append('action', "登陆2")
 
     const [res, param] = await FETCH(data);
 
@@ -43,7 +43,10 @@ function SignIn() {
       return null
 
     }
+    console.log('___',res.json())
+    return null
     let token = await res.json()
+
 
 
 
@@ -54,7 +57,7 @@ function SignIn() {
 
 
     //let data0 = await ress.json()
-
+    console.log(param)
     post('/jc/login.action', param)
 
   };

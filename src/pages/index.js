@@ -19,6 +19,7 @@ import Translate, { translate } from '@docusaurus/Translate';
 
 
 
+
 export default function Home() {
   const context = useDocusaurusContext();
   const { siteConfig = {} } = context;
@@ -35,6 +36,7 @@ export default function Home() {
       <Productes />
       {/*       {() => 1 ? null : <TweetsSection />}
       {() => 1 ? null : <QuotesSection />} */}
+
     </Layout>
 
   );

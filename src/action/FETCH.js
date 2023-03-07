@@ -12,7 +12,7 @@ export default async function FETCH(data) {
     if (!data0.action && !data0.url) {
       return null
     }
-    console.log('______________')
+    //console.log('______________')
 
     let { url, headers, param0, method, cache, param } = await actions[
       data0.action ? data0.action
@@ -29,7 +29,7 @@ export default async function FETCH(data) {
     method = method ? method : 'GET'
     cache = cache ? { cache } : null
 
-    console.log('res')
+    //console.log('res')
 
     let res = await fetch(url, {
       headers,

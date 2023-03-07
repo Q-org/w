@@ -11,16 +11,26 @@ export default function Productes() {
   const [tweets, setTweets] = React.useState(null);
 
   React.useEffect(async () => {
-    console.log('__tweets___', tweets)
-    if (tweets) {
-      return null
+    try {
+
+      console.log('__tweets___', tweets)
+      if (tweets) {
+        return null
+      }
+
+
+      let res = await FETCH({ title: '课程', url: '/q/comm/介绍', })
+      console.log(res)
+      //   if (1) return console.log(res)
+      let result = await res.json()
+      if (!res.ok) {
+        return null
+      }
+      setTweets(JSON.parse(result))
+    } catch (e) {
+      console.log(e)
+      throw 'productes\n' + e
     }
-
-    let res = await FETCH({ title: '课程', url: '/q/comm/介绍', })
-
-    let result = await res.json()
-
-    setTweets(JSON.parse(result))
 
   })
 
