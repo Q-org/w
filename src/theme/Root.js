@@ -32,8 +32,7 @@ const CookieBanner = () => {
 export default function R({ children }) {
 
     const ref = React.createRef();
-    if (!useIsBrowser()) {
-    }
+    if (!useIsBrowser()) { }
     return (
         <CookieConsentProvider>
             <CssVarsProvider >

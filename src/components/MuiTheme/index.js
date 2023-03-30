@@ -18,6 +18,7 @@ export const ModeSwitcher = (props) => {
 
     useEffect(() => {
         PubSub.subscribe('模式变更了', (msg, data) => {
+            console.log('模式变更了...')
             setMode(data)
         });
     }, [])

@@ -46,7 +46,7 @@ export default function index() {
     return (
         <Layout title="用户" description="Hello React Page">
             <ModeSwitcher />
-            <Search id='gihubuser' />
+           <Search id='gihubuser' />
             <List />
 
         </Layout>
