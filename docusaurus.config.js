@@ -248,7 +248,10 @@ const config = {
           // { to: '/t/t', label: 't' },
 
           // { label: '注册', to: '/sign/SignUp', position: 'right', className: 'signup dev-portal-link', },
-          { label: '登录', to: '/sign/SignIn', position: 'right', className: 'login', },
+          {
+            label: '登录', to: '/sign/SignIn', position: 'right',
+            className: 'login',
+          },
 
         ],
       },
