@@ -4,6 +4,7 @@
 
 export default async function FETCH(data) {
   try {
+    console.log('data', data)
 
     let isFormData = /FormData/.test(data.toString())
 

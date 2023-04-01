@@ -13,19 +13,19 @@ export default function Productes() {
   React.useEffect(async () => {
     try {
 
-      console.log('__tweets___', tweets)
+      // console.log('__tweets___', tweets)
       if (tweets) {
         return null
       }
 
 
       let res = await FETCH({ title: '课程', url: '/q/comm/介绍', })
-      console.log(res)
+
+      if (!(res && res.ok)) return null
+
       //   if (1) return console.log(res)
       let result = await res.json()
-      if (!res.ok) {
-        return null
-      }
+
       setTweets(JSON.parse(result))
     } catch (e) {
       console.log(e)

@@ -297,6 +297,7 @@ const config = {
     /*  './packages/docusaurus-friends-plugin',
      
      './packages/docusaurus-copy-plugin', */
+    '@docusaurus/plugin-ideal-image',
     "@graphql-markdown/docusaurus",
     'docusaurus-plugin-sass',
     async function myPlugin(context, options) {
