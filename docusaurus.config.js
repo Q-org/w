@@ -175,6 +175,16 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       metadata: [{ name: 'keywords', content: '微课程,基础会计, 课程设计,社交，校园交流' }],
+      zoom: {
+        selector: '.markdown :not(em) > img',
+        config: {
+          // options you can specify via https://github.com/francoischalifour/medium-zoom#usage
+          background: {
+            light: 'rgb(255, 255, 255)',
+            dark: 'rgb(50, 50, 50)'
+          }
+        }
+      },
       docs: {
         sidebar: {
           hideable: true,
@@ -294,10 +304,9 @@ const config = {
     }),
 
   plugins: [
-    /*  './packages/docusaurus-friends-plugin',
-     
-     './packages/docusaurus-copy-plugin', */
+    // "docusaurus-plugin-less",
     '@docusaurus/plugin-ideal-image',
+    require.resolve("docusaurus-plugin-image-zoom"),
     "@graphql-markdown/docusaurus",
     'docusaurus-plugin-sass',
     async function myPlugin(context, options) {

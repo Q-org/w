@@ -15,6 +15,26 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Translate from '@docusaurus/Translate';
 
 import { Email, Password, LastName, FirstName, UserId, Copyright } from './fileds';
+const responseGoogle = (response) => {
+  console.log(response);
+}
+
+
+const googleLogin = () => {
+  return (
+    <>
+      <GoogleLogin
+        clientId="658977310896-knrl3gka66fldh83dao2rhgbblmd4un9.apps.googleusercontent.com"
+        buttonText="Login"
+        onSuccess={responseGoogle}
+        onFailure={responseGoogle}
+        cookiePolicy={'single_host_origin'}
+      />,
+      document.getElementById('googleButton')
+    </>
+  )
+}
+
 
 const theme = createTheme();
 
@@ -43,7 +63,7 @@ function SignIn() {
       return null
 
     }
-    console.log('___',res.json())
+    console.log('___', res.json())
     return null
     let token = await res.json()
 
@@ -217,5 +237,23 @@ const httpeception = {
 
 export {
   SignIn, SignUp
+}
+
+import FacebookLogin from 'react-facebook-login';
+
+
+const responseFacebook = (response) => {
+  console.log(response);
+}
+const facebookLogin = () => {
+  return (<>
+    <FacebookLogin
+      appId="1088597931155576"
+      autoLoad={true}
+      fields="name,email,picture"
+      onClick={componentClicked}
+      callback={responseFacebook} />,
+    document.getElementById('demo')
+  </>)
 }
 
