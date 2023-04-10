@@ -286,5 +286,13 @@
   "sidebar.intro.category.微微 - 扩展": {
     "message": "微微 - 扩展",
     "description": "The label for category 微微 - 扩展 in sidebar intro"
+  },
+  "sidebar.manu.category.V9 操作手册": {
+    "message": "V9 操作手册",
+    "description": "The label for category V9 操作手册 in sidebar manu"
+  },
+  "sidebar.manu.category.V9操作手册-学生端-青软": {
+    "message": "V9操作手册-学生端-青软",
+    "description": "The label for category V9操作手册-学生端-青软 in sidebar manu"
   }
 }

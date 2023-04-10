@@ -107,19 +107,19 @@ const config = {
     // ... Your other themes.
     // "@docusaurus-theme-frontmatter",
     // "@docusaurus/theme-live-codeblock",
-    //'@docusaurus/theme-search-algolia',
-    [
-      require.resolve("@easyops-cn/docusaurus-search-local"),
-      {
-        // ... Your options.
-        // `hashed` is recommended as long-term-cache of index file is possible.
-        hashed: true,
-        // For Docs using Chinese, The `language` is recommended to set to:
-        // ```
-        language: ["zh"],
-        // ```
-      },
-    ],
+    // '@docusaurus/theme-search-algolia',
+    // [
+    //   require.resolve("@easyops-cn/docusaurus-search-local"),
+    //   {
+    //     // ... Your options.
+    //     // `hashed` is recommended as long-term-cache of index file is possible.
+    //     hashed: true,
+    //     // For Docs using Chinese, The `language` is recommended to set to:
+    //     // ```
+    //     language: ["zh"],
+    //     // ```
+    //   },
+    // ],
   ],
   presets: [
     [
@@ -204,60 +204,21 @@ const config = {
         },
 
         items: [
-          // {
-          //   type: 'dropdown',
-          //   position: 'left',
-          //   label: "课程",
-          //   /*             dropdownActiveClassDisabled: true, */
-          //   items: [
-          //     {
-          //       type: 'docSidebar',
-          //       sidebarId: 'courses',
-          //       label: '基础会计',
-          //     },
-          //   ],
+          {
+            type: 'dropdown',
+            position: 'left',
+            label: "课程",
+            /*             dropdownActiveClassDisabled: true, */
+            items: [
+              {
+                type: 'docSidebar',
+                sidebarId: 'courses',
+                label: '基础会计',
+              },
+            ],
+          },
 
-
-          // },
           { label: '操作指南', type: 'docSidebar', sidebarId: 'manu', position: 'left', className: 'signup dev-portal-link', },
-          //{ label: '参照', type: 'docSidebar', sidebarId: 'intro', position: 'left', className: 'signup dev-portal-link', },
-          // { label: '操作手册', to: '/productes', position: 'left', className: 'signup dev-portal-link', },
-
-          //  { type: 'docSidebar', sidebarId: 'manu', label: '基础会计', },
-
-          // {
-          //   type: 'doc',
-          //   docId: 'intro',
-          //   position: 'left',
-          //   label: '文档',
-          // },
-          // { to: 'blog', label: '动态', position: 'left' },
-          // { type: 'doc', docId: 'intro', label: '表单', position: 'left' },
-          // {
-          //   type: 'dropdown',
-          //   position: 'left',
-          //   label: "测试",
-          //   /*             dropdownActiveClassDisabled: true, */
-          //   items: [
-
-          //     { to: '/test/b', label: 'useRef' },
-          //     { to: '/test/githubuser', label: '查询用户' },
-          //     { to: '/test/dbtools', label: 'dbtools' },
-          //     { to: '/test/Calculator', label: 'useRCalculatoref' },
-          //   ],
-          // },
-          // { to: '/test/b', label: 'useRef' },
-
-          // // Please keep GitHub link to the right for consistency.
-          // {
-          //   href: 'https://github.com/Q-org/w',
-          //   'aria-label': 'GitHub 仓',
-          //   className: 'header-github-link',
-          //   position: 'right',
-          // },
-          // { to: '/t/t', label: 't' },
-
-          // { label: '注册', to: '/sign/SignUp', position: 'right', className: 'signup dev-portal-link', },
           {
             label: '登录', to: '/sign/SignIn', position: 'right',
             className: 'login',
@@ -267,12 +228,12 @@ const config = {
       },
       algolia: {
         // Algolia 提供的应用 ID
-        appId: 'YOUR_APP_ID',
+        appId: 'KQGPNV3L6O',
 
         //  公开 API 密钥：提交它没有危险
-        apiKey: 'YOUR_SEARCH_API_KEY',
+        apiKey: '693aabdd4be4a258e8d0af3f94d49cba',
 
-        indexName: 'YOUR_INDEX_NAME',
+        indexName: 'KQGPNV3L6O',
 
         // 可选：见下文
         contextualSearch: true,
@@ -295,8 +256,107 @@ const config = {
         //... other Algolia params
       },
       footer: {
-        style: "dark",
-        copyright: `版权 © ${new Date().getFullYear()} Q-org.`,
+        style: 'dark',
+        links: [
+          {
+            title: '课程',
+            items: [
+              {
+                label: '基础会计',
+                to: '/',
+              },
+              {
+                label: '成本会计',
+                to: '/',
+              },
+              // {
+              //   label: 'Migration from v1 to v2',
+              //   to: 'docs/migration',
+              // },
+            ],
+          },
+          {
+            title: '社区',
+            items: [
+              {
+                label: '错误',
+                href: 'https://github.com/Q-org/w/issues',
+              },
+              {
+                label: '功能需求',
+                to: 'https://github.com/Q-org/w/pulls',
+              },
+              {
+                label: '群聊',
+                href: 'https://discordapp.com/invite/docusaurus',
+              },
+              // {
+              //   label: '帮助',
+              //   to: '/community/support',
+              // },
+            ],
+          },
+          {
+            title: '更多',
+            items: [
+              {
+                label: 'Blog',
+                to: 'blog',
+              },
+              // {
+              //   label: 'Changelog',
+              //   to: '/changelog',
+              // },
+              {
+                label: 'GitHub',
+                href: 'https://github.com/facebook/docusaurus',
+              },
+              {
+                label: '公众号',
+                href: 'https://twitter.com/docusaurus',
+              },
+              {
+                html: `
+                <a href="https://www.netlify.com" target="_blank" rel="noreferrer noopener" aria-label="Deploys by Netlify">
+                  <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" width="114" height="51" />
+                </a>
+              `,
+              },
+            ],
+          },
+          {
+            title: 'Legal',
+            // Please don't remove the privacy and terms, it's a legal
+            // requirement.
+            items: [
+              {
+                label: '隐私',
+                href: 'https://opensource.facebook.com/legal/privacy/',
+              },
+              {
+                label: '团队',
+                href: 'https://opensource.facebook.com/legal/terms/',
+              },
+              {
+                label: '数据规则',
+                href: 'https://opensource.facebook.com/legal/data-policy/',
+              },
+              {
+                label: 'Cookie Policy',
+                href: 'https://opensource.facebook.com/legal/cookie-policy/',
+              },
+            ],
+          },
+        ],
+        logo: {
+          alt: 'Meta Open Source Logo',
+          src: '/img/meta_opensource_logo_negative.svg',
+          href: 'https://opensource.fb.com',
+        },
+        copyright: `Copyright © ${new Date().getFullYear()} Meta Platforms, Inc. Built with Docusaurus.`,
+
+        // style: "dark",
+        // copyright: `版权 © ${new Date().getFullYear()} Q-org.`,
       },
       colorMode: {
         defaultMode: "dark",

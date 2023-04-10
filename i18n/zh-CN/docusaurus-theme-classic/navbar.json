@@ -50,5 +50,13 @@
   "item.label.useRCalculatoref": {
     "message": "useRCalculatoref",
     "description": "Navbar item with label useRCalculatoref"
+  },
+  "logo.alt": {
+    "message": "微微 项目 Logo",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.操作指南": {
+    "message": "操作指南",
+    "description": "Navbar item with label 操作指南"
   }
 }

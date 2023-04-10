@@ -16,7 +16,7 @@ import styles from '@site/src/pages/styles.module.css';
 import Link from '@docusaurus/Link';
 import Productes from '@site/src/pages/productes';
 import Translate, { translate } from '@docusaurus/Translate';
-
+import HomepageFeatures1 from '@site/src/components/home/HomepageFeatures'
 
 
 
@@ -30,6 +30,7 @@ export default function Home() {
       description="Description will go into a meta tag in <head />">
       <TopBanner />
       <HeroBanner />
+      <HomepageFeatures1 />
       <div className={styles.section}>
         <FeaturesContainer />
       </div>
@@ -50,9 +51,9 @@ function TopBanner() {
         <Link
           to='/productes'
           className={styles.topBannerTitleText}>
+
           <Translate id="homepage.banner.launch.2.0">
-            {'会计综合实训\xa02.0 \xa0开课了!️'}
-            {/*             {() => 1 ? null : '微课\xa02.0 \xa0发布!️'} */}
+            {'hallow会计综合实训\xa02.0 \xa0开课了!️'}
           </Translate>
         </Link>
         {'\xa0🥳'}
