@@ -16,7 +16,8 @@ export default function HackerNewsIcon({
   return (
     <Link
       to="https://news.ycombinator.com/item?id=32303052"
-      style={{display: 'block', width: size, height: size}}>
+      style={{ display: 'block', width: size, height: size }}>
+      
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 48 48"

@@ -193,7 +193,7 @@ const config = {
       },
       announcementBar: {
         id: 'announcementBar-2', // Increment on change
-        content: `🎉如果您喜欢微微, 请在 <a target="_blank" rel="noopener noreferrer" href="https://github.com/Q-org/w">GitHub</a>给一个⭐️关注我们<a target="_blank" rel="noopener noreferrer" href="https://github.com/Q-org/w">公众号</a>🎉`,
+        content: `🎉如果您喜欢微微, 请在 <a target="_blank" rel="noopener noreferrer" href="https://github.com/Q-org/w">GitHub</a>给一个⭐️关注我们<a target="_blank" rel="noopener noreferrer" href="https://github.com/Q-org/w">公众号</a>🎉 `,
       },
       navbar: {
         hideOnScroll: true,
@@ -219,41 +219,31 @@ const config = {
           },
 
           { label: '操作指南', type: 'docSidebar', sidebarId: 'manu', position: 'left', className: 'signup dev-portal-link', },
+          { label: 'test', to: '/test/test', position: 'left', className: 'login', },
           {
             label: '登录', to: '/sign/SignIn', position: 'right',
             className: 'login',
           },
-
+          {
+            href: 'https://github.com/facebook/docusaurus',
+            position: 'right',
+            className: 'header-github-link',
+            'aria-label': 'GitHub repository',
+          },
         ],
       },
       algolia: {
         // Algolia 提供的应用 ID
         appId: 'KQGPNV3L6O',
-
         //  公开 API 密钥：提交它没有危险
         apiKey: '693aabdd4be4a258e8d0af3f94d49cba',
-
-        indexName: 'KQGPNV3L6O',
-
-        // 可选：见下文
-        contextualSearch: true,
-
-        // 可选：声明哪些域名需要用 window.location 型的导航而不是 history.push。 适用于 Algolia 配置会爬取多个文档站点，而我们想要用 window.location.href 在它们之间跳转时。
-        externalUrlRegex: 'external\\.com|domain\\.com',
-
+        indexName: 'qorgsearch',
         // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
-        replaceSearchResultPathname: {
-          from: '/docs/', // or as RegExp: /\/docs\//
-          to: '/',
-        },
+        // replaceSearchResultPathname: {
+        //   from: /^\/docs\/next/g,
+        //   to: '/docs',
+        // },
 
-        // Optional: Algolia search parameters
-        searchParameters: {},
-
-        // Optional: path for search page that enabled by default (`false` to disable it)
-        searchPagePath: 'search',
-
-        //... other Algolia params
       },
       footer: {
         style: 'dark',
@@ -318,14 +308,14 @@ const config = {
               {
                 html: `
                 <a href="https://www.netlify.com" target="_blank" rel="noreferrer noopener" aria-label="Deploys by Netlify">
-                  <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" width="114" height="51" />
+                  <img src="/img/netlify-color-accent.svg" alt="Deploys by Netlify" width="114" height="51" />
                 </a>
               `,
               },
             ],
           },
           {
-            title: 'Legal',
+            title: '法律',
             // Please don't remove the privacy and terms, it's a legal
             // requirement.
             items: [
@@ -342,7 +332,7 @@ const config = {
                 href: 'https://opensource.facebook.com/legal/data-policy/',
               },
               {
-                label: 'Cookie Policy',
+                label: '饼干规则',
                 href: 'https://opensource.facebook.com/legal/cookie-policy/',
               },
             ],
@@ -353,10 +343,10 @@ const config = {
           src: '/img/meta_opensource_logo_negative.svg',
           href: 'https://opensource.fb.com',
         },
-        copyright: `Copyright © ${new Date().getFullYear()} Meta Platforms, Inc. Built with Docusaurus.`,
+        // copyright: `Copyright © ${new Date().getFullYear()} Meta Platforms, Inc. Built with Docusaurus.`,
 
         // style: "dark",
-        // copyright: `版权 © ${new Date().getFullYear()} Q-org.`,
+        copyright: `版权 © ${new Date().getFullYear()} Q-org.`,
       },
       colorMode: {
         defaultMode: "dark",

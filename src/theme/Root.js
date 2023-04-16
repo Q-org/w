@@ -1,4 +1,4 @@
-import React, { useState, useEffect, creatContext } from 'react';
+import * as React from 'react';
 import useIsBrowser from '@docusaurus/useIsBrowser';
 import PubSub from 'pubsub-js'
 import {
@@ -10,6 +10,7 @@ import ModeSwitcher from '../components/MuiTheme';
 
 import { CookieConsentProvider } from '@use-cookie-consent/react'
 // 默认实现，你可以自定义
+import { GPRMProvider } from "../components/mobx/GPRMcontext";
 
 const CookieBanner = () => {
     /*     const { acceptAllCookies, declineAllCookies, acceptCookies } =
@@ -36,8 +37,9 @@ export default function R({ children }) {
         <CookieConsentProvider>
             <CssVarsProvider >
                 <ModeSwitcher />
-                {children}
-
+                <GPRMProvider>
+                    {children}
+                </GPRMProvider>
             </CssVarsProvider>
         </CookieConsentProvider>
     )

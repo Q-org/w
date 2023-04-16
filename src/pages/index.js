@@ -18,7 +18,7 @@ import Productes from '@site/src/pages/productes';
 import Translate, { translate } from '@docusaurus/Translate';
 import HomepageFeatures1 from '@site/src/components/home/HomepageFeatures'
 
-
+import UserFeedbacks from '@site/src/components/home/UserFeedbacks.tsx'
 
 export default function Home() {
   const context = useDocusaurusContext();
@@ -86,7 +86,7 @@ function TopBanner() {
           {/*           <ProductHuntCard />
           <HackerNewsIcon /> */}
         </div>
-
+        <UserFeedbacks />
       </div>
         : null}
     </div>

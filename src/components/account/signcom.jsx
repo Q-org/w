@@ -13,6 +13,8 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Translate from '@docusaurus/Translate';
+import { GoogleLogin } from 'react-google-login';
+
 
 import { Email, Password, LastName, FirstName, UserId, Copyright } from './fileds';
 const responseGoogle = (response) => {
@@ -29,8 +31,7 @@ const googleLogin = () => {
         onSuccess={responseGoogle}
         onFailure={responseGoogle}
         cookiePolicy={'single_host_origin'}
-      />,
-      document.getElementById('googleButton')
+      />
     </>
   )
 }
@@ -144,6 +145,15 @@ function SignIn() {
               </Grid>
             </Grid>
           </Box>
+
+          <GoogleLogin
+            clientId="658977310896-knrl3gka66fldh83dao2rhgbblmd4un9.apps.googleusercontent.com"
+            buttonText="Login"
+            onSuccess={responseGoogle}
+            onFailure={responseGoogle}
+            cookiePolicy={'single_host_origin'}
+          />
+
         </Box>
         <Copyright sx={{ mt: 8, mb: 4 }} />
       </Container>
