@@ -31,14 +31,14 @@ function createLoading(sx: BoxProps['sx']) {
   };
 }
 
-const CoreShowcase = dynamic(() => import('./CoreShowcase'), {
+const CoreShowcase = dynamic(() => import('@site/src/components/home/CoreShowcase'), {
   loading: createLoading({ height: 723, mt: { md: 2 } }),
 });
-const AdvancedShowcase = dynamic(() => import('./AdvancedShowcase'), {
+const AdvancedShowcase = dynamic(() => import('@site/src/components/home/AdvancedShowcase'), {
   loading: createLoading({ height: 750, mt: { md: 2 } }),
 });
-const StoreTemplatesBanner = dynamic(() => import('./StoreTemplatesBanner'));
-const DesignKits = dynamic(() => import('./DesignKits'));
+const StoreTemplatesBanner = dynamic(() => import('@site/src/components/home/StoreTemplatesBanner'));
+const DesignKits = dynamic(() => import('@site/src/components/home/DesignKits'));
 
 function ProductSuite() {
   const [productIndex, setProductIndex] = React.useState(0);
@@ -90,10 +90,10 @@ function ProductSuite() {
               <React.Fragment>
                 <PrefetchStoreTemplateImages />
                 <PrefetchDesignKitImages />
-                {productIndex === 0 && <CoreShowcase />}
-                {productIndex === 1 && <AdvancedShowcase />}
+{/*                {productIndex === 0 && <CoreShowcase />}
+                 {productIndex === 1 && <AdvancedShowcase />}
                 {productIndex === 2 && <StoreTemplatesBanner />}
-                {productIndex === 3 && <DesignKits />}
+                {productIndex === 3 && <DesignKits />} */}
               </React.Fragment>
             )}
           </Grid>

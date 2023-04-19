@@ -12,11 +12,11 @@ import { StyleSheetManager } from 'styled-components';
 import { jssPreset, StylesProvider } from '@mui/styles';
 import { useTheme, styled, createTheme, ThemeProvider } from '@mui/material/styles';
 import rtl from 'jss-rtl';
-import DemoErrorBoundary from 'docs/src/modules/components/DemoErrorBoundary';
-import { useTranslate } from 'docs/src/modules/utils/i18n';
-import { pathnameToLanguage } from 'docs/src/modules/utils/helpers';
-import { getDesignTokens } from 'docs/src/modules/brandingTheme';
-import { highDensity } from 'docs/src/modules/components/ThemeContext';
+import DemoErrorBoundary from '@site/src/modules/components/DemoErrorBoundary';
+import { useTranslate } from '@site/src/modules/utils/i18n';
+import { pathnameToLanguage } from '@site/src/modules/utils/helpers';
+import { getDesignTokens } from '@site/src/modules/brandingTheme';
+import { highDensity } from '@site/src/modules/components/ThemeContext';
 
 function FramedDemo(props) {
   const { children, document } = props;
@@ -108,9 +108,9 @@ function DemoIframe(props) {
       <Iframe onLoad={onLoad} ref={frameRef} title={`${name} demo`} {...other} />
       {iframeLoaded !== false
         ? ReactDOM.createPortal(
-            <FramedDemo document={document}>{children}</FramedDemo>,
-            document.body,
-          )
+          <FramedDemo document={document}>{children}</FramedDemo>,
+          document.body,
+        )
         : null}
     </React.Fragment>
   );

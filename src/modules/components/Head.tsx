@@ -1,13 +1,13 @@
 import * as React from 'react';
 import NextHead from 'next/head';
 import { useRouter } from 'next/router';
-import { LANGUAGES_SSR } from 'config';
-import { useUserLanguage, useTranslate } from 'docs/src/modules/utils/i18n';
-import { pathnameToLanguage } from 'docs/src/modules/utils/helpers';
+//import { LANGUAGES_SSR } from '@site/config';
+import { useUserLanguage, useTranslate } from '@site/src/modules/utils/i18n';
+import { pathnameToLanguage } from '@site/src/modules/utils/helpers';
 
 // #major-version-switch
 const HOST = 'https://mui.com';
-
+const LANGUAGES_SSR = ['zh-CN'];
 interface HeadProps {
   card?: string;
   children?: React.ReactNode;
@@ -65,7 +65,7 @@ export default function Head(props: HeadProps) {
               key={userLanguage2}
               rel="alternate"
               href={`https://mui.com${
-                userLanguage2 === 'en' ? '' : `/${userLanguage2}`
+                userLanguage2 === 'en' ? '' : `/en`
               }${canonicalAs}`}
               hrefLang={userLanguage2}
             />

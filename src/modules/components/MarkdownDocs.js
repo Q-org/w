@@ -5,14 +5,14 @@ import { useRouter } from 'next/router';
 import { useTheme } from '@mui/system';
 import { exactProp } from '@mui/utils';
 import { CssVarsProvider, useColorScheme } from '@mui/joy/styles';
-import Demo from 'docs/src/modules/components/Demo';
-import MarkdownElement from 'docs/src/modules/components/MarkdownElement';
-import { pathnameToLanguage } from 'docs/src/modules/utils/helpers';
-import AppLayoutDocs from 'docs/src/modules/components/AppLayoutDocs';
-import { useTranslate, useUserLanguage } from 'docs/src/modules/utils/i18n';
-import BrandingProvider from 'docs/src/BrandingProvider';
-import Ad from 'docs/src/modules/components/Ad';
-import AdGuest from 'docs/src/modules/components/AdGuest';
+import Demo from '@site/src/modules/components/Demo';
+import MarkdownElement from '@site/src/modules/components/MarkdownElement';
+import { pathnameToLanguage } from '@site/src/modules/utils/helpers';
+import AppLayoutDocs from '@site/src/modules/components/AppLayoutDocs';
+import { useTranslate, useUserLanguage } from '@site/src/modules/utils/i18n';
+import BrandingProvider from '@site/src/BrandingProvider';
+import Ad from '@site/src/modules/components/Ad';
+import AdGuest from '@site/src/modules/components/AdGuest';
 
 function noComponent(moduleID) {
   return function NoComponent() {

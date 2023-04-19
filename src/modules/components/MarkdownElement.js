@@ -5,7 +5,7 @@ import { alpha, darken, styled } from '@mui/material/styles';
 import {
   brandingDarkTheme as darkTheme,
   brandingLightTheme as lightTheme,
-} from 'docs/src/modules/brandingTheme';
+} from '@site/src/modules/brandingTheme';
 
 const Root = styled('div')(
   ({ theme }) => ({
@@ -23,9 +23,8 @@ const Root = styled('div')(
       backgroundColor: `var(--muidocs-palette-primaryDark-800, ${lightTheme.palette.primaryDark[800]})`,
       color: '#f8f8f2',
       colorScheme: 'dark',
-      borderRadius: `var(--muidocs-shape-borderRadius, ${
-        theme.shape?.borderRadius ?? lightTheme.shape.borderRadius
-      }px)`,
+      borderRadius: `var(--muidocs-shape-borderRadius, ${theme.shape?.borderRadius ?? lightTheme.shape.borderRadius
+        }px)`,
       border: '1px solid',
       borderColor: `var(--muidocs-palette-primaryDark-700, ${lightTheme.palette.primaryDark[700]})`,
       overflow: 'auto',
@@ -188,12 +187,12 @@ const Root = styled('div')(
       marginBottom: '20px',
       borderSpacing: 0,
       '& .prop-name, & .prop-type, & .prop-default, & .slot-name, & .slot-defaultClass, & .slot-default':
-        {
-          fontWeight: 400,
-          fontFamily: lightTheme.typography.fontFamilyCode,
-          WebkitFontSmoothing: 'subpixel-antialiased',
-          fontSize: lightTheme.typography.pxToRem(13),
-        },
+      {
+        fontWeight: 400,
+        fontFamily: lightTheme.typography.fontFamilyCode,
+        WebkitFontSmoothing: 'subpixel-antialiased',
+        fontSize: lightTheme.typography.pxToRem(13),
+      },
       '& .required': {
         color: '#006500',
       },
@@ -230,9 +229,8 @@ const Root = styled('div')(
       paddingBottom: 12,
     },
     '& blockquote': {
-      borderRadius: `var(--muidocs-shape-borderRadius, ${
-        theme.shape?.borderRadius ?? lightTheme.shape.borderRadius
-      }px)`,
+      borderRadius: `var(--muidocs-shape-borderRadius, ${theme.shape?.borderRadius ?? lightTheme.shape.borderRadius
+        }px)`,
       border: '1px solid',
       borderLeft: '8px solid',
       borderColor: `var(--muidocs-palette-warning-300, ${lightTheme.palette.warning[300]})`,
@@ -248,9 +246,8 @@ const Root = styled('div')(
       padding: '16px',
       margin: '16px 0',
       border: '1px solid',
-      borderRadius: `var(--muidocs-shape-borderRadius, ${
-        theme.shape?.borderRadius ?? lightTheme.shape.borderRadius
-      }px)`,
+      borderRadius: `var(--muidocs-shape-borderRadius, ${theme.shape?.borderRadius ?? lightTheme.shape.borderRadius
+        }px)`,
       '& > ul, & > p': {
         '&:last-child': {
           margin: 0,

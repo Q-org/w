@@ -7,16 +7,16 @@ import ChevronLeftRoundedIcon from '@mui/icons-material/ChevronLeftRounded';
 import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
 import Avatar from '@mui/material/Avatar';
-import Head from 'docs/src/modules/components/Head';
-import BrandingCssVarsProvider from 'docs/src/BrandingCssVarsProvider';
-import AppHeader from 'docs/src/layouts/AppHeader';
-import AppContainer from 'docs/src/modules/components/AppContainer';
-import AppFooter from 'docs/src/layouts/AppFooter';
-import HeroEnd from 'docs/src/components/home/HeroEnd';
-import MarkdownElement from 'docs/src/modules/components/MarkdownElement';
-import { pathnameToLanguage } from 'docs/src/modules/utils/helpers';
-import ROUTES from 'docs/src/route';
-import Link from 'docs/src/modules/components/Link';
+import Head from '@site/src/modules/components/Head';
+import BrandingCssVarsProvider from '@site/src/BrandingCssVarsProvider';
+import AppHeader from '@site/src/layouts/AppHeader';
+import AppContainer from '@site/src/modules/components/AppContainer';
+import AppFooter from '@site/src/layouts/AppFooter';
+import HeroEnd from '@site/src/components/home/HeroEnd';
+import MarkdownElement from '@site/src/modules/components/MarkdownElement';
+import { pathnameToLanguage } from '@site/src/modules/utils/helpers';
+import ROUTES from '@site/src/route';
+import Link from '@site/src/modules/components/Link';
 
 export const authors = {
   oliviertassinari: {
@@ -123,9 +123,8 @@ const AuthorsContainer = styled('div')(({ theme }) => ({
 const Root = styled('div')(
   ({ theme }) => ({
     flexGrow: 1,
-    background: `linear-gradient(180deg, ${
-      (theme.vars || theme).palette.grey[50]
-    } 0%, #FFFFFF 100%)`,
+    background: `linear-gradient(180deg, ${(theme.vars || theme).palette.grey[50]
+      } 0%, #FFFFFF 100%)`,
     backgroundSize: '100% 300px',
     backgroundRepeat: 'no-repeat',
     [`& .${classes.back}`]: {
@@ -205,9 +204,8 @@ const Root = styled('div')(
   }),
   ({ theme }) =>
     theme.applyDarkStyles({
-      background: `linear-gradient(180deg, ${
-        (theme.vars || theme).palette.primaryDark[900]
-      } 0%, #001E3C 100%)`,
+      background: `linear-gradient(180deg, ${(theme.vars || theme).palette.primaryDark[900]
+        } 0%, #001E3C 100%)`,
       [`& .${classes.container}`]: {
         '& strong': {
           color: (theme.vars || theme).palette.grey[100],

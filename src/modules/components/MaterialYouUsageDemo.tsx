@@ -9,8 +9,8 @@ import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 import Switch from '@mui/material/Switch';
 import Typography from '@mui/material/Typography';
-import BrandingProvider from 'docs/src/BrandingProvider';
-import HighlightedCode from 'docs/src/modules/components/HighlightedCode';
+import BrandingProvider from '@site/src/BrandingProvider';
+import HighlightedCode from '@site/src/modules/components/HighlightedCode';
 import {
   extendTheme,
   CssVarsProvider as MaterialYouCssVarsProvider,

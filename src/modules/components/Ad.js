@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
-import AdCarbon from 'docs/src/modules/components/AdCarbon';
-import AdInHouse from 'docs/src/modules/components/AdInHouse';
-import { AdContext, adShape } from 'docs/src/modules/components/AdManager';
-import { useTranslate } from 'docs/src/modules/utils/i18n';
+import AdCarbon from '@site/src/modules/components/AdCarbon';
+import AdInHouse from '@site/src/modules/components/AdInHouse';
+import { AdContext, adShape } from '@site/src/modules/components/AdManager';
+import { useTranslate } from '@site/src/modules/utils/i18n';
 
 function PleaseDisableAdblock(props) {
   const t = useTranslate();
@@ -151,7 +151,7 @@ function Ad() {
         if (
           document.querySelector('#carbonads a') &&
           document.querySelector('#carbonads a').getAttribute('href') ===
-            'https://material-ui-next.com/discover-more/backers'
+          'https://material-ui-next.com/discover-more/backers'
         ) {
           setCarbonOut(true);
         }

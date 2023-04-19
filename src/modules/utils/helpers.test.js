@@ -11,7 +11,7 @@ describe('docs getDependencies helpers', () => {
   });
 
   it('should return correct title', () => {
-    expect(pageToTitle({ pathname: '/docs/src/pages/components/button/button.md' })).to.equal(
+    expect(pageToTitle({ pathname: '/@site/src/pages/components/button/button.md' })).to.equal(
       'Button',
     );
     expect(pageToTitle({ pathname: '/components' })).to.equal('Components');

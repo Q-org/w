@@ -2,8 +2,8 @@ import * as React from 'react';
 import { expect } from 'chai';
 import { createRenderer } from 'test/utils';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { getDesignTokens } from 'docs/src/modules/brandingTheme';
-import HighlightedCode from 'docs/src/modules/components/HighlightedCode';
+import { getDesignTokens } from '@site/src/modules/brandingTheme';
+import HighlightedCode from '@site/src/modules/components/HighlightedCode';
 
 describe('HighlightedCode', () => {
   const { render } = createRenderer();

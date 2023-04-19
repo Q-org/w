@@ -8,18 +8,18 @@ import { unstable_useId as useId } from '@mui/utils';
 import IconButton from '@mui/material/IconButton';
 import Collapse from '@mui/material/Collapse';
 import NoSsr from '@mui/material/NoSsr';
-import HighlightedCode from 'docs/src/modules/components/HighlightedCode';
-import DemoSandbox from 'docs/src/modules/components/DemoSandbox';
-import ReactRunner from 'docs/src/modules/components/ReactRunner';
-import DemoEditor from 'docs/src/modules/components/DemoEditor';
-import DemoEditorError from 'docs/src/modules/components/DemoEditorError';
-import { AdCarbonInline } from 'docs/src/modules/components/AdCarbon';
-import { pathnameToLanguage } from 'docs/src/modules/utils/helpers';
-import { useCodeVariant } from 'docs/src/modules/utils/codeVariant';
-import { CODE_VARIANTS } from 'docs/src/modules/constants';
-import { useUserLanguage, useTranslate } from 'docs/src/modules/utils/i18n';
-import BrandingProvider from 'docs/src/BrandingProvider';
-import { blue, blueDark, grey } from 'docs/src/modules/brandingTheme';
+import HighlightedCode from '@site/src/modules/components/HighlightedCode';
+import DemoSandbox from '@site/src/modules/components/DemoSandbox';
+import ReactRunner from '@site/src/modules/components/ReactRunner';
+import DemoEditor from '@site/src/modules/components/DemoEditor';
+import DemoEditorError from '@site/src/modules/components/DemoEditorError';
+import { AdCarbonInline } from '@site/src/modules/components/AdCarbon';
+import { pathnameToLanguage } from '@site/src/modules/utils/helpers';
+import { useCodeVariant } from '@site/src/modules/utils/codeVariant';
+import { CODE_VARIANTS } from '@site/src/modules/constants';
+import { useUserLanguage, useTranslate } from '@site/src/modules/utils/i18n';
+import BrandingProvider from '@site/src/BrandingProvider';
+import { blue, blueDark, grey } from '@site/src/modules/brandingTheme';
 
 /**
  * Removes leading spaces (indentation) present in the `.tsx` previews
@@ -75,19 +75,19 @@ function useDemoData(codeVariant, demo, githubLocation) {
       jsxPreview: demo.jsxPreview,
       ...(codeVariant === CODE_VARIANTS.TS && demo.rawTS
         ? {
-            codeVariant: CODE_VARIANTS.TS,
-            githubLocation: githubLocation.replace(/\.js$/, '.tsx'),
-            raw: demo.rawTS,
-            Component: demo.tsx,
-            sourceLanguage: 'tsx',
-          }
+          codeVariant: CODE_VARIANTS.TS,
+          githubLocation: githubLocation.replace(/\.js$/, '.tsx'),
+          raw: demo.rawTS,
+          Component: demo.tsx,
+          sourceLanguage: 'tsx',
+        }
         : {
-            codeVariant: CODE_VARIANTS.JS,
-            githubLocation,
-            raw: demo.raw,
-            Component: demo.js,
-            sourceLanguage: 'jsx',
-          }),
+          codeVariant: CODE_VARIANTS.JS,
+          githubLocation,
+          raw: demo.raw,
+          Component: demo.js,
+          sourceLanguage: 'jsx',
+        }),
       title: `${getDemoName(githubLocation)} demo — ${name}`,
       product,
       language: userLanguage,
@@ -118,9 +118,9 @@ function useDemoElement({ demoData, editorCode, setDebouncedError, liveDemoActiv
         code={
           editorCode.isPreview
             ? trimLeadingSpaces(demoData.raw).replace(
-                trimLeadingSpaces(demoData.jsxPreview),
-                editorCode.value,
-              )
+              trimLeadingSpaces(demoData.jsxPreview),
+              editorCode.value,
+            )
             : editorCode.value
         }
       />
@@ -196,9 +196,8 @@ const DemoRootMaterial = styled('div', {
     )} 0px, transparent 50%),
         radial-gradient(at 80% 0%, #FFFFFF 0px, transparent 20%),
         radial-gradient(at 0% 95%, ${alpha(theme.palette.primary[100], 0.3)}, transparent 40%),
-        radial-gradient(at 0% 20%, ${
-          (theme.vars || theme).palette.primary[50]
-        } 0px, transparent 50%),
+        radial-gradient(at 0% 20%, ${(theme.vars || theme).palette.primary[50]
+      } 0px, transparent 50%),
         radial-gradient(at 93% 85%, ${alpha(theme.palette.primary[100], 0.2)} 0px, transparent 50%),
         url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23003A75' fill-opacity='0.03'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");`,
     ...theme.applyDarkStyles({
@@ -208,15 +207,12 @@ const DemoRootMaterial = styled('div', {
         theme.palette.primaryDark[700],
         0.5,
       )} 0px, transparent 50%),
-    radial-gradient(at 80% 0%, ${
-      (theme.vars || theme).palette.primaryDark[700]
-    } 0px, transparent 50%),
-    radial-gradient(at 0% 95%, ${
-      (theme.vars || theme).palette.primaryDark[700]
-    } 0px, transparent 50%),
-    radial-gradient(at 0% 5%, ${
-      (theme.vars || theme).palette.primaryDark[700]
-    } 0px, transparent 35%),
+    radial-gradient(at 80% 0%, ${(theme.vars || theme).palette.primaryDark[700]
+        } 0px, transparent 50%),
+    radial-gradient(at 0% 95%, ${(theme.vars || theme).palette.primaryDark[700]
+        } 0px, transparent 50%),
+    radial-gradient(at 0% 5%, ${(theme.vars || theme).palette.primaryDark[700]
+        } 0px, transparent 35%),
     radial-gradient(at 93% 85%, ${alpha(theme.palette.primaryDark[500], 0.8)} 0px, transparent 50%),
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23003A75' fill-opacity='0.15'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");`,
     }),
@@ -415,8 +411,8 @@ export default function Demo(props) {
   const initialEditorCode = isPreview
     ? demoData.jsxPreview
     : // Prettier remove all the leading lines except for the last one, remove it as we don't
-      // need it in the live edit view.
-      demoData.raw.replace(/\n$/, '');
+    // need it in the live edit view.
+    demoData.raw.replace(/\n$/, '');
 
   const [editorCode, setEditorCode] = React.useState({
     value: initialEditorCode,

@@ -3,12 +3,12 @@ import SimpleCodeEditor from 'react-simple-code-editor';
 import Box from '@mui/material/Box';
 import NoSsr from '@mui/base/NoSsr';
 import { styled, useTheme } from '@mui/material/styles';
-import prism from '@mui/markdown/prism';
-import MarkdownElement from 'docs/src/modules/components/MarkdownElement';
-import CodeCopyButton from 'docs/src/modules/components/CodeCopyButton';
-import { useTranslate } from 'docs/src/modules/utils/i18n';
-import { useCodeCopy } from 'docs/src/modules/utils/CodeCopy';
-import { blue, blueDark } from 'docs/src/modules/brandingTheme';
+/* import prism from '@mui/markdown'; */
+import MarkdownElement from '@site/src/modules/components/MarkdownElement';
+import CodeCopyButton from '@site/src/modules/components/CodeCopyButton';
+import { useTranslate } from '@site/src/modules/utils/i18n';
+import { useCodeCopy } from '@site/src/modules/utils/CodeCopy';
+import { blue, blueDark } from '@site/src/modules/brandingTheme';
 
 const StyledMarkdownElement = styled(MarkdownElement)(({ theme }) => [
   {
@@ -29,7 +29,7 @@ const StyledMarkdownElement = styled(MarkdownElement)(({ theme }) => [
     },
     '& pre': {
       // The scroll container needs to be the parent of the editor, overriding:
-      // https://github.com/mui/material-ui/blob/269c1d0c7572fcb6ae3b270a2622d16c7e40c848/docs/src/modules/components/MarkdownElement.js#L27-L26
+      // https://github.com/mui/material-ui/blob/269c1d0c7572fcb6ae3b270a2622d16c7e40c848/@site/src/modules/components/MarkdownElement.js#L27-L26
       maxWidth: 'initial',
       maxHeight: 'initial',
     },

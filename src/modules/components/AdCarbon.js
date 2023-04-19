@@ -1,8 +1,8 @@
 import * as React from 'react';
 import GlobalStyles from '@mui/material/GlobalStyles';
-import loadScript from 'docs/src/modules/utils/loadScript';
-import AdDisplay from 'docs/src/modules/components/AdDisplay';
-import { adStylesObject } from 'docs/src/modules/components/ad.styles';
+import loadScript from '@site/src/modules/utils/loadScript';
+import AdDisplay from '@site/src/modules/components/AdDisplay';
+import { adStylesObject } from '@site/src/modules/components/ad.styles';
 
 function AdCarbonImage() {
   const ref = React.useRef(null);
@@ -70,7 +70,7 @@ export function AdCarbonInline(props) {
         }
 
         const data = await response.json();
-        // Inspired by https://github.com/Semantic-Org/Semantic-UI-React/blob/2c7134128925dd831de85011e3eb0ec382ba7f73/docs/src/components/CarbonAd/CarbonAdNative.js#L9
+        // Inspired by https://github.com/Semantic-Org/Semantic-UI-React/blob/2c7134128925dd831de85011e3eb0ec382ba7f73/@site/src/components/CarbonAd/CarbonAdNative.js#L9
         const sanitizedAd = data.ads
           .filter((item) => Object.keys(item).length > 0)
           .filter((item) => item.statlink)

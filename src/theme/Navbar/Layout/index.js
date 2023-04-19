@@ -1,11 +1,13 @@
 import React from 'react';
+import { useEffect } from 'react';
+import useIsBrowser from '@docusaurus/useIsBrowser';
 import clsx from 'clsx';
-import {useThemeConfig} from '@docusaurus/theme-common';
+import { useThemeConfig } from '@docusaurus/theme-common';
 import {
   useHideableNavbar,
   useNavbarMobileSidebar,
 } from '@docusaurus/theme-common/internal';
-import {translate} from '@docusaurus/Translate';
+import { translate } from '@docusaurus/Translate';
 import NavbarMobileSidebar from '@theme/Navbar/MobileSidebar';
 import styles from './styles.module.css';
 function NavbarBackdrop(props) {
@@ -17,12 +19,21 @@ function NavbarBackdrop(props) {
     />
   );
 }
-export default function NavbarLayout({children}) {
+export default function NavbarLayout({ children }) {
   const {
-    navbar: {hideOnScroll, style},
+    navbar: { hideOnScroll, style },
   } = useThemeConfig();
   const mobileSidebar = useNavbarMobileSidebar();
-  const {navbarRef, isNavbarVisible} = useHideableNavbar(hideOnScroll);
+  const { navbarRef, isNavbarVisible } = useHideableNavbar(hideOnScroll);
+
+  if (useIsBrowser() && document.querySelector(`li:has(a[href='https://beian.miit.gov.cn/'])`)) {
+    const handlee = () => {
+      if (document.querySelector(`li:has(a[href='https://beian.miit.gov.cn/'])`)) {
+        document.querySelector(`li:has(a[href='https://beian.miit.gov.cn/'])`).style.display = 'none'
+      }
+    }
+    setTimeout(handlee, 300)
+  }
   return (
     <nav
       ref={navbarRef}

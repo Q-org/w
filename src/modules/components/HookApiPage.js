@@ -3,12 +3,12 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import { exactProp } from '@mui/utils';
 import Typography from '@mui/material/Typography';
-import { useTranslate, useUserLanguage } from 'docs/src/modules/utils/i18n';
-import PropertiesTable from 'docs/src/modules/components/PropertiesTable';
-import HighlightedCode from 'docs/src/modules/components/HighlightedCode';
-import MarkdownElement from 'docs/src/modules/components/MarkdownElement';
-import AppLayoutDocs from 'docs/src/modules/components/AppLayoutDocs';
-import Ad from 'docs/src/modules/components/Ad';
+import { useTranslate, useUserLanguage } from '@site/src/modules/utils/i18n';
+import PropertiesTable from '@site/src/modules/components/PropertiesTable';
+import HighlightedCode from '@site/src/modules/components/HighlightedCode';
+import MarkdownElement from '@site/src/modules/components/MarkdownElement';
+import AppLayoutDocs from '@site/src/modules/components/AppLayoutDocs';
+import Ad from '@site/src/modules/components/Ad';
 
 function getTranslatedHeader(t, header) {
   const translations = {
@@ -129,9 +129,9 @@ export default function ApiPage(props) {
         <HighlightedCode
           code={`
 import ${nonDefaultHooks.includes(hookName) ? `{ ${hookName} }` : hookName} from '${source
-            .split('/')
-            .slice(0, -1)
-            .join('/')}';`}
+              .split('/')
+              .slice(0, -1)
+              .join('/')}';`}
           language="jsx"
         />
         {/* TODO: Add this once the hooks are in dedicated folders */}

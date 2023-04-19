@@ -9,11 +9,11 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import YouTubeIcon from '@mui/icons-material/YouTube';
-import SvgMuiLogo from 'docs/src/icons/SvgMuiLogo';
-import EmailSubscribe from 'docs/src/components/footer/EmailSubscribe';
-import ROUTES from 'docs/src/route';
-import Link from 'docs/src/modules/components/Link';
-import SvgStackOverflow from 'docs/src/icons/SvgStackOverflow';
+import SvgMuiLogo from '@site/src/icons/SvgMuiLogo';
+import EmailSubscribe from '@site/src/components/footer/EmailSubscribe';
+import ROUTES from '@site/src/route';
+import Link from '@site/src/modules/components/Link';
+import SvgStackOverflow from '@site/src/icons/SvgStackOverflow';
 
 export default function AppFooter() {
   return (

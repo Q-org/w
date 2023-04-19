@@ -5,11 +5,11 @@ import Box from '@mui/material/Box';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
-import IconImage from 'docs/src/components/icon/IconImage';
-import Highlighter from 'docs/src/components/action/Highlighter';
-import Link from 'docs/src/modules/components/Link';
+import IconImage from '@site/src/components/icon/IconImage';
+import Highlighter from '@site/src/components/action/Highlighter';
+import Link from '@site/src/modules/components/Link';
 import KeyboardArrowRightRounded from '@mui/icons-material/KeyboardArrowRightRounded';
-import ROUTES from 'docs/src/route';
+import ROUTES from '@site/src/route';
 
 const SwipeableViews = dynamic(() => import('react-swipeable-views'), { ssr: false });
 

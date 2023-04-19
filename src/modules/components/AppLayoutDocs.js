@@ -5,15 +5,15 @@ import { styled } from '@mui/material/styles';
 import { exactProp } from '@mui/utils';
 import GlobalStyles from '@mui/material/GlobalStyles';
 import NoSsr from '@mui/material/NoSsr';
-import { pathnameToLanguage } from 'docs/src/modules/utils/helpers';
-import Head from 'docs/src/modules/components/Head';
-import AppFrame from 'docs/src/modules/components/AppFrame';
-import EditPage from 'docs/src/modules/components/EditPage';
-import AppContainer from 'docs/src/modules/components/AppContainer';
-import AppTableOfContents from 'docs/src/modules/components/AppTableOfContents';
-import AdManager from 'docs/src/modules/components/AdManager';
-import AppLayoutDocsFooter from 'docs/src/modules/components/AppLayoutDocsFooter';
-import BackToTop from 'docs/src/modules/components/BackToTop';
+import { pathnameToLanguage } from '@site/src/modules/utils/helpers';
+import Head from '@site/src/modules/components/Head';
+import AppFrame from '@site/src/modules/components/AppFrame';
+import EditPage from '@site/src/modules/components/EditPage';
+import AppContainer from '@site/src/modules/components/AppContainer';
+import AppTableOfContents from '@site/src/modules/components/AppTableOfContents';
+import AdManager from '@site/src/modules/components/AdManager';
+import AppLayoutDocsFooter from '@site/src/modules/components/AppLayoutDocsFooter';
+import BackToTop from '@site/src/modules/components/BackToTop';
 
 const Main = styled('main', {
   shouldForwardProp: (prop) => prop !== 'disableToc',
@@ -22,15 +22,15 @@ const Main = styled('main', {
   width: '100%',
   ...(disableToc
     ? {
-        [theme.breakpoints.up('lg')]: {
-          marginRight: '5%',
-        },
-      }
+      [theme.breakpoints.up('lg')]: {
+        marginRight: '5%',
+      },
+    }
     : {
-        [theme.breakpoints.up('md')]: {
-          gridTemplateColumns: '1fr 242px',
-        },
-      }),
+      [theme.breakpoints.up('md')]: {
+        gridTemplateColumns: '1fr 242px',
+      },
+    }),
   '& .markdown-body .comment-link': {
     display: 'inline-block',
   },

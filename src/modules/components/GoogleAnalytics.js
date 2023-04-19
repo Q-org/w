@@ -1,10 +1,10 @@
 import * as React from 'react';
-import loadScript from 'docs/src/modules/utils/loadScript';
+import loadScript from '@site/src/modules/utils/loadScript';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { useNoSsrCodeVariant } from 'docs/src/modules/utils/codeVariant';
-import { useUserLanguage } from 'docs/src/modules/utils/i18n';
-import { pathnameToLanguage } from 'docs/src/modules/utils/helpers';
+import { useNoSsrCodeVariant } from '@site/src/modules/utils/codeVariant';
+import { useUserLanguage } from '@site/src/modules/utils/i18n';
+import { pathnameToLanguage } from '@site/src/modules/utils/helpers';
 import { useRouter } from 'next/router';
 
 // So we can write code like:

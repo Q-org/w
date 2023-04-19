@@ -53,7 +53,7 @@ function TopBanner() {
           className={styles.topBannerTitleText}>
 
           <Translate id="homepage.banner.launch.2.0">
-            {'hallow会计综合实训\xa02.0 \xa0开课了!️'}
+            {'会计综合实训\xa02.0 \xa0开课了!️'}
           </Translate>
         </Link>
         {'\xa0🥳'}

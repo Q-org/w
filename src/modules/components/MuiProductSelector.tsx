@@ -4,10 +4,10 @@ import Box, { BoxProps } from '@mui/material/Box';
 import Chip from '@mui/material/Chip';
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
-import IconImage from 'docs/src/components/icon/IconImage';
-import ROUTES from 'docs/src/route';
-import Link from 'docs/src/modules/components/Link';
-import useRouterExtra from 'docs/src/modules/utils/useRouterExtra';
+import IconImage from '@site/src/components/icon/IconImage';
+import ROUTES from '@site/src/route';
+import Link from '@site/src/modules/components/Link';
+import useRouterExtra from '@site/src/modules/utils/useRouterExtra';
 
 interface ProductSubMenuProp extends BoxProps {
   icon: React.ReactNode;

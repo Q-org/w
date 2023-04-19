@@ -2,8 +2,8 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
-import { adShape } from 'docs/src/modules/components/AdManager';
-import { adStylesObject } from 'docs/src/modules/components/ad.styles';
+import { adShape } from '@site/src/modules/components/AdManager';
+import { adStylesObject } from '@site/src/modules/components/ad.styles';
 
 const Root = styled('span', { shouldForwardProp: (prop) => prop !== 'shape' })(
   ({ theme, shape }) => {
@@ -32,10 +32,10 @@ export default function AdDisplay(props) {
         rel="noopener sponsored"
         {...(ad.label
           ? {
-              'data-ga-event-category': 'ad',
-              'data-ga-event-action': 'click',
-              'data-ga-event-label': ad.label,
-            }
+            'data-ga-event-category': 'ad',
+            'data-ga-event-action': 'click',
+            'data-ga-event-label': ad.label,
+          }
           : {})}
       >
         <span className="AdDisplay-imageWrapper">

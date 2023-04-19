@@ -1,5 +1,5 @@
 import * as React from 'react';
-import useClipboardCopy from 'docs/src/modules/utils/useClipboardCopy';
+import useClipboardCopy from '@site/src/modules/utils/useClipboardCopy';
 
 interface CodeCopyButtonProps {
   code: string;

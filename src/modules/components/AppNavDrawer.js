@@ -14,15 +14,15 @@ import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Box from '@mui/material/Box';
 import { unstable_useEnhancedEffect as useEnhancedEffect } from '@mui/utils';
-import SvgMuiLogo from 'docs/src/icons/SvgMuiLogo';
-import DiamondSponsors from 'docs/src/modules/components/DiamondSponsors';
-import AppNavDrawerItem from 'docs/src/modules/components/AppNavDrawerItem';
-import { pathnameToLanguage, pageToTitleI18n } from 'docs/src/modules/utils/helpers';
-import PageContext from 'docs/src/modules/components/PageContext';
-import { useUserLanguage, useTranslate } from 'docs/src/modules/utils/i18n';
+import SvgMuiLogo from '@site/src/icons/SvgMuiLogo';
+import DiamondSponsors from '@site/src/modules/components/DiamondSponsors';
+import AppNavDrawerItem from '@site/src/modules/components/AppNavDrawerItem';
+import { pathnameToLanguage, pageToTitleI18n } from '@site/src/modules/utils/helpers';
+import PageContext from '@site/src/modules/components/PageContext';
+import { useUserLanguage, useTranslate } from '@site/src/modules/utils/i18n';
 import ArrowDropDownRoundedIcon from '@mui/icons-material/ArrowDropDownRounded';
 import DoneRounded from '@mui/icons-material/DoneRounded';
-import MuiProductSelector from 'docs/src/modules/components/MuiProductSelector';
+import MuiProductSelector from '@site/src/modules/components/MuiProductSelector';
 import materialPkgJson from '../../../../packages/mui-material/package.json';
 import joyPkgJson from '../../../../packages/mui-joy/package.json';
 import basePkgJson from '../../../../packages/mui-base/package.json';
@@ -209,7 +209,7 @@ function renderNavItems(options) {
 
 /**
  * @param {object} context
- * @param {import('docs/src/pages').MuiPage} context.page
+ * @param {import('@site/src/pages').MuiPage} context.page
  */
 function reduceChildRoutes(context) {
   const { onClose, activePageParents, items, depth, t } = context;
@@ -361,14 +361,14 @@ export default function AppNavDrawer(props) {
                   key={item.text}
                   {...(item.current
                     ? {
-                        selected: true,
-                        onClick: () => setAnchorEl(null),
-                      }
+                      selected: true,
+                      onClick: () => setAnchorEl(null),
+                    }
                     : {
-                        component: 'a',
-                        href: item.href,
-                        onClick: onClose,
-                      })}
+                      component: 'a',
+                      href: item.href,
+                      onClick: onClose,
+                    })}
                 >
                   {item.text} {item.current && <DoneRounded sx={{ fontSize: 16, ml: 0.25 }} />}
                 </MenuItem>
@@ -454,69 +454,69 @@ export default function AppNavDrawer(props) {
           )}
           {(canonicalAs.startsWith('/x/react-data-grid/') ||
             canonicalAs.startsWith('/x/api/data-grid/')) && (
-            <ProductIdentifier
-              name="Data Grid"
-              metadata="MUI X"
-              versionSelector={renderVersionSelector([
-                // DATA_GRID_VERSION is set from the X repo
-                {
-                  text: 'v6',
-                  ...(process.env.DATA_GRID_VERSION.startsWith('6')
-                    ? {
+              <ProductIdentifier
+                name="Data Grid"
+                metadata="MUI X"
+                versionSelector={renderVersionSelector([
+                  // DATA_GRID_VERSION is set from the X repo
+                  {
+                    text: 'v6',
+                    ...(process.env.DATA_GRID_VERSION.startsWith('6')
+                      ? {
                         text: `v${process.env.DATA_GRID_VERSION}`,
                         current: true,
                       }
-                    : {
+                      : {
                         href: `https://mui.com${languagePrefix}/components/data-grid/`,
                       }),
-                },
-                {
-                  text: 'v5',
-                  ...(process.env.DATA_GRID_VERSION.startsWith('5')
-                    ? {
+                  },
+                  {
+                    text: 'v5',
+                    ...(process.env.DATA_GRID_VERSION.startsWith('5')
+                      ? {
                         text: `v${process.env.DATA_GRID_VERSION}`,
                         current: true,
                       }
-                    : {
+                      : {
                         href: `https://v5.mui.com${languagePrefix}/components/data-grid/`,
                       }),
-                },
-                { text: 'v4', href: `https://v4.mui.com${languagePrefix}/components/data-grid/` },
-              ])}
-            />
-          )}
+                  },
+                  { text: 'v4', href: `https://v4.mui.com${languagePrefix}/components/data-grid/` },
+                ])}
+              />
+            )}
           {(canonicalAs.startsWith('/x/react-date-pickers/') ||
             canonicalAs.startsWith('/x/api/date-pickers/')) && (
-            <ProductIdentifier
-              name="Date pickers"
-              metadata="MUI X"
-              versionSelector={renderVersionSelector([
-                // DATE_PICKERS_VERSION is set from the X repo
-                {
-                  ...(process.env.DATE_PICKERS_VERSION.startsWith('6')
-                    ? {
+              <ProductIdentifier
+                name="Date pickers"
+                metadata="MUI X"
+                versionSelector={renderVersionSelector([
+                  // DATE_PICKERS_VERSION is set from the X repo
+                  {
+                    ...(process.env.DATE_PICKERS_VERSION.startsWith('6')
+                      ? {
                         text: `v${process.env.DATE_PICKERS_VERSION}`,
                         current: true,
                       }
-                    : {
+                      : {
                         text: `v6`,
                         href: `https://next.mui.com${languagePrefix}/components/data-grid/`,
                       }),
-                },
-                {
-                  ...(process.env.DATE_PICKERS_VERSION.startsWith('5')
-                    ? {
+                  },
+                  {
+                    ...(process.env.DATE_PICKERS_VERSION.startsWith('5')
+                      ? {
                         text: `v${process.env.DATE_PICKERS_VERSION}`,
                         current: true,
                       }
-                    : {
+                      : {
                         text: `v5`,
                         href: `https://v5.mui.com${languagePrefix}/components/data-grid/`,
                       }),
-                },
-              ])}
-            />
-          )}
+                  },
+                ])}
+              />
+            )}
           {canonicalAs.startsWith('/toolpad/') && (
             <ProductIdentifier name="Toolpad" metadata="MUI Toolpad" />
           )}

@@ -5,18 +5,18 @@ import GlobalStyles from '@mui/material/GlobalStyles';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Container from '@mui/material/Container';
-import SvgMuiLogo from 'docs/src/icons/SvgMuiLogo';
-import HeaderNavBar from 'docs/src/components/header/HeaderNavBar';
-import HeaderNavDropdown from 'docs/src/components/header/HeaderNavDropdown';
-import ThemeModeToggle from 'docs/src/components/header/ThemeModeToggle';
-import { useChangeTheme } from 'docs/src/modules/components/ThemeContext';
-import Link from 'docs/src/modules/components/Link';
-import { DeferredAppSearch } from 'docs/src/modules/components/AppFrame';
-import ROUTES from 'docs/src/route';
+import SvgMuiLogo from '@site/src/icons/SvgMuiLogo';
+import HeaderNavBar from '@site/src/components/header/HeaderNavBar';
+import HeaderNavDropdown from '@site/src/components/header/HeaderNavDropdown';
+import ThemeModeToggle from '@site/src/components/header/ThemeModeToggle';
+import { useChangeTheme } from '@site/src/modules/components/ThemeContext';
+import Link from '@site/src/modules/components/Link';
+import { DeferredAppSearch } from '@site/src/modules/components/AppFrame';
+import ROUTES from '@site/src/route';
 import Tooltip from '@mui/material/Tooltip';
 import IconButton from '@mui/material/IconButton';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import { useTranslate } from 'docs/src/modules/utils/i18n';
+import { useTranslate } from '@site/src/modules/utils/i18n';
 
 const Header = styled('header')(({ theme }) => [
   {

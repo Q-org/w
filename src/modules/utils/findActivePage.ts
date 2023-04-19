@@ -1,4 +1,4 @@
-import { MuiPage } from 'docs/src/pages';
+import { MuiPage } from '@site/src/pages';
 
 export default function findActivePage(
   currentPages: MuiPage[],

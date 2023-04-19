@@ -59,14 +59,14 @@ import Search from '@mui/icons-material/Search';
 import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
 import DarkMode from '@mui/icons-material/DarkMode';
 import LightMode from '@mui/icons-material/LightMode';
-import HighlightedCode from 'docs/src/modules/components/HighlightedCode';
-import BrandingProvider from 'docs/src/BrandingProvider';
-import codeSandbox from 'docs/src/modules/sandbox/CodeSandbox';
-import sourceJoyTemplates, { TemplateData } from 'docs/src/modules/joy/sourceJoyTemplates';
-import extractTemplates from 'docs/src/modules/utils/extractTemplates';
-import generateThemeAugmentation from 'docs/src/modules/joy/generateThemeAugmentation';
-import literalToObject from 'docs/src/modules/joy/literalToObject';
-import getMinimalJoyTemplate from 'docs/src/modules/joy/getMinimalJoyTemplate';
+import HighlightedCode from '@site/src/modules/components/HighlightedCode';
+import BrandingProvider from '@site/src/BrandingProvider';
+import codeSandbox from '@site/src/modules/sandbox/CodeSandbox';
+import sourceJoyTemplates, { TemplateData } from '@site/src/modules/joy/sourceJoyTemplates';
+import extractTemplates from '@site/src/modules/utils/extractTemplates';
+import generateThemeAugmentation from '@site/src/modules/joy/generateThemeAugmentation';
+import literalToObject from '@site/src/modules/joy/literalToObject';
+import getMinimalJoyTemplate from '@site/src/modules/joy/getMinimalJoyTemplate';
 
 const tailwindColors = {
   slate: {

@@ -3,14 +3,14 @@ import { DataGrid, GridCellParams, GridRenderEditCellParams, GridColDef } from '
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
-import ShowcaseContainer from 'docs/src/components/home/ShowcaseContainer';
-import HighlightedCode from 'docs/src/modules/components/HighlightedCode';
-import MarkdownElement from 'docs/src/components/markdown/MarkdownElement';
-import XGridGlobalStyles from 'docs/src/components/home/XGridGlobalStyles';
-import ProgressBar from 'docs/src/components/x-grid/ProgressBar';
-import EditProgress from 'docs/src/components/x-grid/EditProgress';
-import Status from 'docs/src/components/x-grid/Status';
-import EditStatus from 'docs/src/components/x-grid/EditStatus';
+import ShowcaseContainer from '@site/src/components/home/ShowcaseContainer';
+import HighlightedCode from '@site/src/modules/components/HighlightedCode';
+import MarkdownElement from '@site/src/components/markdown/MarkdownElement';
+import XGridGlobalStyles from '@site/src/components/home/XGridGlobalStyles';
+import ProgressBar from '@site/src/components/x-grid/ProgressBar';
+import EditProgress from '@site/src/components/x-grid/EditProgress';
+import Status from '@site/src/components/x-grid/Status';
+import EditStatus from '@site/src/components/x-grid/EditStatus';
 
 const columns: Array<GridColDef> = [
   {
@@ -1736,7 +1736,7 @@ export default function DataTable() {
           }}
         >
           <HighlightedCode
-            copyButtonHidden
+/*             copyButtonHidden */
             component={MarkdownElement}
             code={code}
             language="jsx"

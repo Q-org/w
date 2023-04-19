@@ -16,8 +16,8 @@ import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import SettingsBrightnessIcon from '@mui/icons-material/SettingsBrightness';
 import FormatTextdirectionLToRIcon from '@mui/icons-material/FormatTextdirectionLToR';
 import FormatTextdirectionRToLIcon from '@mui/icons-material/FormatTextdirectionRToL';
-import { useChangeTheme } from 'docs/src/modules/components/ThemeContext';
-import { useTranslate } from 'docs/src/modules/utils/i18n';
+import { useChangeTheme } from '@site/src/modules/components/ThemeContext';
+import { useTranslate } from '@site/src/modules/utils/i18n';
 
 const Heading = styled(Typography)(({ theme }) => ({
   margin: '20px 0 10px',
@@ -184,11 +184,10 @@ function AppSettingsDrawer(props) {
             mx: 0,
             py: 1,
             fontWeight: 500,
-            border: `1px solid  ${
-              theme.palette.mode === 'dark'
+            border: `1px solid  ${theme.palette.mode === 'dark'
                 ? theme.palette.primaryDark[700]
                 : theme.palette.grey[200]
-            }`,
+              }`,
             color:
               theme.palette.mode === 'dark'
                 ? theme.palette.primary[300]

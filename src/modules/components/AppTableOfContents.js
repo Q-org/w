@@ -5,10 +5,10 @@ import throttle from 'lodash/throttle';
 import { styled, alpha } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import NoSsr from '@mui/material/NoSsr';
-import Link from 'docs/src/modules/components/Link';
-import { useTranslate } from 'docs/src/modules/utils/i18n';
-import { shoudHandleLinkClick } from 'docs/src/modules/components/MarkdownLinks';
-import TableOfContentsBanner from 'docs/src/components/banner/TableOfContentsBanner';
+import Link from '@site/src/modules/components/Link';
+import { useTranslate } from '@site/src/modules/utils/i18n';
+import { shoudHandleLinkClick } from '@site/src/modules/components/MarkdownLinks';
+import TableOfContentsBanner from '@site/src/components/banner/TableOfContentsBanner';
 
 const Nav = styled('nav')(({ theme }) => ({
   top: 0,
@@ -95,7 +95,7 @@ const NavItem = styled(Link, {
   ];
 });
 
-const noop = () => {};
+const noop = () => { };
 
 function useThrottledOnScroll(callback, delay) {
   const throttledCallback = React.useMemo(
@@ -177,7 +177,7 @@ export default function AppTableOfContents(props) {
       if (
         node &&
         node.offsetTop <
-          document.documentElement.scrollTop + document.documentElement.clientHeight / 8
+        document.documentElement.scrollTop + document.documentElement.clientHeight / 8
       ) {
         active = item;
         break;

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import Portal from '@mui/material/Portal';
-import { AdContext } from 'docs/src/modules/components/AdManager';
+import { AdContext } from '@site/src/modules/components/AdManager';
 
 export default function AdGuest(props) {
   const ad = React.useContext(AdContext);

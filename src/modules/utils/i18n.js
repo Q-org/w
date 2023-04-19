@@ -26,12 +26,14 @@ function getPath(obj, path) {
   return path.split('.').reduce((acc, item) => (acc && acc[item] ? acc[item] : null), obj);
 }
 
-const UserLanguageContext = React.createContext({ userLanguage: '', setUserLanguage: () => { } });
+const UserLanguageContext = React.createContext({ userLanguage: 'zh', setUserLanguage: () => { } });
 if (process.env.NODE_ENV !== 'production') {
+
   UserLanguageContext.displayName = 'UserLanguage';
 }
 
 export function UserLanguageProvider(props) {
+
   const { children, defaultUserLanguage } = props;
 
   const [userLanguage, setUserLanguage] = React.useState(defaultUserLanguage);

@@ -1,11 +1,11 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import { getCookie } from 'docs/src/modules/utils/helpers';
-import { CODE_VARIANTS } from 'docs/src/modules/constants';
+import { getCookie } from '@site/src/modules/utils/helpers';
+import { CODE_VARIANTS } from '@site/src/modules/constants';
 
 const CodeVariantContext = React.createContext({
   codeVariant: CODE_VARIANTS.TS,
-  setCodeVariant: () => {},
+  setCodeVariant: () => { },
 });
 if (process.env.NODE_ENV !== 'production') {
   CodeVariantContext.displayName = 'CodeVariant';

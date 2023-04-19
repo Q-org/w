@@ -106,19 +106,21 @@ const config = {
   themes: [
     // ... Your other themes.
     // "@docusaurus-theme-frontmatter",
-    // "@docusaurus/theme-live-codeblock",
-    // '@docusaurus/theme-search-algolia',
+
     // [
     //   require.resolve("@easyops-cn/docusaurus-search-local"),
-    //   {
+    //   /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
+    //   ({
     //     // ... Your options.
     //     // `hashed` is recommended as long-term-cache of index file is possible.
     //     hashed: true,
     //     // For Docs using Chinese, The `language` is recommended to set to:
     //     // ```
-    //     language: ["zh"],
+    //     language: ["en", "zh"],
     //     // ```
-    //   },
+    //     indexPages: true,
+
+    //   }),
     // ],
   ],
   presets: [
@@ -219,7 +221,7 @@ const config = {
           },
 
           { label: '操作指南', type: 'docSidebar', sidebarId: 'manu', position: 'left', className: 'signup dev-portal-link', },
-          { label: 'test', to: '/test/test', position: 'left', className: 'login', },
+          // { label: 'test', to: '/test/test', position: 'left', className: 'login', },
           {
             label: '登录', to: '/sign/SignIn', position: 'right',
             className: 'login',
@@ -233,18 +235,23 @@ const config = {
         ],
       },
       algolia: {
+
+        // appId: 'R2IYF7ETH7',
+        // apiKey: '599cec31baffa4868cae4e79f180729b',
+        // indexName: 'docsearch',
         // Algolia 提供的应用 ID
         appId: 'KQGPNV3L6O',
-        //  公开 API 密钥：提交它没有危险
+        // //  公开 API 密钥：提交它没有危险
         apiKey: '693aabdd4be4a258e8d0af3f94d49cba',
         indexName: 'qorgsearch',
         // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
-        // replaceSearchResultPathname: {
-        //   from: /^\/docs\/next/g,
-        //   to: '/docs',
-        // },
-
+        replaceSearchResultPathname: {
+          from: 'docs',
+          to: '/',
+        },
       },
+
+
       footer: {
         style: 'dark',
         links: [
@@ -335,6 +342,18 @@ const config = {
                 label: '饼干规则',
                 href: 'https://opensource.facebook.com/legal/cookie-policy/',
               },
+              {
+                label: '蜀ICP备2023006146号-1',
+                href: 'https://beian.miit.gov.cn/',
+              },
+              // if (document.querySelector(`li:has(a[href='https://beian.miit.gov.cn/'])`)) {
+              //   const handlee = () => {
+              //     if (document.querySelector(`li:has(a[href='https://beian.miit.gov.cn/'])`)) {
+              //       document.querySelector(`li:has(a[href='https://beian.miit.gov.cn/'])`).style.display = 'none'
+              //     }
+              //   }
+              //   setTimeout(handlee, 300)
+              // }
             ],
           },
         ],
@@ -357,6 +376,7 @@ const config = {
     // "docusaurus-plugin-less",
     '@docusaurus/plugin-ideal-image',
     require.resolve("docusaurus-plugin-image-zoom"),
+
     "@graphql-markdown/docusaurus",
     'docusaurus-plugin-sass',
     async function myPlugin(context, options) {

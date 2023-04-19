@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import Alert from '@mui/material/Alert';
 import { alpha, styled } from '@mui/material/styles';
-import { useTranslate } from 'docs/src/modules/utils/i18n';
+import { useTranslate } from '@site/src/modules/utils/i18n';
 
 const Asterisk = styled('abbr')(({ theme }) => ({ color: theme.palette.error.main }));
 

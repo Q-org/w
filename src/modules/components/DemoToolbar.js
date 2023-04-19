@@ -18,10 +18,10 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 import Tooltip from '@mui/material/Tooltip';
 import RefreshRoundedIcon from '@mui/icons-material/RefreshRounded';
 import ResetFocusIcon from '@mui/icons-material/CenterFocusWeak';
-import { getCookie } from 'docs/src/modules/utils/helpers';
-import { CODE_VARIANTS } from 'docs/src/modules/constants';
-import { useSetCodeVariant } from 'docs/src/modules/utils/codeVariant';
-import { useTranslate } from 'docs/src/modules/utils/i18n';
+import { getCookie } from '@site/src/modules/utils/helpers';
+import { CODE_VARIANTS } from '@site/src/modules/constants';
+import { useSetCodeVariant } from '@site/src/modules/utils/codeVariant';
+import { useTranslate } from '@site/src/modules/utils/i18n';
 import { useRouter } from 'next/router';
 import codeSandbox from '../sandbox/CodeSandbox';
 import stackBlitz from '../sandbox/StackBlitz';
@@ -137,7 +137,7 @@ function useToolbar(controlRefs, options = {}) {
       if (process.env.NODE_ENV !== 'production') {
         console.error(
           'MUI: The toolbar contains a focusable element that is not controlled by the toolbar. ' +
-            'Make sure you have attached `getControlProps(index)` to every focusable element within this toolbar.',
+          'Make sure you have attached `getControlProps(index)` to every focusable element within this toolbar.',
         );
       }
     }
@@ -149,7 +149,7 @@ function useToolbar(controlRefs, options = {}) {
       if (findControlIndex(event.target) === -1) {
         console.error(
           'MUI: The toolbar contains a focusable element that is not controlled by the toolbar. ' +
-            'Make sure you have attached `getControlProps(index)` to every focusable element within this toolbar.',
+          'Make sure you have attached `getControlProps(index)` to every focusable element within this toolbar.',
         );
       }
     };

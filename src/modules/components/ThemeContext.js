@@ -5,14 +5,14 @@ import { deepmerge } from '@mui/utils';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { enUS, zhCN, ptBR } from '@mui/material/locale';
 import { unstable_useEnhancedEffect as useEnhancedEffect } from '@mui/material/utils';
-import { getCookie } from 'docs/src/modules/utils/helpers';
-import useLazyCSS from 'docs/src/modules/utils/useLazyCSS';
-import { useUserLanguage } from 'docs/src/modules/utils/i18n';
+import { getCookie } from '@site/src/modules/utils/helpers';
+import useLazyCSS from '@site/src/modules/utils/useLazyCSS';
+import { useUserLanguage } from '@site/src/modules/utils/i18n';
 import {
   getDesignTokens,
   getThemedComponents,
   getMetaThemeColor,
-} from 'docs/src/modules/brandingTheme';
+} from '@site/src/modules/brandingTheme';
 
 const languageMap = {
   en: enUS,

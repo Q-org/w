@@ -9,23 +9,23 @@ import AppBar from '@mui/material/AppBar';
 import Stack from '@mui/material/Stack';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
-import SvgHamburgerMenu from 'docs/src/icons/SvgHamburgerMenu';
+import SvgHamburgerMenu from '@site/src/icons/SvgHamburgerMenu';
 import Tooltip from '@mui/material/Tooltip';
 import Box from '@mui/material/Box';
 import SettingsIcon from '@mui/icons-material/SettingsOutlined';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import NProgressBar from '@mui/docs/NProgressBar';
-import AppNavDrawer from 'docs/src/modules/components/AppNavDrawer';
-import AppSettingsDrawer from 'docs/src/modules/components/AppSettingsDrawer';
-import Notifications from 'docs/src/modules/components/Notifications';
-import MarkdownLinks from 'docs/src/modules/components/MarkdownLinks';
-import SkipLink from 'docs/src/modules/components/SkipLink';
-import PageContext from 'docs/src/modules/components/PageContext';
-import { useTranslate } from 'docs/src/modules/utils/i18n';
+import AppNavDrawer from '@site/src/modules/components/AppNavDrawer';
+import AppSettingsDrawer from '@site/src/modules/components/AppSettingsDrawer';
+import Notifications from '@site/src/modules/components/Notifications';
+import MarkdownLinks from '@site/src/modules/components/MarkdownLinks';
+import SkipLink from '@site/src/modules/components/SkipLink';
+import PageContext from '@site/src/modules/components/PageContext';
+import { useTranslate } from '@site/src/modules/utils/i18n';
 import { debounce } from '@mui/material/utils';
 import NextLink from 'next/link';
-import SvgMuiLogo from 'docs/src/icons/SvgMuiLogo';
-import AppFrameBanner from 'docs/src/components/banner/AppFrameBanner';
+import SvgMuiLogo from '@site/src/icons/SvgMuiLogo';
+import AppFrameBanner from '@site/src/components/banner/AppFrameBanner';
 
 const nProgressStart = debounce(() => {
   NProgress.start();
@@ -64,7 +64,7 @@ export function NextNProgressBar() {
   return <NProgressBar />;
 }
 
-const AppSearch = React.lazy(() => import('docs/src/modules/components/AppSearch'));
+const AppSearch = React.lazy(() => import('@site/src/modules/components/AppSearch'));
 export function DeferredAppSearch() {
   const [mounted, setMounted] = React.useState(false);
   React.useEffect(() => {

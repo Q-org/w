@@ -499,5 +499,41 @@
   },
   "homepage.banner.launch.2.0": {
     "message": "会计综合实训 2.0  开课了!️"
+  },
+  "Props": {
+    "message": "属性"
+  },
+  "Zoom": {
+    "message": "缩放"
+  },
+  "Show grid": {
+    "message": "Show grid"
+  },
+  "Border radius": {
+    "message": "Border radius"
+  },
+  "Avatar Width": {
+    "message": "Avatar宽"
+  },
+  "Avatar Height": {
+    "message": "Avatar高"
+  },
+  "Rotate": {
+    "message": "旋转"
+  },
+  "Disable Canvas Rotation": {
+    "message": "禁止画布旋转"
+  },
+  "Rotation": {
+    "message": "旋转"
+  },
+  "Transparent image": {
+    "message": "透明"
+  },
+  "Background color": {
+    "message": "背景色"
+  },
+  "Preview": {
+    "message": "预览"
   }
 }

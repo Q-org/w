@@ -11,11 +11,9 @@ import ModeSwitcher from '../components/MuiTheme';
 import { CookieConsentProvider } from '@use-cookie-consent/react'
 // 默认实现，你可以自定义
 import { GPRMProvider } from "../components/mobx/GPRMcontext";
+//import useIsBrowser from '@docusaurus/useIsBrowser';
 
 const CookieBanner = () => {
-    /*     const { acceptAllCookies, declineAllCookies, acceptCookies } =
-            CookieConsentProvider.useCookieConsentContext(); */
-
     return (
         <div>
             <button onClick={'acceptAllCookies'}>Accept all</button>

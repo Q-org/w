@@ -5,8 +5,8 @@ import KeyboardArrowRightRoundedIcon from '@mui/icons-material/KeyboardArrowRigh
 import { alpha, styled } from '@mui/material/styles';
 import Collapse from '@mui/material/Collapse';
 import Chip from '@mui/material/Chip';
-import { shoudHandleLinkClick } from 'docs/src/modules/components/MarkdownLinks';
-import Link from 'docs/src/modules/components/Link';
+import { shoudHandleLinkClick } from '@site/src/modules/components/MarkdownLinks';
+import Link from '@site/src/modules/components/Link';
 import ArticleRoundedIcon from '@mui/icons-material/ArticleRounded';
 import ToggleOffRoundedIcon from '@mui/icons-material/ToggleOffRounded';
 import CodeRoundedIcon from '@mui/icons-material/CodeRounded';
@@ -91,9 +91,9 @@ const Item = styled(
           backgroundColor: theme.vars
             ? `rgba(${theme.vars.palette.primary.mainChannel} / calc(${theme.vars.palette.action.selectedOpacity} + ${theme.vars.palette.action.hoverOpacity}))`
             : alpha(
-                theme.palette.primary.main,
-                theme.palette.action.selectedOpacity + theme.palette.action.hoverOpacity,
-              ),
+              theme.palette.primary.main,
+              theme.palette.action.selectedOpacity + theme.palette.action.hoverOpacity,
+            ),
           '@media (hover: none)': {
             backgroundColor: theme.vars
               ? `rgba(${theme.vars.palette.primary.mainChannel} / ${theme.vars.palette.action.selectedOpacity})`
@@ -104,9 +104,9 @@ const Item = styled(
           backgroundColor: theme.vars
             ? `rgba(${theme.vars.palette.primary.mainChannel} / calc(${theme.vars.palette.action.selectedOpacity} + ${theme.vars.palette.action.focusOpacity}))`
             : alpha(
-                theme.palette.primary.main,
-                theme.palette.action.selectedOpacity + theme.palette.action.focusOpacity,
-              ),
+              theme.palette.primary.main,
+              theme.palette.action.selectedOpacity + theme.palette.action.focusOpacity,
+            ),
         },
       },
       '& .MuiChip-root': {

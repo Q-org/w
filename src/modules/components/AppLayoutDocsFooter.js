@@ -17,10 +17,10 @@ import ThumbDownIcon from '@mui/icons-material/ThumbDownAlt';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import Snackbar from '@mui/material/Snackbar';
-import { getCookie, pageToTitleI18n } from 'docs/src/modules/utils/helpers';
-import PageContext from 'docs/src/modules/components/PageContext';
-import Link from 'docs/src/modules/components/Link';
-import { useUserLanguage, useTranslate } from 'docs/src/modules/utils/i18n';
+import { getCookie, pageToTitleI18n } from '@site/src/modules/utils/helpers';
+import PageContext from '@site/src/modules/components/PageContext';
+import Link from '@site/src/modules/components/Link';
+import { useUserLanguage, useTranslate } from '@site/src/modules/utils/i18n';
 
 const PaginationDiv = styled('div')(({ theme }) => {
   return {
@@ -50,8 +50,8 @@ const FeedbackGrid = styled(Grid)(({ theme }) => {
 });
 
 /**
- * @typedef {import('docs/src/pages').MuiPage} MuiPage
- * @typedef {import('docs/src/pages').OrderedMuiPage} OrderedMuiPage
+ * @typedef {import('@site/src/pages').MuiPage} MuiPage
+ * @typedef {import('@site/src/pages').OrderedMuiPage} OrderedMuiPage
  */
 
 /**

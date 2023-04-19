@@ -3,14 +3,14 @@ import { ThemeProvider, createTheme, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Button, { buttonClasses } from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import HighlightedCode from 'docs/src/modules/components/HighlightedCode';
-import MarkdownElement from 'docs/src/components/markdown/MarkdownElement';
-import MaterialDesignDemo, { componentCode } from 'docs/src/components/home/MaterialDesignDemo';
-import ShowcaseContainer from 'docs/src/components/home/ShowcaseContainer';
-import PointerContainer, { Data } from 'docs/src/components/home/ElementPointer';
+import HighlightedCode from '@site/src/modules/components/HighlightedCode';
+import MarkdownElement from '@site/src/components/markdown/MarkdownElement';
+import MaterialDesignDemo, { componentCode } from '@site/src/components/home/MaterialDesignDemo';
+import ShowcaseContainer from '@site/src/components/home/ShowcaseContainer';
+import PointerContainer, { Data } from '@site/src/components/home/ElementPointer';
 import TouchAppRounded from '@mui/icons-material/TouchAppRounded';
-import StylingInfo from 'docs/src/components/action/StylingInfo';
-import FlashCode from 'docs/src/components/animation/FlashCode';
+import StylingInfo from '@site/src/components/action/StylingInfo';
+import FlashCode from '@site/src/components/animation/FlashCode';
 
 const lineMapping: Record<string, number | number[]> = {
   avatar: 2,

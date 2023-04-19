@@ -1,7 +1,7 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import Button from '@mui/material/Button';
-import { useUserLanguage, useTranslate } from 'docs/src/modules/utils/i18n';
+import { useUserLanguage, useTranslate } from '@site/src/modules/utils/i18n';
 import EditRoundedIcon from '@mui/icons-material/EditRounded';
 
 export default function EditPage(props) {
@@ -20,9 +20,9 @@ export default function EditPage(props) {
         userLanguage === 'en'
           ? `${process.env.SOURCE_CODE_ROOT_URL}${markdownLocation}`
           : `${CROWDIN_ROOT_URL}${crowdInLocale}#/${process.env.SOURCE_CODE_ROOT_URL.replace(
-              'https://github.com/mui/',
-              '',
-            ).replace('/blob/', '%20%2F%20')}${crowdInPath}`
+            'https://github.com/mui/',
+            '',
+          ).replace('/blob/', '%20%2F%20')}${crowdInPath}`
       }
       target="_blank"
       rel="noopener nofollow"

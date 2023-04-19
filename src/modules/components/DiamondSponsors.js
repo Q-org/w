@@ -3,9 +3,9 @@ import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import { styled, alpha } from '@mui/material/styles';
-import { useTranslate } from 'docs/src/modules/utils/i18n';
+import { useTranslate } from '@site/src/modules/utils/i18n';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
-// import Link from 'docs/src/modules/components/Link';
+// import Link from '@site/src/modules/components/Link';
 
 const Root = styled('div')(({ theme }) => ({
   margin: theme.spacing(1, 2),

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { pathnameToLanguage } from 'docs/src/modules/utils/helpers';
+import { pathnameToLanguage } from '@site/src/modules/utils/helpers';
 import * as ReactDOMServer from 'react-dom/server';
 import PropTypes from 'prop-types';
 import NextLink from 'next/link';
@@ -15,11 +15,11 @@ import KeyboardArrowRightRounded from '@mui/icons-material/KeyboardArrowRightRou
 import SearchIcon from '@mui/icons-material/Search';
 import GlobalStyles from '@mui/material/GlobalStyles';
 import { alpha, styled } from '@mui/material/styles';
-import { LANGUAGES_SSR } from 'config';
-import Link from 'docs/src/modules/components/Link';
-import { useTranslate, useUserLanguage } from 'docs/src/modules/utils/i18n';
-import useLazyCSS from 'docs/src/modules/utils/useLazyCSS';
-import getUrlProduct from 'docs/src/modules/utils/getUrlProduct';
+import { LANGUAGES_SSR } from '/config';
+import Link from '@site/src/modules/components/Link';
+import { useTranslate, useUserLanguage } from '@site/src/modules/utils/i18n';
+import useLazyCSS from '@site/src/modules/utils/useLazyCSS';
+import getUrlProduct from '@site/src/modules/utils/getUrlProduct';
 
 const SearchButton = styled('button')(({ theme }) => [
   {
@@ -213,7 +213,7 @@ export default function AppSearch() {
   const [isOpen, setIsOpen] = React.useState(false);
   const [initialQuery, setInitialQuery] = React.useState(undefined);
   const facetFilterLanguage =
-    LANGUAGES_SSR.indexOf(userLanguage) !== -1 ? `language:${userLanguage}` : `language:en`;
+    LANGUAGES_SSR.indexOf(userLanguage) !== -1 ? `language:en` : `language:en`;
   const macOS = window.navigator.platform.toUpperCase().indexOf('MAC') >= 0;
   const onOpen = React.useCallback(() => {
     setIsOpen(true);
