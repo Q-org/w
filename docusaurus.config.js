@@ -67,7 +67,8 @@ const isBranchDeploy =
 const config = {
   title: '微课程',
   tagline: '微课程很酷',
-  url: 'https://www.qio.wiki',
+  //url: 0 ? 'https://www.qio.wiki' : 'https://zingy-tiramisu-028c02.netlify.app/',
+  url: 'https://zingy-tiramisu-028c02.netlify.app/',
   baseUrl: '/',
   stylesheets: [
     {
