@@ -67,7 +67,7 @@ const isBranchDeploy =
 const config = {
   title: '微课程',
   tagline: '微课程很酷',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://www.qio.wiki',
   baseUrl: '/',
   stylesheets: [
     {
@@ -245,10 +245,19 @@ const config = {
         apiKey: '693aabdd4be4a258e8d0af3f94d49cba',
         indexName: 'qorgsearch',
         // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
+        contextualSearch: true,
+        externalUrlRegex: '(www.)?qio(\\.wiki)?',
         replaceSearchResultPathname: {
           from: 'docs',
           to: '/',
         },
+        // Optional: Algolia search parameters
+        searchParameters: {},
+
+        // Optional: path for search page that enabled by default (`false` to disable it)
+        searchPagePath: 'search',
+
+        //... other Algolia params
       },
 
 
