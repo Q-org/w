@@ -49,7 +49,7 @@ function TopBanner() {
       <div className={styles.topBannerTitle}>
         {'🎉\xa0'}
         <Link
-          to='/productes'
+          onClick={() => location.href = location.href + '/jc'}
           className={styles.topBannerTitleText}>
 
           <Translate id="homepage.banner.launch.2.0">
