@@ -123,13 +123,14 @@ export default function Notifications() {
         const filteredNotifications = [
           {
             id: 0,
-            title: "Let's translate!",
-            text: '<a style="color: inherit;" target="_blank" rel="noopener" data-ga-event-category="l10n" data-ga-event-action="notification" data-ga-event-label="zh" href="https://translate.mui.com/">帮助 MUI 将文档翻译成中文</a>. 🇨🇳',
+            title: "分享",
+            text: '<a style="color: inherit;" target="_blank" rel="noopener" data-ga-event-category="l10n" data-ga-event-action="notification" data-ga-event-label="zh" href="https://translate.mui.com/">帮助 微微分享</a>. 🇨🇳',
             userLanguage: 'zh',
           },
           {
             id: 1,
-            text: 'You can <a style="color: inherit;" target="_blank" rel="noopener" href="https://twitter.com/MUI_hq">follow us on Twitter</a> or subscribe on <a style="color: inherit;" target="_blank" rel="noopener" href="/blog/">our blog</a> to receive exclusive tips and updates about MUI and the React ecosystem.',
+            title: "关注",
+            text: '您可以 <a style="color: inherit;" target="_blank" rel="noopener" href="https://twitter.com/MUI_hq">follow us on Twitter</a> or subscribe on <a style="color: inherit;" target="_blank" rel="noopener" href="/blog/">our blog</a> to receive exclusive tips and updates about MUI and the React ecosystem.',
           },
           // Only 2
           ...notifications.splice(-2),
