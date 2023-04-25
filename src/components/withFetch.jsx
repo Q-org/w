@@ -2,7 +2,7 @@ import React from 'react'
 
 const withFetch = (Component, url) => {
 
-    console.log(url)
+    // console.log(url)
     return class withFetchC extends Component {
         state = {
             data: []

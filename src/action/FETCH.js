@@ -4,7 +4,7 @@
 
 export default async function FETCH(data) {
   try {
-    console.log('data', data)
+    // console.log('data', data)
 
     let isFormData = /FormData/.test(data.toString())
 
@@ -13,7 +13,7 @@ export default async function FETCH(data) {
     if (!data0.action && !data0.url) {
       return null
     }
-    //console.log('______________')
+    // console.log('______________')
 
     let { url, headers, param0, method, cache, param } = await actions[
       data0.action ? data0.action
@@ -26,11 +26,11 @@ export default async function FETCH(data) {
       Authorization: "Bearer " + sessionStorage.getItem('access_token'),
       ...headers
     }
-    console.log(headers)
+    // console.log(headers)
     method = method ? method : 'GET'
     cache = cache ? { cache } : null
 
-    //console.log('res')
+    // console.log('res')
 
     let res = await fetch(url, {
       headers,
@@ -54,7 +54,7 @@ export default async function FETCH(data) {
 
 
     if (/登陆/.test(data0.action)) {
-      //console.log(res, param0)
+      // console.log(res, param0)
       res = [res, param0]
     }
 
@@ -97,7 +97,7 @@ const actions = {
 
     const data0 = { 'sysUserVo.userName': userId, 'sysUserVo.userPassword': password, action }
 
-    //console.log(await bcrypt.hash(data.password, saltOrRounds));
+    // (await bcrypt.hash(data.password, saltOrRounds));
 
 
     return {

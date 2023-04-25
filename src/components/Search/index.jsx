@@ -18,22 +18,22 @@ export default class Search extends Component {
     search = async () => {
 
         const { keyKey: { value } } = this
-ff()
+        ff()
         this.setState({ loading: true })
-        //console.log('修改', this.state)
+        // console.log('修改', this.state)
         if (!value) return
 
         let url = `https://api.github.com/search/users?q=${value}`
         const res = await fetch(url)
         let data = await res.json()
 
-       // console.log(data)
+        // console.log(data)
         PubSub.publish('MY TOPIC', data);
     }
 
     render() {
         const { loading } = this.state
-        console.log(loading, 'loading')
+        // console.log(loading, 'loading')
         return (
             <Box
                 component="form"

@@ -18,7 +18,7 @@ import { GoogleLogin } from 'react-google-login';
 
 import { Email, Password, LastName, FirstName, UserId, Copyright } from './fileds';
 const responseGoogle = (response) => {
-  console.log(response);
+  // console.log(response);
 }
 
 
@@ -57,14 +57,14 @@ function SignIn() {
 
 
     if (!res.ok) {
-      console.log('登陆失败', res)
+      // console.log('登陆失败', res)
 
       setError(true)
       setMessage(httpeception[res.status]())
       return null
 
     }
-    console.log('___', res.json())
+    // console.log('___', res.json())
     return null
     let token = await res.json()
 
@@ -72,13 +72,13 @@ function SignIn() {
 
 
 
-    //console.log('______99999____', token)
+    // console.log('______99999____', token)
     sessionStorage.setItem('oldtoken', sessionStorage.getItem('access_token'))
     Object.keys(token).map(k => sessionStorage.setItem(k, token[k]))
 
 
-    //let data0 = await ress.json()
-    console.log(param)
+    // let data0 = await ress.json()
+    // console.log(param)
     post('/jc/login.action', param)
 
   };
@@ -245,7 +245,7 @@ import FacebookLogin from 'react-facebook-login';
 
 
 const responseFacebook = (response) => {
-  console.log(response);
+  // console.log(response);
 }
 const facebookLogin = () => {
   return (<>

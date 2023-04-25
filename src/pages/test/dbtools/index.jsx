@@ -39,8 +39,8 @@ export default (dbtools) => {
                         <code></code>
                         <BrowserOnly>
                             {() => {
-                                /*                                 console.log(dbtools.dbtools)
-                                                                console.log(dbtools) */
+/*                                 console.log(dbtools.dbtools)
+                                console.log(dbtools) */
 
                                 return (
                                     <span>

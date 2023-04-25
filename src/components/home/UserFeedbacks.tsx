@@ -114,7 +114,7 @@ const TESTIMONIALS = [
 
 export default function UserFeedbacks() {
   const [slideIndex, setSlideIndex] = React.useState(0);
-  console.log('theme.palette.primaryDark')
+// console.log('theme.palette.primaryDark')
   return (
     <Box sx={{ maxWidth: { md: 500 } }}>
       <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 2 }}>

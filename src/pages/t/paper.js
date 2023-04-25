@@ -31,7 +31,7 @@ export default function Productes() {
   tweets.filter((tweet) => tweet).forEach((tweet, i) =>
     tweetColumns[i % 3].push(tweet),
   );
-  console.log(tweetColumns)
+  // console.log(tweetColumns)
 
   return (
     <div className={clsx(styles.section, styles.sectionAlt)}>
@@ -43,7 +43,7 @@ export default function Productes() {
           {tweetColumns.map((tweetItems, i) => (
             <div className="col col--4" key={i}>
               {tweetItems.map((tweet) => {
-                //console.log(tweet)
+                // console.log(tweet)
 
                 return <RecipeReviewCard {...tweet} />
               })}

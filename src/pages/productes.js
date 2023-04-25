@@ -23,12 +23,12 @@ export default function Productes() {
 
       if (!(res && res.ok)) return null
 
-      //   if (1) return console.log(res)
+      //  if (1) return console.log(res)
       let result = await res.json()
 
       setTweets(JSON.parse(result))
     } catch (e) {
-      console.log(e)
+      // console.log(e)
       throw 'productes\n' + e
     }
 
@@ -53,7 +53,7 @@ export default function Productes() {
           {tweetColumns.map((tweetItems, i) => (
             <div className="col col--4" key={i}>
               {tweetItems.map((tweet) => {
-                //  console.log(tweet)
+                // console.log(tweet)
 
                 return <Producte {...tweet} />
               })}

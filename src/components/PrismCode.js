@@ -8,7 +8,7 @@ const expcode = `
 w\src\pages\test\prismreactrenderer.js
 (function someDemo() {
   var test = "Hello World!";
-  console.log(test);
+  /*console.log(test);*/
 })();
 return () => <App />;
 `;

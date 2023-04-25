@@ -2,6 +2,7 @@
   "name": "w",
   "version": "1.0.5",
   "private": true,
+  "packageManager": "yarn@3.4.1",
   "scripts": {
     "docusaurus": "docusaurus",
     "w": "docusaurus start --port 83 --host 0.0.0.0 --locale zh-CN",

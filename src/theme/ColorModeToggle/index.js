@@ -1,17 +1,13 @@
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
 import React from 'react';
-
 import clsx from 'clsx';
 import useIsBrowser from '@docusaurus/useIsBrowser';
-import {translate} from '@docusaurus/Translate';
+import { translate } from '@docusaurus/Translate';
 import IconLightMode from '@theme/Icon/LightMode';
 import IconDarkMode from '@theme/Icon/DarkMode';
 import styles from './styles.module.css';
+
+import { useEffect } from 'react';
+import PubSub from 'pubsub-js'
 
 function ColorModeToggle({ className, buttonClassName, value, onChange }) {
   const isBrowser = useIsBrowser();
@@ -25,18 +21,20 @@ function ColorModeToggle({ className, buttonClassName, value, onChange }) {
       mode:
         value === 'dark'
           ? translate({
-              message: 'dark mode',
-              id: 'theme.colorToggle.ariaLabel.mode.dark',
-              description: 'The name for the dark color mode',
-            })
+            message: 'dark mode',
+            id: 'theme.colorToggle.ariaLabel.mode.dark',
+            description: 'The name for the dark color mode',
+          })
           : translate({
-              message: 'light mode',
-              id: 'theme.colorToggle.ariaLabel.mode.light',
-              description: 'The name for the light color mode',
-            }),
+            message: 'light mode',
+            id: 'theme.colorToggle.ariaLabel.mode.light',
+            description: 'The name for the light color mode',
+          }),
     },
   );
-
+  useEffect(() => { // console.log('模式变更了lele',value)
+    PubSub.publish('模式变更了', value);
+  }, [value])
   return (
     <div className={clsx(styles.toggle, className)}>
       <button

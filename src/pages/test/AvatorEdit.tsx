@@ -131,7 +131,7 @@ export default class App extends React.Component<{}, State> {
   }
 
   logCallback(e: any) {
-    console.log('callback', e)
+// console.log('callback', e)
   }
 
   handlePositionChange = (position: Position) => {

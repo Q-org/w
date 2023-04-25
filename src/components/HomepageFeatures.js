@@ -161,7 +161,7 @@ export function TweetsSection({ props }) {
 
 
 export function QuotesSection({ props }) {
-  console.log(props)
+  // console.log(props)
   return (
     <div className={clsx(styles.section)}>
       <div className="container">

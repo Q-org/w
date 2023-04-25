@@ -4,7 +4,7 @@ function handleClick() {
     // Simply omit context parameter.
     // Parse
     const cookies = parseCookies()
-    console.log({ cookies })
+    // console.log({ cookies })
 
     // Set
     setCookie(null, 'fromClient', 'value', {

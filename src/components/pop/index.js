@@ -58,7 +58,7 @@ export default function ({ pp }) {
                         <button
                             className="button"
                             onClick={() => {
-                                console.log('modal closed ');
+                                // console.log('modal closed ');
                                 close();
                             }}
                         >

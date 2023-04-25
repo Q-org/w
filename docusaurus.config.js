@@ -228,7 +228,7 @@ const config = {
             className: 'login',
           },
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/Q-org',
             position: 'right',
             className: 'header-github-link',
             'aria-label': 'GitHub repository',
@@ -257,7 +257,6 @@ const config = {
 
         // Optional: path for search page that enabled by default (`false` to disable it)
         searchPagePath: 'search',
-
         //... other Algolia params
       },
 
