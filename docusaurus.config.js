@@ -17,6 +17,10 @@ const math = import('remark-math');
 const npm2yarn = require('@docusaurus/remark-plugin-npm2yarn');
 const VersionsArchived = require('./versions.json');
 
+const {
+  dogfoodingPluginInstances,
+  dogfoodingThemeInstances,
+} = require('./_dogfooding/dogfooding.config');
 
 const versions = require('./versions.json');
 
@@ -105,6 +109,8 @@ const config = {
           ['zh-CN'],
   },
   themes: [
+    'live-codeblock',
+    // ...dogfoodingThemeInstances
     // ... Your other themes.
     // "@docusaurus-theme-frontmatter",
 
@@ -309,18 +315,19 @@ const config = {
                 label: 'Blog',
                 to: 'blog',
               },
-              // {
-              //   label: 'Changelog',
-              //   to: '/changelog',
-              // },
+              {
+                label: '渐近式Web App',
+                href: 'https://www.pwastats.com/',
+              },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/q-org',
               },
               {
                 label: '公众号',
                 href: 'https://twitter.com/docusaurus',
               },
+
               {
                 html: `
                 <a href="https://www.netlify.com" target="_blank" rel="noreferrer noopener" aria-label="Deploys by Netlify">
@@ -355,14 +362,7 @@ const config = {
                 label: '蜀ICP备2023006146号-1',
                 href: 'https://beian.miit.gov.cn/',
               },
-              // if (document.querySelector(`li:has(a[href='https://beian.miit.gov.cn/'])`)) {
-              //   const handlee = () => {
-              //     if (document.querySelector(`li:has(a[href='https://beian.miit.gov.cn/'])`)) {
-              //       document.querySelector(`li:has(a[href='https://beian.miit.gov.cn/'])`).style.display = 'none'
-              //     }
-              //   }
-              //   setTimeout(handlee, 300)
-              // }
+
             ],
           },
         ],
@@ -382,10 +382,39 @@ const config = {
     }),
 
   plugins: [
-    // "docusaurus-plugin-less",
+    "docusaurus-plugin-less",
     '@docusaurus/plugin-ideal-image',
+    '@docusaurus/theme-mermaid',
     require.resolve("docusaurus-plugin-image-zoom"),
-
+    //...dogfoodingPluginInstances,
+    [
+      'client-redirects',
+      /** @type {import('@docusaurus/plugin-client-redirects').Options} */
+      ({
+        fromExtensions: ['html'],
+        createRedirects(routePath) {
+          // Redirect to /docs from /docs/introduction (now docs root doc)
+          if (routePath === '/docs' || routePath === '/docs/') {
+            return [`${routePath}/introduction`];
+          }
+          return [];
+        },
+        redirects: [
+          // {
+          //   from: ['/docs/support', '/docs/next/support'],
+          //   to: '/community/support',
+          // },
+          // {
+          //   from: ['/docs/team', '/docs/next/team'],
+          //   to: '/community/team',
+          // },
+          // {
+          //   from: ['/docs/resources', '/docs/next/resources'],
+          //   to: '/community/resources',
+          // },
+        ],
+      }),
+    ],
     "@graphql-markdown/docusaurus",
     'docusaurus-plugin-sass',
     async function myPlugin(context, options) {

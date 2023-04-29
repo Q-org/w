@@ -1,15 +1,26 @@
 {
-  "name": "微微课件",
+  "name": "微课程应用",
   "short_name": "微微",
   "theme_color": "#2196f3",
   "background_color": "#424242",
   "display": "standalone",
   "scope": "./",
   "start_url": "./index.html",
+  "default_applications": [
+    "https://bobbucks.dev/manifest.json"
+  ],
+  "supported_origins": [
+    "https://alicepay.friendsofalice.example"
+  ],
+  "launch_handler": {
+    "client_mode": [
+      "focus-existing, auto"
+    ]
+  },
   "related_applications": [
     {
       "platform": "webapp",
-      "url": "https://docusaurus.io/manifest.json"
+      "url": "https://qio.wiki/manifest.json"
     }
   ],
   "icons": [
