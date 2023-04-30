@@ -1,8 +1,12 @@
 ---
-slug: welcome
-title: Welcome
-authors: [slorber, yangshun]
-tags: [facebook, hello, docusaurus]
+slug: 欢迎
+title: 欢迎
+authors:
+  name: q-org
+  title: 微微应用
+  url: https://github.com/q-org
+  image_url: https://github.com/q-org.png
+tags: [微微, pwa, 渐近式web 应用]
 ---
 
 [Docusaurus blogging features](https://docusaurus.io/docs/blog) are powered by the [blog plugin](https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog).

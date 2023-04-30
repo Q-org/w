@@ -1,0 +1,125 @@
+---
+slug: mdx-blog-post
+title: 通知, 推送功能
+authors:
+  name: q-org
+  title: 微微应用
+  url: https://github.com/q-org
+  image_url: https://github.com/q-org.png
+tags: [推送, 通知,微微, pwa,可重用,请求授权]
+---
+
+
+import TestButton from '@site/src/pages/TestButton';
+
+<!-- truncate
+
+
+import BrowserWindow from '@site/src/components/BrowserWindow';
+import IframeWindow from '@site/src/components/BrowserWindow/IframeWindow';
+import ErrorBoundaryTestButton from '@site/src/pages/BoundaryTestButton';
+-->
+
+
+## 可重用
+
+:::info
+>通过通知推送提高[***微微***](https://qio.wiki) 的可重用。
+:::
+
+以本地缓存实现离线应用是一个强大的特性。允许用户在主屏幕上安装 Web 应用程序则显得更了不起。但除了单纯依赖用户手动打开应用之外，我们还可以走得更远，利用通知和消息推送提高用户参与度，并且随时提供新的内容。
+
+
+## 两个API一个目标
+
+推送 API和通知 API是两个相互独立的 API，但在提高用户参与度这件事上，它们可以配合得很好。推送 API 可以用来从服务端推送新的内容而无需客户端介入，它是由应用的 Service Worker 来实现的；通知功能则可以通过 Service Worker 来向用户展示一些新信息，或者至少提醒用户应用已经更新了某些功能。
+
+跟 Service Worker 一样，这些工作是在浏览器外部实现的，所以即使应用被隐藏到后台甚至被关闭了，我们仍然能够推送更新或者通知给用户。
+
+
+
+## 通知
+让我们先从通知 API 开始，它能够脱离推送 API 单独工作，但两者结合起来会非常的有用，我们先看看它单独能做什么。
+
+### 请求授权
+为了能够显示通知，我们需要先请求用户的授权。最佳的实践经验告诉我们，不应该直接请求授权，而应该引导用户点击一个按钮，然后才弹出授权窗口：
+
+```jsx
+var button = document.getElementById("notifications");
+button.addEventListener('click', function(e) {
+    Notification.requestPermission().then(function(result) {
+        if(result === 'granted') {
+            randomNotification();
+        }
+    });
+});
+```
+
+:::tip
+
+通过系统的通知服务显示一个授权窗口: <TestButton handler={()=>{
+    Notification.requestPermission()
+    .then(res=>{alert(res)})
+    }} />
+
+:::
+
+
+
+当用户确定接收通知，应用就可以获得推送通知的功能。用户的授权的结果有三种，default（默认）、granted（允许）或者 denied（拒绝），当用户没有做出选择的时候，授权结果会返回 default，另外两种结果分别在用户选择了允许或者拒绝的时候返回。
+
+### 创建一个通知
+
+我们的示例应用通过可用的数据来创建通知。随机选择一个游戏数据来填充通知的主体：用游戏的名称来作为通知的标题，通知的主体会提及游戏的作者，用游戏的图片来作为通知的图标：
+
+```jsx
+function randomNotification() {
+    var randomItem = Math.floor(Math.random()*games.length);
+    var notifTitle = games[randomItem].name;
+    var notifBody = 'Created by '+games[randomItem].author+'.';
+    var notifImg = 'data/img/'+games[randomItem].slug+'.jpg';
+    var options = {
+        body: notifBody,
+        icon: notifImg
+    }
+    var notif = new Notification(notifTitle, options);
+    setTimeout(randomNotification, 30000);
+}
+```
+
+:::tip
+
+通过系统的通知服务显示一个授权窗口: <TestButton handler={()=>{
+    var randomItem = Math.floor(Math.random()*games.length);
+    var notifTitle = games[randomItem].name;
+    var notifBody = 'Created by '+games[randomItem].author+'.';
+    var notifImg = 'data/img/'+games[randomItem].slug+'.jpg';
+    var options = {
+        body: notifBody,
+        icon: notifImg
+    }
+    var notif = new Notification(notifTitle, options);
+    setTimeout(randomNotification, 30000);
+    }} />
+
+:::
+
+上述代码每隔三十秒会创建一个通知，直到用户觉得通知有点烦人并手动关闭掉它为止。一个真正的 App，对通知的频率必须进行严格的控制，通知内容也要更加有用才行。通知 API 的优势在于它使用了操作系统的通知功能，这意味着即使用户当前并没有在使用我们的应用，我们的通知也能够展示，它看起来跟一个原生应用发出的通知差不多。
+
+## 推送
+
+推送比通知要复杂一些，我们需要从服务端订阅一个服务，之后服务端会推送数据到客户端应用。应用的 Service Worker 将会接收到从服务端推送的数据，这些数据可以用来做通知推送，或者实现其他的需求。
+
+这个技术还处在非常初级的阶段，一些可用示例使用了谷歌云的消息推送平台，但它们正在被重写以支持 VAPID (Voluntary Application Identification)，它能为您的应用提供一层额外的安全防护。您可以看一下 Service Workers Cookbook 里的一些例子，尝试用 Firebase 配置一个消息推送服务，或者构建自己的推送服务（例如使用 Node.js）。
+
+之前提到，为了接收到推送的消息，您需要有一个 Service Worker，这部分的基础知识我们已经在文章通过 Service workers 让 PWA 离线工作 (en-US)里面解释过。在 Service Worker 内部，存在一个消息推送服务订阅机制。
+
+```jsx
+registration.pushManager.getSubscription() .then( /* ... */ );
+```
+
+App 会从服务器请求一个公钥并且把响应结果转化成文本，最后它还需要转化成一个 Uint8Array（为了兼容 Chrome）。如果你想学习更多关于 VAPID 的内容可以阅读 [Sending VAPID identified WebPush Notifications via Mozilla’s Push Service](https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/) 这篇文章。
+
+App 现在可以使用 PushManager 来订阅新用户。这个方法支持传递两个参数：
+ - ```userVisibleOnly:true```，意思是发送给用户的所有通知对他们都是可见的，
+ - ```applicationServerKey```，这个参数包含我们之前从服务端取得并转化的 VAPID key。

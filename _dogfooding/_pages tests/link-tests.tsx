@@ -13,7 +13,8 @@ export default function LinkTest(): JSX.Element {
   const anchorRef = useRef<HTMLAnchorElement>(null);
   return (
     <Layout>
-      <main className="container margin-vert--xl">
+      <main className="container margin-vert--xl" src="/img/docusaurus.png">
+      <img src="/static/img/inbox-zero.svginbox-zero.svg" alt="Docusaurus">
         <Link ref={anchorRef} to="/">
           A little link
         </Link>

@@ -71,8 +71,8 @@ const isBranchDeploy =
 const config = {
   title: '微课程',
   tagline: '微课程很酷',
-  //url: 0 ? 'https://www.qio.wiki' : 'https://zingy-tiramisu-028c02.netlify.app/',
-  url: 'https://zingy-tiramisu-028c02.netlify.app/',
+  url: 1 ? 'https://qio.wiki' : 'https://zingy-tiramisu-028c02.netlify.app/',
+  // url: 'https://zingy-tiramisu-028c02.netlify.app/',
   baseUrl: '/',
   stylesheets: [
     {
@@ -170,7 +170,7 @@ const config = {
             // Please change this to your repo.
             // Remove this to remove the "edit this page" links.
 
-            'http://127.0.0.1:81/',
+            'http://127.0.0.1/p/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -281,6 +281,10 @@ const config = {
                 label: '成本会计',
                 to: '/',
               },
+              {
+                label: '更多课程',
+                to: '/',
+              },
               // {
               //   label: 'Migration from v1 to v2',
               //   to: 'docs/migration',
@@ -291,12 +295,16 @@ const config = {
             title: '社区',
             items: [
               {
+                label: 'Blog',
+                to: 'blog',
+              },
+              {
                 label: '错误',
                 href: 'https://github.com/Q-org/w/issues',
               },
               {
                 label: '功能需求',
-                to: 'https://github.com/Q-org/w/pulls',
+                href: 'https://github.com/Q-org/w/pulls',
               },
               {
                 label: '群聊',
@@ -312,10 +320,6 @@ const config = {
             title: '更多',
             items: [
               {
-                label: 'Blog',
-                to: 'blog',
-              },
-              {
                 label: '渐近式Web App',
                 href: 'https://www.pwastats.com/',
               },
@@ -325,7 +329,7 @@ const config = {
               },
               {
                 label: '公众号',
-                href: 'https://twitter.com/docusaurus',
+                href: 'https://twitter.com',
               },
 
               {

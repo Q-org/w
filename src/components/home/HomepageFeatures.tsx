@@ -76,7 +76,7 @@ export default function HomepageFeatures1() {
           <div className='col col--8'>
             <h2>什么是微微?</h2>
             <p>
-            微微使您能够收集、管理和流式传输媒体。在您的系统上运行微微服务器，并访问领先的免费软件娱乐系统，包括花里胡哨。
+            微微是微课程，包括花里胡哨。
             </p>
           </div>
         </div>

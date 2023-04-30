@@ -1,6 +1,6 @@
 {
   "extends": "@tsconfig/docusaurus/tsconfig.json",
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "pkg/**/*.ts", "pkg/**/*.d.ts", "pkg/**/*.tsx", "pkg/**/*.vue"],
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "pkg/**/*.ts", "pkg/**/*.d.ts", "pkg/**/*.tsx", "pkg/**/*.vue", "src/pages/TestButton.js"],
   "exclude": ["node_modules"],
 
   "compilerOptions": {

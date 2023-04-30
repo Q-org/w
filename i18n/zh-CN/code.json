@@ -535,5 +535,112 @@
   },
   "Preview": {
     "message": "预览"
+  },
+  "homepage.features.powered-by-mdx.title": {
+    "message": "Powered by MDX"
+  },
+  "homepage.features.built-using-react.title": {
+    "message": "Built Using React"
+  },
+  "homepage.features.ready-for-translations.title": {
+    "message": "Ready for Translations"
+  },
+  "homepage.features.document-versioning.title": {
+    "message": "Document Versioning"
+  },
+  "homepage.features.content-search.title": {
+    "message": "Content Search"
+  },
+  "homepage.quotes.christopher-chedeau.title": {
+    "message": "Lead Prettier Developer",
+    "description": "Title of quote of Christopher Chedeau on the home page"
+  },
+  "homepage.quotes.christopher-chedeau": {
+    "message": "I've helped open source many projects at Facebook and every one needed a website. They all had very similar constraints: the documentation should be written in markdown and be deployed via GitHub pages. I’m so glad that Docusaurus now exists so that I don’t have to spend a week each time spinning up a new one.",
+    "description": "Quote of Christopher Chedeau on the home page"
+  },
+  "homepage.quotes.hector-ramos.title": {
+    "message": "Lead React Native Advocate",
+    "description": "Title of quote of Hector Ramos on the home page"
+  },
+  "homepage.quotes.hector-ramos": {
+    "message": "Open source contributions to the React Native docs have skyrocketed after our move to Docusaurus. The docs are now hosted on a small repo in plain markdown, with none of the clutter that a typical static site generator would require. Thanks Slash!",
+    "description": "Quote of Hector Ramos on the home page"
+  },
+  "homepage.quotes.risky-vetter.title": {
+    "message": "ReasonReact Developer",
+    "description": "Title of quote of Ricky Vetter on the home page"
+  },
+  "homepage.quotes.risky-vetter": {
+    "message": "Docusaurus has been a great choice for the ReasonML family of projects. It makes our documentation consistent, i18n-friendly, easy to maintain, and friendly for new contributors.",
+    "description": "Quote of Ricky Vetter on the home page"
+  },
+  "Favorite": {
+    "message": "Favorite"
+  },
+  "showcase.tag.favorite.description": {
+    "message": "Our favorite Docusaurus sites that you must absolutely check out!"
+  },
+  "Open-Source": {
+    "message": "Open-Source"
+  },
+  "showcase.tag.opensource.description": {
+    "message": "Open-Source Docusaurus sites can be useful for inspiration!"
+  },
+  "Product": {
+    "message": "Product"
+  },
+  "showcase.tag.product.description": {
+    "message": "Docusaurus sites associated to a commercial product!"
+  },
+  "Design": {
+    "message": "Design"
+  },
+  "showcase.tag.design.description": {
+    "message": "Beautiful Docusaurus sites, polished and standing out from the initial template!"
+  },
+  "I18n": {
+    "message": "I18n"
+  },
+  "showcase.tag.i18n.description": {
+    "message": "Translated Docusaurus sites using the internationalization support with more than 1 locale."
+  },
+  "Versioning": {
+    "message": "Versioning"
+  },
+  "showcase.tag.versioning.description": {
+    "message": "Docusaurus sites using the versioning feature of the docs plugin to manage multiple versions."
+  },
+  "Large": {
+    "message": "Large"
+  },
+  "showcase.tag.large.description": {
+    "message": "Very large Docusaurus sites, including many more pages than the average!"
+  },
+  "Meta": {
+    "message": "Meta"
+  },
+  "showcase.tag.meta.description": {
+    "message": "Docusaurus sites of Meta (formerly Facebook) projects"
+  },
+  "Personal": {
+    "message": "Personal"
+  },
+  "showcase.tag.personal.description": {
+    "message": "Personal websites, blogs and digital gardens built with Docusaurus"
+  },
+  "RTL Direction": {
+    "message": "RTL Direction"
+  },
+  "showcase.tag.rtl.description": {
+    "message": "Docusaurus sites using the right-to-left reading direction support."
+  },
+  "theme.Playground.result": {
+    "message": "结果",
+    "description": "The result label of the live codeblocks"
+  },
+  "theme.Playground.liveEditor": {
+    "message": "实时编辑器",
+    "description": "The live editor label of the live codeblocks"
   }
 }
