@@ -6424,6 +6424,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"commander@npm:^9.4.0":
+  version: 9.5.0
+  resolution: "commander@npm:9.5.0"
+  checksum: c7a3e27aa59e913b54a1bafd366b88650bc41d6651f0cbe258d4ff09d43d6a7394232a4dadd0bf518b3e696fdf595db1028a0d82c785b88bd61f8a440cecfade
+  languageName: node
+  linkType: hard
+
 "common-tags@npm:^1.8.0":
   version: 1.8.2
   resolution: "common-tags@npm:1.8.2"
@@ -7394,7 +7401,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dayjs@npm:^1.11.7, dayjs@npm:^1.8.34":
+"dayjs@npm:^1.11.5, dayjs@npm:^1.11.7, dayjs@npm:^1.8.34":
   version: 1.11.7
   resolution: "dayjs@npm:1.11.7"
   checksum: 5003a7c1dd9ed51385beb658231c3548700b82d3548c0cfbe549d85f2d08e90e972510282b7506941452c58d32136d6362f009c77ca55381a09c704e9f177ebb
@@ -7748,6 +7755,18 @@ __metadata:
     "@docusaurus/core": ^2.0.0-beta
     sass: ^1.30.0
   checksum: 928b02fd7c63835d54cdcce2eeda01cb6124707c6d43ef8e77db06474d3e3b4b7282cc0d88fed378cf1f3db2fc93ba8c11366965bb9b668eae19ca805e578acb
+  languageName: node
+  linkType: hard
+
+"docusaurus-post-generator@npm:^1.0.9":
+  version: 1.0.9
+  resolution: "docusaurus-post-generator@npm:1.0.9"
+  dependencies:
+    commander: ^9.4.0
+    dayjs: ^1.11.5
+  bin:
+    docusaurus-post-generator: index.js
+  checksum: f87cc9e14cf55ee706fb039dc5aa84fe07880b73a34f7bf3d30be1bddd564ed38a5fa33d6c30b29f76860caeedc4521a573a8ad559ed1e6dfd59aa7fb8af24b8
   languageName: node
   linkType: hard
 
@@ -17312,6 +17331,7 @@ __metadata:
     docusaurus-plugin-image-zoom: ^0.1.1
     docusaurus-plugin-less: ^2.0.2
     docusaurus-plugin-sass: ^0.2.2
+    docusaurus-post-generator: ^1.0.9
     docx2html: ^1.3.2
     eslint: ^8.14.0
     eslint-config-airbnb: ^19.0.4
