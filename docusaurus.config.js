@@ -1,5 +1,5 @@
 /**
- * Copyright (c) Facebook, Inc. and its affiliates.
+ * Copyright (c) Qorg, Inc. and its affiliates.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
@@ -12,6 +12,8 @@
 /** @type {import('@docusaurus/types').Config} */
 // @ts-ignore
 const isDev = process.env.NODE_ENV === 'development';
+const isDeployPreview =
+  !!process.env.NETLIFY && process.env.CONTEXT === 'deploy-preview';
 const isBuildFast = !!process.env.BUILD_FAST
 const math = import('remark-math');
 const npm2yarn = require('@docusaurus/remark-plugin-npm2yarn');
@@ -61,8 +63,8 @@ function reverseSidebarItems(items) {
 }
 const isI18nStaging = process.env.I18N_STAGING === 'true';
 const isVersioningDisabled = !!process.env.DISABLE_VERSIONING || isI18nStaging;
-const isDeployPreview =
-  !!process.env.NETLIFY && process.env.CONTEXT === 'deploy-preview';
+
+
 
 // Netlify branch deploy like "docusaurus-v2"
 const isBranchDeploy =
@@ -174,6 +176,18 @@ const config = {
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
+        },
+        gtag: !(isDeployPreview || isBranchDeploy)
+          ? {
+            trackingID: ['G-qio', 'CN-5516-175'],
+          }
+          : undefined,
+        googleTagManager: {
+          containerId: 'GTM-qio',
+        },
+        sitemap: {
+          // Note: /tests/docs already has noIndex: true
+          ignorePatterns: ['/tests/{blog,pages}/**'],
         },
       }),
     ],

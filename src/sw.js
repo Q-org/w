@@ -1,5 +1,5 @@
 /**
- * Copyright (c) Facebook, Inc. and its affiliates.
+ * Copyright (c) Qorg, Inc. and its affiliates.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
@@ -23,6 +23,7 @@ export default function swCustom(params) {
         /avatars1\.githubusercontent/,
       ].some((regex) => context.url.href.match(regex)),
     new StaleWhileRevalidate(),
+    console.log('注册成功')
   );
 }
 

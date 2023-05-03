@@ -2,3 +2,4 @@
 
 User-agent: *
 Allow: /
+Sitemap: http://qio.wiki/sitemap.xml

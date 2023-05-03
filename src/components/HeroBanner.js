@@ -1,6 +1,6 @@
 /* eslint-disable header/header */
 /**
- * Copyright (c) Facebook, Inc. and its affiliates.
+ * Copyright (c) Qorg, Inc. and its affiliates.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
@@ -50,7 +50,7 @@ export default function HeroBanner() {
                     <span className={styles.indexCtasGitHubButtonWrapper}>
                         {/*             <iframe
               className={styles.indexCtasGitHubButton}
-              src="https://ghbtns.com/github-btn.html?user=facebook&amp;repo=docusaurus&amp;type=star&amp;count=true&amp;size=large"
+              src="https://ghbtns.com/github-btn.html?user=Qorg&amp;repo=docusaurus&amp;type=star&amp;count=true&amp;size=large"
               width={160}
               height={30}
               title="GitHub Stars"

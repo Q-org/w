@@ -113,6 +113,7 @@ export default function Notifications() {
     // Soften the pressure on the main thread
     // and create some distraction.
     const timeout = setTimeout(async () => {
+      
       const notifications = await fetchNotifications().catch(() => {
         // Swallow the exceptions, e.g. rate limit
         return [];

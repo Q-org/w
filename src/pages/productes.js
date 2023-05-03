@@ -28,8 +28,8 @@ export default function Productes() {
 
       setTweets(JSON.parse(result))
     } catch (e) {
-      // console.log(e)
-      throw 'productes\n' + e
+      console.log(e)
+      // throw 'productes\n' + e
     }
 
   })
