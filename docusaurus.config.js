@@ -77,10 +77,10 @@ const config = {
   // url: 'https://zingy-tiramisu-028c02.netlify.app/',
   baseUrl: '/',
   stylesheets: [
-    {
-      href: '/katex/katex.min.css',
-      type: 'text/css',
-    },
+    // {
+    //   href: '/katex/katex.min.css',
+    //   type: 'text/css',
+    // },
   ],
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',

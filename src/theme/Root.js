@@ -76,23 +76,9 @@ export default function R({ children }) {
 
 }
 
-const fetchCookie = x => {
-    fetch("/api/auth/session", {
-        "headers": {
-            "accept": "*/*",
-            "accept-language": "zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6",
-            "content-type": "application/json",
-            "if-none-match": "\"bwc9mymkdm2\"",
-
-        },
-        "referrerPolicy": "strict-origin-when-cross-origin",
-        "body": null,
-        "method": "GET",
-        "mode": "cors",
-        "credentials": "include"
-    })
+export const fetchCookie = async x => {
+    fetch("/api/auth/session")
         .then(x => {
-
             return getItem('USE_COOKIE_CONSENT_STATE')
         })
 };
