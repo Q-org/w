@@ -1,22 +1,16 @@
 import * as React from 'react';
 import useIsBrowser from '@docusaurus/useIsBrowser';
-import PubSub from 'pubsub-js'
 import {
     Experimental_CssVarsProvider as CssVarsProvider,
     useColorScheme,
 } from '@mui/material/styles';
-import { getToken } from "next-auth/jwt"
 import ModeSwitcher from '../components/MuiTheme';
 
 
-//import {  } from "js-cookie";
-
-
-import { CookieConsentProvider, createCookieConsentContext, useCookieConsent } from '@use-cookie-consent/react'
+// import { CookieConsentProvider, createCookieConsentContext, useCookieConsent } from '@use-cookie-consent/react'
 // 默认实现，你可以自定义
 import { GPRMProvider } from "../components/mobx/GPRMcontext";
-import { ControlCameraSharp } from '@mui/icons-material';
-//import useIsBrowser from '@docusaurus/useIsBrowser';
+
 
 const getItem = key =>
     document.cookie.split("; ").reduce((total, currentCookie) => {
@@ -59,18 +53,17 @@ export default function R({ children }) {
         console.log(getItem('qio.csrf-token'))
 
     }, [])
-
+    console.log()
     return (<>
 
-        <CookieConsentProvider >
-            <CssVarsProvider >
-                <ModeSwitcher />
-                <GPRMProvider>
-                    {/*                     <CookieBanner /> */}
-                    {children}
-                </GPRMProvider>
-            </CssVarsProvider>
-        </CookieConsentProvider>
+        <CssVarsProvider >
+            <ModeSwitcher />
+            <GPRMProvider>
+                {/*                     <CookieBanner /> */}
+                {children}
+            </GPRMProvider>
+        </CssVarsProvider>
+
 
     </>)
 
@@ -82,21 +75,20 @@ export const fetchCookie = async x => {
             return getItem('USE_COOKIE_CONSENT_STATE')
         })
 };
+
+
 const log = x => {
-    if (typeof window !== 'undefined' /* && process.env.NODE_ENV === 'production' */) {
-        // eslint-disable-next-line no-console
-        console.log(
-            `%c
+    if (typeof window !== 'undefined') {
+        console.log(`%c
   
-  ███╗   ███╗ ██╗   ██╗ ██████╗
-  ████╗ ████║ ██║   ██║   ██╔═╝
-  ██╔████╔██║ ██║   ██║   ██║
-  ██║╚██╔╝██║ ██║   ██║   ██║
-  ██║ ╚═╝ ██║ ╚██████╔╝ ██████╗
-  ╚═╝     ╚═╝  ╚═════╝  ╚═════╝
-  
-  Tip: you can access the documentation \`theme\` object directly in the console.
-  `, 'font-family:monospace;color:#1976d2;font-size:11px;',
-        );
+        ██╗          ██╗	██████╗	██████╗
+        ██║	██╗	██║	██╔═══╝		██╔═╝	
+        ██╚████╗██║	█████╗		██║		
+        ████╔═████║	██╔══╝		██║		
+        ███╔╝    ███║  ██████╗	██████╗	
+         ╚═╝         ╚═╝	╚═════╝	╚═════╝	 
+      
+        Tip: you can access the documentation \`theme\` object directly in the console.
+        `, 'font-family:monospace;color:#1976d2;font-size:12px;');
     }
 }

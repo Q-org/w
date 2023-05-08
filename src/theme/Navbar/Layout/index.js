@@ -25,14 +25,14 @@ export default function NavbarLayout({ children }) {
   } = useThemeConfig();
   const mobileSidebar = useNavbarMobileSidebar();
   const { navbarRef, isNavbarVisible } = useHideableNavbar(hideOnScroll);
-  if (useIsBrowser() && document.querySelector(`li:has(a[href='https://beian.miit.gov.cn/'])`)) {
-    const handlee = () => {
-      if (document.querySelector(`li:has(a[href='https://beian.miit.gov.cn/'])`)) {
-        document.querySelector(`li:has(a[href='https://beian.miit.gov.cn/'])`).style.display = 'none'
-      }
-    }
-    setTimeout(handlee, 300)
-  }
+  // if (useIsBrowser() ) {
+  //   const handlee = () => {
+  //     if (document.querySelector(`li:has(a[href="https://beian.miit.gov.cn/"])`)) {
+  //       document.querySelector(`li:has(a[href="https://beian.miit.gov.cn/"])`).style.display = 'none'
+  //     }
+  //   }
+  //   setTimeout(handlee, 300)
+  // }
   return (
     <nav
       ref={navbarRef}
