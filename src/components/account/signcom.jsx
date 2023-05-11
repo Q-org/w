@@ -14,27 +14,15 @@ import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Translate from '@docusaurus/Translate';
 import { GoogleLogin } from 'react-google-login';
-
+// import Link from 'httpnext/link';
 
 import { Email, Password, LastName, FirstName, UserId, Copyright } from './fileds';
 const responseGoogle = (response) => {
   // console.log(response);
 }
 
+import GithubProvider from "next-auth/providers/github"
 
-const googleLogin = () => {
-  return (
-    <>
-      <GoogleLogin
-        clientId="658977310896-knrl3gka66fldh83dao2rhgbblmd4un9.apps.googleusercontent.com"
-        buttonText="Login"
-        onSuccess={responseGoogle}
-        onFailure={responseGoogle}
-        cookiePolicy={'single_host_origin'}
-      />
-    </>
-  )
-}
 
 
 const theme = createTheme();
@@ -47,6 +35,7 @@ function SignIn() {
   const handleSubmit = async (event) => {
 
     event.preventDefault();
+
 
     const data = new FormData(event.currentTarget);
 
@@ -65,7 +54,7 @@ function SignIn() {
 
     }
     // console.log('___', res.json())
-    return null
+
     let token = await res.json()
 
 
@@ -93,6 +82,7 @@ function SignIn() {
 
   return (
     <ThemeProvider theme={theme}>
+      <div>ok ___________</div>
       <Container component="main" maxWidth="xs">
         <CssBaseline />
         <Box
@@ -145,7 +135,7 @@ function SignIn() {
               </Grid>
             </Grid>
           </Box>
-
+          <GithubProvider> oko</GithubProvider>
         </Box>
         <Copyright sx={{ mt: 8, mb: 4 }} />
       </Container>

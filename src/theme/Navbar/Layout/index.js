@@ -10,6 +10,7 @@ import NavbarMobileSidebar from '@theme/Navbar/MobileSidebar';
 import styles from './styles.module.css';
 import { useEffect } from 'react';
 import useIsBrowser from '@docusaurus/useIsBrowser';
+
 function NavbarBackdrop(props) {
   return (
     <div
@@ -33,14 +34,17 @@ export default function NavbarLayout({ children }) {
   //   }
   //   setTimeout(handlee, 300)
   // }
+
   return (
     <nav
       ref={navbarRef}
-      aria-label={translate({
-        id: 'theme.NavBar.navAriaLabel',
-        message: 'Main',
-        description: 'The ARIA label for the main navigation',
-      })}
+      aria-label={
+
+        translate({
+          id: 'theme.NavBar.navAriaLabel',
+          message: 'Main',
+          description: 'The ARIA label for the main navigation',
+        })}
       className={clsx(
         'navbar',
         'navbar--fixed-top',

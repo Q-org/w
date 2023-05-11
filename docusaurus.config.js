@@ -227,6 +227,7 @@ const config = {
         },
 
         items: [
+
           {
             type: 'dropdown',
             position: 'left',
@@ -244,8 +245,15 @@ const config = {
           { label: '操作指南', type: 'docSidebar', sidebarId: 'manu', position: 'left', className: 'signup dev-portal-link', },
           // { label: 'test', to: '/test/test', position: 'left', className: 'login', },
           {
-            label: '登录', to: '/sign/SignIn', position: 'right',
+            label: '登录2', to: '/sign/SignIn', position: 'right',
             className: 'login',
+          },
+          {
+            label: '登陆',
+            to: 'http://127.0.0.1/api/auth/signin',
+            position: 'right',
+            target: '_self',
+            'aria-label': 'GitHub repository',
           },
           {
             href: 'https://github.com/Q-org',

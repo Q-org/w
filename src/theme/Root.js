@@ -5,41 +5,11 @@ import {
     useColorScheme,
 } from '@mui/material/styles';
 import ModeSwitcher from '../components/MuiTheme';
-
-
+import Logo from '@theme/Logo';
+import NavbarLogo from '@theme/Navbar/Logo';
 // import { CookieConsentProvider, createCookieConsentContext, useCookieConsent } from '@use-cookie-consent/react'
 // 默认实现，你可以自定义
 import { GPRMProvider } from "../components/mobx/GPRMcontext";
-
-
-const getItem = key =>
-    document.cookie.split("; ").reduce((total, currentCookie) => {
-        const item = currentCookie.split("=");
-        const storedKey = item[0];
-        const storedValue = item[1];
-        return key === storedKey
-            ? decodeURIComponent(storedValue)
-            : total;
-    }, '');
-
-
-
-const CookieBanner = x => {
-
-    return (
-        <div>
-            <button onClick={'acceptAllCookies'}>Accept all</button>
-            <button onClick={() => 'acceptCookies({ thirdParty: true })'}>
-                Accept third-party
-            </button>
-            <button onClick={() => 'acceptCookies({ firstParty: true })'}>
-                Accept first-party
-            </button>
-            <button onClick={'declineAllCookies'}>Reject all</button>
-        </div>
-    );
-};
-
 
 export default function R({ children }) {
 
@@ -48,32 +18,30 @@ export default function R({ children }) {
     React.useEffect(async x => {
 
         log('')
-        await fetchCookie()
+        let session = await fetchCookie()
+        if (!session) return null
 
-        console.log(getItem('qio.csrf-token'))
+        console.log('{', session, '}')
 
     }, [])
-    console.log()
     return (<>
 
         <CssVarsProvider >
+
             <ModeSwitcher />
             <GPRMProvider>
                 {/*                     <CookieBanner /> */}
+
                 {children}
             </GPRMProvider>
         </CssVarsProvider>
-
-
     </>)
 
 }
 
 export const fetchCookie = async x => {
-    fetch("/api/auth/session")
-        .then(x => {
-            return getItem('USE_COOKIE_CONSENT_STATE')
-        })
+    let res = await fetch('/api/auth/session');
+    return await res.json();
 };
 
 

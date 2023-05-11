@@ -18,6 +18,7 @@ function useNavbarItems() {
   return useThemeConfig().navbar.items;
 }
 function NavbarItems({ items }) {
+
   return (
     <>
       {items.map((item, i) => (
@@ -50,6 +51,7 @@ export default function NavbarContent() {
   const items = useNavbarItems();
   const [leftItems, rightItems] = splitNavbarItems(items);
   const searchBarItem = items.find((item) => item.type === 'search');
+   //  console.log('render navbar_')
   return (
     <NavbarContentLayout
       left={
