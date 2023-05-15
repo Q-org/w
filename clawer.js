@@ -1,16 +1,16 @@
 new Crawler({
-    appId: 'YOUR_APP_ID',
-    apiKey: 'YOUR_API_KEY',
+    appId: 'KQGPNV3L6O',
+    apiKey: '6eafd6a6da222939c19d32f4067c358b',
     rateLimit: 8,
     maxDepth: 10,
-    startUrls: ['https://YOUR_WEBSITE_URL/'],
-    sitemaps: ['https://YOUR_WEBSITE_URL/sitemap.xml'],
+    startUrls: ['https://qio/'],
+    sitemaps: ['https://qio/sitemap.xml'],
     ignoreCanonicalTo: true,
-    discoveryPatterns: ['https://YOUR_WEBSITE_URL/**'],
+    discoveryPatterns: ['https://qio/**'],
     actions: [
         {
-            indexName: 'YOUR_INDEX_NAME',
-            pathsToMatch: ['https://YOUR_WEBSITE_URL/**'],
+            indexName: 'QORGSEARCH',
+            pathsToMatch: ['https://qio/**'],
             recordExtractor: ({ $, helpers }) => {
                 // priority order: deepest active sub list header -> navbar active item -> 'Documentation'
                 const lvl0 =
@@ -42,7 +42,7 @@ new Crawler({
         },
     ],
     initialIndexSettings: {
-        YOUR_INDEX_NAME: {
+        QORGSEARCH: {
             attributesForFaceting: [
                 'type',
                 'lang',

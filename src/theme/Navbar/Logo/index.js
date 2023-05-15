@@ -15,7 +15,7 @@ const renderlogo = props => {
 }
 
 export default function NavbarLogo() {
-  console.log('1 --- navbar ')
+  /*   console.log('1 --- navbar ') */
 
   const [log, setLog] = React.useState({
     "alt": "微微 项目 Logo",

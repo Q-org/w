@@ -244,10 +244,10 @@ const config = {
 
           { label: '操作指南', type: 'docSidebar', sidebarId: 'manu', position: 'left', className: 'signup dev-portal-link', },
           // { label: 'test', to: '/test/test', position: 'left', className: 'login', },
-          {
-            label: '登录2', to: '/sign/SignIn', position: 'right',
-            className: 'login',
-          },
+          // {
+          //   label: '登录2', to: '/sign/SignIn', position: 'right',
+          //   className: 'login',
+          // },
           {
             label: '登陆',
             to: 'http://127.0.0.1/api/auth/signin',
@@ -276,10 +276,10 @@ const config = {
         // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
         contextualSearch: true,
         externalUrlRegex: '(www.)?qio(\\.wiki)?',
-        replaceSearchResultPathname: {
-          from: 'docs',
-          to: '/',
-        },
+        // replaceSearchResultPathname: {
+        //   from: 'docs',
+        //   to: '/',
+        // },
         // Optional: Algolia search parameters
         searchParameters: {},
 

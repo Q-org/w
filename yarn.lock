@@ -14621,6 +14621,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-social-icons@npm:^5.15.0":
+  version: 5.15.0
+  resolution: "react-social-icons@npm:5.15.0"
+  dependencies:
+    prop-types: ^15.7.2
+  peerDependencies:
+    react: 15.x.x || 16.x.x || 17.x.x || 18.x.x
+  checksum: b93d2ca603f24825424a44a996215af261868247897bfced1ca37f8ab9dbceb14f73ed399e49b18c9f3d77faf7aad6b5f577553dc13e435d4c3bbb21bc08c278
+  languageName: node
+  linkType: hard
+
 "react-swipeable-views-core@npm:^0.14.0":
   version: 0.14.0
   resolution: "react-swipeable-views-core@npm:0.14.0"
@@ -17480,6 +17491,7 @@ __metadata:
     react-pdf: ^6.2.2
     react-perfect-scrollbar: ^1.5.8
     react-redux: ^8.0.5
+    react-social-icons: ^5.15.0
     react-swipeable-views: ^0.14.0
     react-viewer: ^3.2.2
     reactjs-popup: ^2.0.5

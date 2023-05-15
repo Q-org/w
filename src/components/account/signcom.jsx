@@ -21,7 +21,6 @@ const responseGoogle = (response) => {
   // console.log(response);
 }
 
-import GithubProvider from "next-auth/providers/github"
 
 
 
@@ -135,7 +134,6 @@ function SignIn() {
               </Grid>
             </Grid>
           </Box>
-          <GithubProvider> oko</GithubProvider>
         </Box>
         <Copyright sx={{ mt: 8, mb: 4 }} />
       </Container>
