@@ -1,5 +1,4 @@
-# Algolia-Crawler-Verif: 7bd1cdcc-0c99-4f77-9ede-d028c1509455
-
+# Algolia-Crawler-Verif: 053D61CAB8C7596B
 User-agent: *
 Allow: /
 Sitemap: http://qio.wiki/sitemap.xml

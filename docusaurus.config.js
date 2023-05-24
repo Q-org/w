@@ -73,7 +73,7 @@ const isBranchDeploy =
 const config = {
   title: '微课程',
   tagline: '微课程很酷',
-  url: 1 ? 'https://qio.wiki' : 'https://zingy-tiramisu-028c02.netlify.app/',
+  url: 0 ? 'https://qio.wiki' : 'https://q-org.netlify.app/',
   // url: 'https://zingy-tiramisu-028c02.netlify.app/',
   baseUrl: '/',
   stylesheets: [
@@ -264,14 +264,13 @@ const config = {
         ],
       },
       algolia: {
-
-        // appId: 'R2IYF7ETH7',
-        // apiKey: '599cec31baffa4868cae4e79f180729b',
         // indexName: 'docsearch',
         // Algolia 提供的应用 ID
-        appId: 'KQGPNV3L6O',
-        // //  公开 API 密钥：提交它没有危险
-        apiKey: '693aabdd4be4a258e8d0af3f94d49cba',
+        // appId: 'KQGPNV3L6O',
+        appId: 'EPQT07RLZB',
+        // 公开 API 密钥：提交它没有危险
+        //apiKey: '693aabdd4be4a258e8d0af3f94d49cba',
+        apiKey: '7af2ff95d2ccdf0adbd8992f30f19021',
         indexName: 'qorgsearch',
         // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
         contextualSearch: true,
@@ -287,8 +286,6 @@ const config = {
         searchPagePath: 'search',
         //... other Algolia params
       },
-
-
       footer: {
         style: 'dark',
         links: [
