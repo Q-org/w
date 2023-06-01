@@ -10,9 +10,10 @@ import NavbarLogo from '@theme/Navbar/Logo';
 // import { CookieConsentProvider, createCookieConsentContext, useCookieConsent } from '@use-cookie-consent/react'
 // 默认实现，你可以自定义
 import { GPRMProvider } from "../components/mobx/GPRMcontext";
-
+// Variant = 'LOGIN' | 'REGISTER';
 export default function R({ children }) {
-
+    const [variant, setVariant] = React.useState('LOGIN');
+    const [isLoading, setIsLoading] = React.useState(false);
     const ref = React.createRef();
     if (!useIsBrowser()) { }
     React.useEffect(async x => {

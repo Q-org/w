@@ -116,21 +116,21 @@ const config = {
     // ... Your other themes.
     // "@docusaurus-theme-frontmatter",
 
-    // [
-    //   require.resolve("@easyops-cn/docusaurus-search-local"),
-    //   /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
-    //   ({
-    //     // ... Your options.
-    //     // `hashed` is recommended as long-term-cache of index file is possible.
-    //     hashed: true,
-    //     // For Docs using Chinese, The `language` is recommended to set to:
-    //     // ```
-    //     language: ["en", "zh"],
-    //     // ```
-    //     indexPages: true,
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
+      ({
+        // ... Your options.
+        // `hashed` is recommended as long-term-cache of index file is possible.
+        hashed: true,
+        // For Docs using Chinese, The `language` is recommended to set to:
+        // ```
+        language: ["en", "zh"],
+        // ```
+        indexPages: true,
 
-    //   }),
-    // ],
+      }),
+    ],
   ],
   presets: [
     [
@@ -250,7 +250,7 @@ const config = {
           // },
           {
             label: '登陆',
-            to: 'http://127.0.0.1/api/auth/signin',
+            to: 'http://127.0.0.1/n',
             position: 'right',
             target: '_self',
             'aria-label': 'GitHub repository',
@@ -266,11 +266,11 @@ const config = {
       algolia: {
         // indexName: 'docsearch',
         // Algolia 提供的应用 ID
-        // appId: 'KQGPNV3L6O',
-        appId: 'EPQT07RLZB',
+        appId: 'KQGPNV3L6O',
+        // appId: 'EPQT07RLZB',
         // 公开 API 密钥：提交它没有危险
-        //apiKey: '693aabdd4be4a258e8d0af3f94d49cba',
-        apiKey: '7af2ff95d2ccdf0adbd8992f30f19021',
+        apiKey: '693aabdd4be4a258e8d0af3f94d49cba',
+        // apiKey: '7af2ff95d2ccdf0adbd8992f30f19021',
         indexName: 'qorgsearch',
         // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
         contextualSearch: true,

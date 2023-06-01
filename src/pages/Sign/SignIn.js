@@ -1,25 +1,51 @@
-import React from 'react'
-//import Layout from '@theme/Layout';
+import * as React from 'react'
+import Layout from '@theme/Layout';
 //import Layout from '@mui-treasury/layout';
 import { SignIn } from '@site/src/components/account/signcom'
-import Link from '@docusaurus/Link';
-import BrowserOnly from '@docusaurus/BrowserOnly';
+import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
+import IframeResizer from 'iframe-resizer-react';
 
+
+
+//import { signIn, useSession } from 'next-auth/react';
 //请求登录成功后跳转 history.push(nextPathname, null);
 export default function index() {
+  if (ExecutionEnvironment.canUseDOM) {
+    // const signIn = require.resolve('/n/next-auth/react');
 
-  return (<>
-    <BrowserOnly>
-      {() => {
+  }
+  const iframeRef = React.useRef(null)
+  const [messageData, setMessageData] = React.useState()
 
-        return <Link to="https://docusaurus.io" className="my-website-class">
-          website
-        </Link>
+  const onResized = data => setMessageData(data)
 
-      }}
-    </BrowserOnly>
-    <SignIn />
+  const onMessage = data => {
+    setMessageData(data)
+    iframeRef.current.sendMessage('Hello back from the parent page')
+  }
 
-  </>
+
+  return (
+    <Layout>
+      <IframeResizer
+        forwardRef={iframeRef}
+        heightCalculationMethod="lowestElement"
+        inPageLinks
+        log
+        onMessage={onMessage}
+        onResized={onResized}
+        src="https://127.0.0.1/n/tt"
+        autoResize={true}
+        resizeFrom={'child'}
+        sizeHeight={false}
+      />
+      <button
+        onClick={() => {
+          IframeResizer.resize()
+        }}
+      >ok
+      </button>
+      <SignIn />
+    </Layout>
   )
 }

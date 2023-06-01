@@ -6,7 +6,7 @@
   "scripts": {
     "docusaurus": "docusaurus",
     "w": "docusaurus start --port 83 --host 0.0.0.0 --locale zh-CN",
-    "s": "HTTPS=true SSL_CRT_FILE=./localhost.pem SSL_KEY_FILE=./localhost-key.pem docusaurus start --port 83 --host 0.0.0.0 --locale zh-CN",
+    "s": "HTTPS=true SSL_CRT_FILE=d:/mkcert/qio+3.pem SSL_KEY_FILE=d:/mkcert/qio+3-key.pem docusaurus start --port 83 --host 0.0.0.0 --locale zh-CN",
     "build": "docusaurus build",
     "start:blogOnly": "cross-env yarn start --config=docusaurus.config-blog-only.js",
     "build:blogOnly": "cross-env yarn build --config=docusaurus.config-blog-only.js",
