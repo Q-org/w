@@ -13,11 +13,10 @@ const LANGUAGES_IGNORE_PAGES = (pathname) => {
   if (pathname === '/blog' || pathname.startsWith('/blog/')) {
     return true;
   }
-
   if (pathname === '/size-snapshot/') {
     return true;
   }
-
+  
   return false;
 };
 

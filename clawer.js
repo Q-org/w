@@ -9,6 +9,7 @@ new Crawler({
     discoveryPatterns: ['https://qio/**'],
     actions: [
         {
+            
             indexName: 'QORGSEARCH',
             pathsToMatch: ['https://qio/**'],
             recordExtractor: ({ $, helpers }) => {
