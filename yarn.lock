@@ -1680,7 +1680,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.0.0, @babel/runtime@npm:^7.1.2, @babel/runtime@npm:^7.10.3, @babel/runtime@npm:^7.11.2, @babel/runtime@npm:^7.12.1, @babel/runtime@npm:^7.12.13, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.18.3, @babel/runtime@npm:^7.18.6, @babel/runtime@npm:^7.2.0, @babel/runtime@npm:^7.20.13, @babel/runtime@npm:^7.20.6, @babel/runtime@npm:^7.20.7, @babel/runtime@npm:^7.21.0, @babel/runtime@npm:^7.5.5, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.8.7":
+"@babel/runtime@npm:^7.0.0, @babel/runtime@npm:^7.1.2, @babel/runtime@npm:^7.10.3, @babel/runtime@npm:^7.11.2, @babel/runtime@npm:^7.12.1, @babel/runtime@npm:^7.12.13, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.18.3, @babel/runtime@npm:^7.18.6, @babel/runtime@npm:^7.2.0, @babel/runtime@npm:^7.20.13, @babel/runtime@npm:^7.20.7, @babel/runtime@npm:^7.21.0, @babel/runtime@npm:^7.5.5, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.8.7":
   version: 7.22.3
   resolution: "@babel/runtime@npm:7.22.3"
   dependencies:
@@ -1939,7 +1939,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@docusaurus/module-type-aliases@npm:2.4.1":
+"@docusaurus/module-type-aliases@npm:2.4.1, @docusaurus/module-type-aliases@npm:^2.4.1":
   version: 2.4.1
   resolution: "@docusaurus/module-type-aliases@npm:2.4.1"
   dependencies:
@@ -4085,7 +4085,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tsconfig/docusaurus@npm:^1.0.5":
+"@tsconfig/docusaurus@npm:^1.0.7":
   version: 1.0.7
   resolution: "@tsconfig/docusaurus@npm:1.0.7"
   checksum: 8f5b14005d90b2008f10daf03a5edec86d2a7603e5641c579ea936a5c2d165a8c3007a72254fc4c2adb0554d73062f52bb97b30ff818f01c9215957822f3c4db
@@ -4448,6 +4448,15 @@ __metadata:
   version: 1.2.4
   resolution: "@types/range-parser@npm:1.2.4"
   checksum: b7c0dfd5080a989d6c8bb0b6750fc0933d9acabeb476da6fe71d8bdf1ab65e37c136169d84148034802f48378ab94e3c37bb4ef7656b2bec2cb9c0f8d4146a95
+  languageName: node
+  linkType: hard
+
+"@types/react-dom@npm:^18.2.4":
+  version: 18.2.4
+  resolution: "@types/react-dom@npm:18.2.4"
+  dependencies:
+    "@types/react": "*"
+  checksum: 8301f35cf1cbfec8c723e9477aecf87774e3c168bd457d353b23c45064737213d3e8008b067c6767b7b08e4f2b3823ee239242a6c225fc91e7f8725ef8734124
   languageName: node
   linkType: hard
 
@@ -14204,26 +14213,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-facebook-login@npm:^4.1.1":
-  version: 4.1.1
-  resolution: "react-facebook-login@npm:4.1.1"
-  peerDependencies:
-    react: ^16.0.0
-  checksum: e644da474c6bf308e9a862c55397d61fd876a088345f3e9d234ec457eb3c205d1deb1263c5000005adfc1899bf6774cf761ee670c33bd6b0887f0dfd3bdff957
-  languageName: node
-  linkType: hard
-
-"react-facebook@npm:^9.0.12":
-  version: 9.0.12
-  resolution: "react-facebook@npm:9.0.12"
-  dependencies:
-    "@babel/runtime": ^7.20.6
-  peerDependencies:
-    react: ">= 16"
-  checksum: b97c0f8f18d79d1173f944bed707f7b47fe01efaf37aee90bab5c6da8ad0f8015f51e7d7094c03cda38de8819269e825d835a74cef754fb4c22b34344f48a310
-  languageName: node
-  linkType: hard
-
 "react-fast-compare@npm:^3.2.0":
   version: 3.2.2
   resolution: "react-fast-compare@npm:3.2.2"
@@ -16695,13 +16684,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^4.7.4":
-  version: 4.9.5
-  resolution: "typescript@npm:4.9.5"
+"typescript@npm:^5.1.3":
+  version: 5.1.3
+  resolution: "typescript@npm:5.1.3"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: ee000bc26848147ad423b581bd250075662a354d84f0e06eb76d3b892328d8d4440b7487b5a83e851b12b255f55d71835b008a66cbf8f255a11e4400159237db
+  checksum: d9d51862d98efa46534f2800a1071a613751b1585dc78884807d0c179bcd93d6e9d4012a508e276742f5f33c480adefc52ffcafaf9e0e00ab641a14cde9a31c7
   languageName: node
   linkType: hard
 
@@ -16715,13 +16704,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@^4.7.4#~builtin<compat/typescript>":
-  version: 4.9.5
-  resolution: "typescript@patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"
+"typescript@patch:typescript@^5.1.3#~builtin<compat/typescript>":
+  version: 5.1.3
+  resolution: "typescript@patch:typescript@npm%3A5.1.3#~builtin<compat/typescript>::version=5.1.3&hash=1f5320"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: ab417a2f398380c90a6cf5a5f74badd17866adf57f1165617d6a551f059c3ba0a3e4da0d147b3ac5681db9ac76a303c5876394b13b3de75fdd5b1eaa06181c9d
+  checksum: 32a25b2e128a4616f999d4ee502aabb1525d5647bc8955e6edf05d7fbc53af8aa98252e2f6ba80bcedfc0260c982b885f3c09cfac8bb65d2924f3133ad1e1e62
   languageName: node
   linkType: hard
 
@@ -17327,6 +17316,7 @@ __metadata:
     "@babel/runtime": ^7.21.0
     "@docusaurus/core": latest
     "@docusaurus/eslint-plugin": latest
+    "@docusaurus/module-type-aliases": ^2.4.1
     "@docusaurus/plugin-client-redirects": latest
     "@docusaurus/plugin-google-gtag": latest
     "@docusaurus/plugin-google-tag-manager": latest
@@ -17351,9 +17341,10 @@ __metadata:
     "@mui/x-data-grid-generator": 6.0.0-alpha.14
     "@mui/x-data-grid-pro": 6.0.0-alpha.14
     "@primer/octicons-react": ^18.3.0
-    "@tsconfig/docusaurus": ^1.0.5
+    "@tsconfig/docusaurus": ^1.0.7
     "@types/markdown-to-jsx": ^7.0.1
     "@types/marked": ^4.0.8
+    "@types/react-dom": ^18.2.4
     "@types/react-swipeable-views": ^0.13.1
     "@types/react-swipeable-views-utils": ^0.13.4
     "@use-cookie-consent/react": ^0.3.7
@@ -17406,8 +17397,6 @@ __metadata:
     react-dom: ^17.0.2
     react-draggable: ^4.4.5
     react-dropzone: ^14.2.3
-    react-facebook: ^9.0.12
-    react-facebook-login: ^4.1.1
     react-frame-component: ^5.2.6
     react-google-login: ^5.2.2
     react-image: ^4.0.3
@@ -17427,7 +17416,7 @@ __metadata:
     sanitize-html: ^2.8.1
     sass: ^1.57.1
     swiper: ^9.2.0
-    typescript: ^4.7.4
+    typescript: ^5.1.3
     webpack: ^5.75.0
     workbox-routing: ^6.5.4
     workbox-strategies: ^6.5.4
