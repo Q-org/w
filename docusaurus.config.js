@@ -14,7 +14,7 @@
 const isDev = process.env.NODE_ENV === 'development';
 const isDeployPreview =
   !!process.env.NETLIFY && process.env.CONTEXT === 'deploy-preview';
-const isBuildFast = !!process.env.BUILD_FAST
+const isBuildFast = !!process.env.BUILD_FAST;
 const math = import('remark-math');
 const npm2yarn = require('@docusaurus/remark-plugin-npm2yarn');
 const VersionsArchived = require('./versions.json');
@@ -26,8 +26,7 @@ const {
 
 const versions = require('./versions.json');
 
-
-const ArchivedVersionsDropdownItems = VersionsArchived
+const ArchivedVersionsDropdownItems = VersionsArchived;
 /* .splice(
   0,
   5,
@@ -38,7 +37,7 @@ function getNextBetaVersionName() {
   const expectedPrefix = '2.0.0-beta.';
 
   const lastReleasedVersion = versions[0];
-  if (!lastReleasedVersion.includes(expectedPrefix)) {
+  if (!lastReleasedVersion?.includes(expectedPrefix)??null) {
     throw new Error(
       'this code is only meant to be used during the 2.0 beta phase.',
     );
@@ -52,7 +51,7 @@ function reverseSidebarItems(items) {
   // Reverse items in categories
   const result = items.map((item) => {
     if (item.type === 'category') {
-      return { ...item, items: reverseSidebarItems(item.items) };
+      return {...item, items: reverseSidebarItems(item.items)};
     }
 
     return item;
@@ -63,8 +62,6 @@ function reverseSidebarItems(items) {
 }
 const isI18nStaging = process.env.I18N_STAGING === 'true';
 const isVersioningDisabled = !!process.env.DISABLE_VERSIONING || isI18nStaging;
-
-
 
 // Netlify branch deploy like "docusaurus-v2"
 const isBranchDeploy =
@@ -103,11 +100,11 @@ const config = {
     locales:
       isDeployPreview || isBranchDeploy
         ? // Deploy preview and branch deploys: keep them fast!
-        ['zh-CN']
-        : isI18nStaging
-          ? // Staging locales: https://docusaurus-i18n-staging.netlify.app/
           ['zh-CN']
-          : // Production locales
+        : isI18nStaging
+        ? // Staging locales: https://docusaurus-i18n-staging.netlify.app/
+          ['zh-CN']
+        : // Production locales
           ['zh-CN'],
   },
   themes: [
@@ -117,7 +114,7 @@ const config = {
     // "@docusaurus-theme-frontmatter",
 
     [
-      require.resolve("@easyops-cn/docusaurus-search-local"),
+      require.resolve('@easyops-cn/docusaurus-search-local'),
       /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
       ({
         // ... Your options.
@@ -125,10 +122,9 @@ const config = {
         hashed: true,
         // For Docs using Chinese, The `language` is recommended to set to:
         // ```
-        language: ["en", "zh"],
+        language: ['en', 'zh'],
         // ```
         indexPages: true,
-
       }),
     ],
   ],
@@ -143,14 +139,15 @@ const config = {
           // Remove this to remove the "edit this page" links.
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
-          remarkPlugins: [math, [npm2yarn, { sync: true }]],
+          remarkPlugins: [math, [npm2yarn, {sync: true}]],
           rehypePlugins: [],
           disableVersioning: isVersioningDisabled,
           lastVersion: 'current',
           onlyIncludeVersions: (() => {
             if (isBuildFast) {
               return ['current'];
-            } if (!isVersioningDisabled && (isDev || false)) {
+            }
+            if (!isVersioningDisabled && (isDev || false)) {
               return ['current', ...versions.slice(0, 2)];
             }
             return undefined;
@@ -160,14 +157,15 @@ const config = {
               label: `${getNextBetaVersionName()}`,
             },
           },
-          editUrl:
-            'http://127.0.0.1:81/',
+          editUrl: 'http://127.0.0.1:81/',
         },
         blog: {
           showReadingTime: true,
           // eslint-disable-next-line no-dupe-keys
-          readingTime: ({ content, frontMatter, defaultReadingTime }) =>
-            frontMatter.hide_reading_time ? undefined : defaultReadingTime({ content }),
+          readingTime: ({content, frontMatter, defaultReadingTime}) =>
+            frontMatter.hide_reading_time
+              ? undefined
+              : defaultReadingTime({content}),
           editUrl:
             // Please change this to your repo.
             // Remove this to remove the "edit this page" links.
@@ -179,8 +177,8 @@ const config = {
         },
         gtag: !(isDeployPreview || isBranchDeploy)
           ? {
-            trackingID: ['G-qio', 'CN-5516-175'],
-          }
+              trackingID: ['G-qio', 'CN-5516-175'],
+            }
           : undefined,
         googleTagManager: {
           containerId: 'GTM-qio',
@@ -194,19 +192,20 @@ const config = {
   ],
 
   themeConfig:
-
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      metadata: [{ name: 'keywords', content: '微课程,基础会计, 课程设计,社交，校园交流' }],
+      metadata: [
+        {name: 'keywords', content: '微课程,基础会计, 课程设计,社交，校园交流'},
+      ],
       zoom: {
         selector: '.markdown :not(em) > img',
         config: {
           // options you can specify via https://github.com/francoischalifour/medium-zoom#usage
           background: {
             light: 'rgb(255, 255, 255)',
-            dark: 'rgb(50, 50, 50)'
-          }
-        }
+            dark: 'rgb(50, 50, 50)',
+          },
+        },
       },
       docs: {
         sidebar: {
@@ -227,11 +226,10 @@ const config = {
         },
 
         items: [
-
           {
             type: 'dropdown',
             position: 'left',
-            label: "课程",
+            label: '课程',
             /*             dropdownActiveClassDisabled: true, */
             items: [
               {
@@ -242,7 +240,13 @@ const config = {
             ],
           },
 
-          { label: '操作指南', type: 'docSidebar', sidebarId: 'manu', position: 'left', className: 'signup dev-portal-link', },
+          {
+            label: '操作指南',
+            type: 'docSidebar',
+            sidebarId: 'manu',
+            position: 'left',
+            className: 'signup dev-portal-link',
+          },
           // { label: 'test', to: '/test/test', position: 'left', className: 'login', },
           // {
           //   label: '登录2', to: '/sign/SignIn', position: 'right',
@@ -269,9 +273,9 @@ const config = {
         appId: 'KQGPNV3L6O',
         // appId: 'EPQT07RLZB',
         // 公开 API 密钥：提交它没有危险
-        apiKey: '693aabdd4be4a258e8d0af3f94d49cba',
+        apiKey: '6eafd6a6da222939c19d32f4067c358b',
         // apiKey: '7af2ff95d2ccdf0adbd8992f30f19021',
-        indexName: 'qorgsearch',
+        indexName: 'qio',
         // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
         contextualSearch: true,
         externalUrlRegex: '(www.)?qio(\\.wiki)?',
@@ -385,7 +389,6 @@ const config = {
                 label: '蜀ICP备2023006146号-1',
                 href: 'https://beian.miit.gov.cn/',
               },
-
             ],
           },
         ],
@@ -400,15 +403,15 @@ const config = {
         copyright: `版权 © ${new Date().getFullYear()} Q-org.`,
       },
       colorMode: {
-        defaultMode: "dark",
+        defaultMode: 'dark',
       },
     }),
 
   plugins: [
-    "docusaurus-plugin-less",
+    'docusaurus-plugin-less',
     '@docusaurus/plugin-ideal-image',
     '@docusaurus/theme-mermaid',
-    require.resolve("docusaurus-plugin-image-zoom"),
+    require.resolve('docusaurus-plugin-image-zoom'),
     //...dogfoodingPluginInstances,
     [
       'client-redirects',
@@ -438,7 +441,7 @@ const config = {
         ],
       }),
     ],
-    "@graphql-markdown/docusaurus",
+    '@graphql-markdown/docusaurus',
     'docusaurus-plugin-sass',
     async function myPlugin(context, options) {
       // ...
@@ -448,7 +451,7 @@ const config = {
           return 1 + 1;
         },
 
-        async contentLoaded({ content, actions }) {
+        async contentLoaded({content, actions}) {
           // ...
         },
         /* 其他生命周期 API */
@@ -482,7 +485,6 @@ const config = {
         ],
       },
     ],
-
   ],
 };
 

@@ -1,0 +1,23 @@
+/* TEAM */
+    <h1>Our Team</h1>
+    <ul>
+        <li>Project Manager: John Doe</li>
+        <li>Lead Developer: Jane Smith</li>
+        <li>Designer: Bob Johnson</li>
+    </ul>
+
+/* THANKS */
+    <h1>Special Thanks</h1>
+    <ul>
+        <li>Stack Overflow</li>
+        <li>W3Schools</li>
+        <li>Google Fonts</li>
+    </ul>
+
+/* SITE */
+    <h1>About Our Site</h1>
+    <ul>
+        <li>Created: 2022-06-01</li>
+        <li>Last Updated: 2022-08-01</li>
+        <li>Contact Us: info@ourwebsite.com</li>
+    </ul>

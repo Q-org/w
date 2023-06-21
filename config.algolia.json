@@ -1,7 +1,7 @@
 {
     "index_name": "6eafd6a6da222939c19d32f4067c358b",
     "start_urls": [
-        "https://qio.wiki/"
+        "http://127.0.0.1:83"
     ],
     "selectors": {
         "lvl0": "#content header h1",
