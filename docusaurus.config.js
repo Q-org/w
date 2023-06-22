@@ -37,7 +37,7 @@ function getNextBetaVersionName() {
   const expectedPrefix = '2.0.0-beta.';
 
   const lastReleasedVersion = versions[0];
-  if (!lastReleasedVersion?.includes(expectedPrefix)??null) {
+  if (!lastReleasedVersion?.includes(expectedPrefix) ?? null) {
     throw new Error(
       'this code is only meant to be used during the 2.0 beta phase.',
     );
@@ -270,11 +270,11 @@ const config = {
       algolia: {
         // indexName: 'docsearch',
         // Algolia 提供的应用 ID
-        appId: 'KQGPNV3L6O',
-        // appId: 'EPQT07RLZB',
+        // appId: 'KQGPNV3L6O',
+        appId: 'QVWISRSNQP',
         // 公开 API 密钥：提交它没有危险
-        apiKey: '6eafd6a6da222939c19d32f4067c358b',
-        // apiKey: '7af2ff95d2ccdf0adbd8992f30f19021',
+        // apiKey: '6eafd6a6da222939c19d32f4067c358b',
+        apiKey: '6e0049471cd595eadb4f3bc7c3722dad',
         indexName: 'qio',
         // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
         contextualSearch: true,
