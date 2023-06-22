@@ -75,9 +75,21 @@ const config = {
   baseUrl: '/',
   stylesheets: [
     // {
-    //   href: '/katex/katex.min.css',
+    'https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.css',
     //   type: 'text/css',
     // },
+  ],
+  scripts: [
+    // String format.
+    // Object format.
+    {
+      src: 'https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.js"https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.js"https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.js',
+      async: true,
+    },
+    {
+      src: '/algoliasearchNetlify.js',
+      async: true,
+    },
   ],
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',

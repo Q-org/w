@@ -44,7 +44,7 @@ module.exports = {
     image: 'img/docusaurus-social-card.jpg',
     algolia: {
       appId: 'X1Z85QJPUV',
-      apiKey: 'bf7211c161e8205da2f933a02534105a',
+      apiKey: '9bbd6dc6120b973ea848dace07f57a5a',
       indexName: 'docusaurus-2',
       contextualSearch: true,
     },
