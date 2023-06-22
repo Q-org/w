@@ -113,20 +113,20 @@ const config = {
     // ... Your other themes.
     // "@docusaurus-theme-frontmatter",
 
-    [
-      require.resolve('@easyops-cn/docusaurus-search-local'),
-      /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
-      ({
-        // ... Your options.
-        // `hashed` is recommended as long-term-cache of index file is possible.
-        hashed: true,
-        // For Docs using Chinese, The `language` is recommended to set to:
-        // ```
-        language: ['en', 'zh'],
-        // ```
-        indexPages: true,
-      }),
-    ],
+    // [
+    //   require.resolve('@easyops-cn/docusaurus-search-local'),
+    //   /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
+    //   ({
+    //     // ... Your options.
+    //     // `hashed` is recommended as long-term-cache of index file is possible.
+    //     hashed: true,
+    //     // For Docs using Chinese, The `language` is recommended to set to:
+    //     // ```
+    //     language: ['en', 'zh'],
+    //     // ```
+    //     indexPages: true,
+    //   }),
+    // ],
   ],
   presets: [
     [
@@ -271,10 +271,10 @@ const config = {
         // indexName: 'docsearch',
         // Algolia 提供的应用 ID
         // appId: 'KQGPNV3L6O',
-        appId: 'QVWISRSNQP',
+        appId: 'ZILQXT0BHD',
         // 公开 API 密钥：提交它没有危险
         // apiKey: '6eafd6a6da222939c19d32f4067c358b',
-        apiKey: '6e0049471cd595eadb4f3bc7c3722dad',
+        apiKey: '9bbd6dc6120b973ea848dace07f57a5a',
         indexName: 'qio',
         // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
         contextualSearch: true,
@@ -360,6 +360,7 @@ const config = {
                 <a href="https://www.netlify.com" target="_blank" rel="noreferrer noopener" aria-label="Deploys by Netlify">
                   <img src="/img/netlify-color-accent.svg" alt="Deploys by Netlify" width="114" height="51" />
                 </a>
+                <p>build ${versions}</p>
               `,
               },
             ],
