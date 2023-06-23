@@ -17,3 +17,6 @@ jobs:
           APPLICATION_ID: ${{ secrets.APPLICATION_ID }}
           API_KEY: ${{ secrets.API_KEY }}
           CONFIG: ${{ steps.algolia_config.outputs.config }}
+  netlify:
+    env:set 
+      BUILD_ID: ${BUILD_ID}

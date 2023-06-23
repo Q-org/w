@@ -62,7 +62,7 @@ function reverseSidebarItems(items) {
 }
 const isI18nStaging = process.env.I18N_STAGING === 'true';
 const isVersioningDisabled = !!process.env.DISABLE_VERSIONING || isI18nStaging;
-
+const BUILD_ID =  process.env.BUILD_ID??null
 // Netlify branch deploy like "docusaurus-v2"
 const isBranchDeploy =
   !!process.env.NETLIFY && process.env.CONTEXT === 'branch-deploy';
@@ -371,7 +371,7 @@ const config = {
                 <a href="https://www.netlify.com" target="_blank" rel="noreferrer noopener" aria-label="Deploys by Netlify">
                   <img src="/img/netlify-color-accent.svg" alt="Deploys by Netlify" width="114" height="51" />
                 </a>
-                <p>build ${versions}</p>
+                <p>build: ${BUILD_ID}</p>
               `,
               },
             ],
@@ -453,7 +453,6 @@ const config = {
         ],
       }),
     ],
-    '@graphql-markdown/docusaurus',
     'docusaurus-plugin-sass',
     async function myPlugin(context, options) {
       // ...
