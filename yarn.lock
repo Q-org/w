@@ -136,6 +136,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@algolia/netlify-plugin-crawler@npm:^1.0.15":
+  version: 1.0.15
+  resolution: "@algolia/netlify-plugin-crawler@npm:1.0.15"
+  dependencies:
+    node-fetch: 2.6.7
+  checksum: 4994203d0478b269f7ab6c3807890caad4ae966ea86e7b06a559caa67e3ca6f6a28692b5fbc9f1bb49e6ac65bc55ffc177e282e6e4419229be1d93accc592689
+  languageName: node
+  linkType: hard
+
 "@algolia/requester-browser-xhr@npm:4.17.1":
   version: 4.17.1
   resolution: "@algolia/requester-browser-xhr@npm:4.17.1"
@@ -12929,6 +12938,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"node-fetch@npm:2.6.7":
+  version: 2.6.7
+  resolution: "node-fetch@npm:2.6.7"
+  dependencies:
+    whatwg-url: ^5.0.0
+  peerDependencies:
+    encoding: ^0.1.0
+  peerDependenciesMeta:
+    encoding:
+      optional: true
+  checksum: 8d816ffd1ee22cab8301c7756ef04f3437f18dace86a1dae22cf81db8ef29c0bf6655f3215cb0cdb22b420b6fe141e64b26905e7f33f9377a7fa59135ea3e10b
+  languageName: node
+  linkType: hard
+
 "node-fetch@npm:^2.6.11":
   version: 2.6.11
   resolution: "node-fetch@npm:2.6.11"
@@ -17988,6 +18011,7 @@ __metadata:
   resolution: "w@workspace:."
   dependencies:
     "@algolia/client-search": ^4.17.0
+    "@algolia/netlify-plugin-crawler": ^1.0.15
     "@babel/runtime": ^7.21.0
     "@docusaurus/core": latest
     "@docusaurus/eslint-plugin": latest

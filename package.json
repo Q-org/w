@@ -100,6 +100,7 @@
     "crypto": false
   },
   "devDependencies": {
+    "@algolia/netlify-plugin-crawler": "^1.0.15",
     "@babel/runtime": "^7.21.0",
     "@docusaurus/eslint-plugin": "latest",
     "@docusaurus/module-type-aliases": "^2.4.1",
