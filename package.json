@@ -38,7 +38,7 @@
     "@easyops-cn/docusaurus-search-local": "^0.35.0",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
-    "@graphql-markdown/docusaurus": "^1.16.6",
+
     "@heroicons/react": "^1.0.5",
     "@mui/icons-material": "^5.10.3",
     "@mui/lab": "^5.0.0-alpha.111",

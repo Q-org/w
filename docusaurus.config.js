@@ -70,8 +70,7 @@ const isBranchDeploy =
 const config = {
   title: '微课程',
   tagline: '微课程很酷',
-  url: 0 ? 'https://qio.wiki' : 'https://q-org.netlify.app/',
-  // url: 'https://zingy-tiramisu-028c02.netlify.app/',
+  url: 0 ? 'https://qio.wiki' : 'https://qorg.xyz/',
   baseUrl: '/',
   stylesheets: [
     // {
@@ -110,7 +109,7 @@ const config = {
     defaultLocale: 'zh-CN',
 
     locales:
-      isDeployPreview || isBranchDeploy
+      isDeployPreview || isBranchDeploy || 1
         ? // Deploy preview and branch deploys: keep them fast!
           ['zh-CN']
         : isI18nStaging
