@@ -22,8 +22,8 @@
     "format:diff": "prettier --config .prettierrc --list-different \"**/*.{js,jsx,ts,tsx,md,mdx}\""
   },
   "dependencies": {
-    "@algolia/netlify-plugin-crawler": "^1.0.15",
     "@algolia/client-search": "^4.17.0",
+    "@algolia/netlify-plugin-crawler": "^1.0.15",
     "@docusaurus/core": "latest",
     "@docusaurus/plugin-client-redirects": "latest",
     "@docusaurus/plugin-google-gtag": "latest",
@@ -38,7 +38,6 @@
     "@easyops-cn/docusaurus-search-local": "^0.35.0",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
-
     "@heroicons/react": "^1.0.5",
     "@mui/icons-material": "^5.10.3",
     "@mui/lab": "^5.0.0-alpha.111",
