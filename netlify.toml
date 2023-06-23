@@ -15,5 +15,5 @@ jobs:
         uses: signcl/docsearch-scraper-action@master
         env:
           APPLICATION_ID: ZILQXT0BHD
-          API_KEY: aa7d4774e65c857830eddf599265dd2a
-          CONFIG: ${{ steps.algolia_config.outputs.config }}
+          API_KEY= "aa7d4774e65c857830eddf599265dd2a"
+          CONFIG= "${{ steps.algolia_config.outputs.config }}"
