@@ -1,0 +1,10 @@
+[[plugins]]
+package = "@algolia/netlify-plugin-crawler"
+  [plugins.inputs]
+  branches = ['main', 'develop', 'feat/add-algolia']
+  disabled = true
+  pathPrefix = "/blog"
+  customDomain = "example.com"
+  renderJavaScript = true
+ALGOLIA_BASE_URL= "https://crawler.algolia.com/"
+ALGOLIA_API_KEY="aa7d4774e65c857830eddf599265dd2a"
