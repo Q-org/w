@@ -22,6 +22,7 @@
     "format:diff": "prettier --config .prettierrc --list-different \"**/*.{js,jsx,ts,tsx,md,mdx}\""
   },
   "dependencies": {
+    "@algolia/netlify-plugin-crawler": "^1.0.15",
     "@algolia/client-search": "^4.17.0",
     "@docusaurus/core": "latest",
     "@docusaurus/plugin-client-redirects": "latest",
@@ -100,7 +101,6 @@
     "crypto": false
   },
   "devDependencies": {
-    "@algolia/netlify-plugin-crawler": "^1.0.15",
     "@babel/runtime": "^7.21.0",
     "@docusaurus/eslint-plugin": "latest",
     "@docusaurus/module-type-aliases": "^2.4.1",
