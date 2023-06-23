@@ -2859,6 +2859,117 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@graphql-markdown/core@npm:^1.5.0":
+  version: 1.5.0
+  resolution: "@graphql-markdown/core@npm:1.5.0"
+  dependencies:
+    "@graphql-markdown/utils": ^1.5.0
+  peerDependencies:
+    "@graphql-markdown/diff": ^1.0.12
+    "@graphql-markdown/printer-legacy": ^1.4.0
+    prettier: ^2.8
+  peerDependenciesMeta:
+    "@graphql-markdown/diff":
+      optional: true
+    "@graphql-markdown/printer-legacy":
+      optional: true
+    prettier:
+      optional: true
+  checksum: fb99a7418143f41a2c6d4d5f7359833c8c6a81366234ca0ca830f685949c07022e3d4c7f0e711464521b3c76acfcd0c4e940a46f5fbd2798f48eea973a7657b8
+  languageName: node
+  linkType: hard
+
+"@graphql-markdown/docusaurus@npm:^1.19.0":
+  version: 1.19.0
+  resolution: "@graphql-markdown/docusaurus@npm:1.19.0"
+  dependencies:
+    "@graphql-markdown/core": ^1.5.0
+    "@graphql-markdown/printer-legacy": ^1.4.0
+  checksum: 588c3e647898a5b17c37e467ac34fe02b305b3db066ca4dc98b279a13033b8e192c1dc01eeffba5448f88f472481bb002ea28735621eba9aafd660a25d54b873
+  languageName: node
+  linkType: hard
+
+"@graphql-markdown/printer-legacy@npm:^1.4.0":
+  version: 1.4.0
+  resolution: "@graphql-markdown/printer-legacy@npm:1.4.0"
+  dependencies:
+    "@graphql-markdown/utils": ^1.5.0
+  checksum: 5494cbb34bd6b32c497e5f03e0c2e8ca801df711450026d09e2c05d1450023dfe3a21ab91d7a4cef8153603533e29bc21bbfd2d48f8fdcb1dd2ef0d3603a9b92
+  languageName: node
+  linkType: hard
+
+"@graphql-markdown/utils@npm:^1.5.0":
+  version: 1.5.0
+  resolution: "@graphql-markdown/utils@npm:1.5.0"
+  dependencies:
+    "@graphql-tools/load": ^8.0.0
+  peerDependencies:
+    graphql: ^14.0 || ^15.0 || ^16.0
+  checksum: da6c21b0f0554fd0d202acf4a43fcb3307b0c700d895c44c91473e8d47cf2f002e2698017102665861a8415748bc692ecc2dfe52c5001e68ea5e62836f00e516
+  languageName: node
+  linkType: hard
+
+"@graphql-tools/load@npm:^8.0.0":
+  version: 8.0.0
+  resolution: "@graphql-tools/load@npm:8.0.0"
+  dependencies:
+    "@graphql-tools/schema": ^10.0.0
+    "@graphql-tools/utils": ^10.0.0
+    p-limit: 3.1.0
+    tslib: ^2.4.0
+  peerDependencies:
+    graphql: ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0
+  checksum: e1126bef8917e8a7e89c12cc95b127de727c04502e57f379d93dd3027ce72dc38b16a52a417263959a938b4660a1d362836eed59f941cd30ee3d5452c793a50d
+  languageName: node
+  linkType: hard
+
+"@graphql-tools/merge@npm:^9.0.0":
+  version: 9.0.0
+  resolution: "@graphql-tools/merge@npm:9.0.0"
+  dependencies:
+    "@graphql-tools/utils": ^10.0.0
+    tslib: ^2.4.0
+  peerDependencies:
+    graphql: ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0
+  checksum: e93794260faa477979bdc22f05da26c0eff02bd82c11565a1197152b70b5ab1c73dc6f8a05caf06737bcb18cb244bd19ee99d62bfc41af3bffb3c17eddb70edf
+  languageName: node
+  linkType: hard
+
+"@graphql-tools/schema@npm:^10.0.0":
+  version: 10.0.0
+  resolution: "@graphql-tools/schema@npm:10.0.0"
+  dependencies:
+    "@graphql-tools/merge": ^9.0.0
+    "@graphql-tools/utils": ^10.0.0
+    tslib: ^2.4.0
+    value-or-promise: ^1.0.12
+  peerDependencies:
+    graphql: ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0
+  checksum: 550e9a4528584a4d108892f1553fb5b2590e63e88b9a9d3c1ad80b01c974ca9947adb9d1448a6969230d90c15dc96e8e84d62f32ef0fde804c389b43ac5bd739
+  languageName: node
+  linkType: hard
+
+"@graphql-tools/utils@npm:^10.0.0":
+  version: 10.0.1
+  resolution: "@graphql-tools/utils@npm:10.0.1"
+  dependencies:
+    "@graphql-typed-document-node/core": ^3.1.1
+    tslib: ^2.4.0
+  peerDependencies:
+    graphql: ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0
+  checksum: fc6412b6914bcae87f825e1cf5998f3c0e54470d00730054b2e079a4e2f19eeb52626294eb62d684f82ff2ae59c6e1c1854664a0e13de9becf40aa857c437e3d
+  languageName: node
+  linkType: hard
+
+"@graphql-typed-document-node/core@npm:^3.1.1":
+  version: 3.2.0
+  resolution: "@graphql-typed-document-node/core@npm:3.2.0"
+  peerDependencies:
+    graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0
+  checksum: fa44443accd28c8cf4cb96aaaf39d144a22e8b091b13366843f4e97d19c7bfeaf609ce3c7603a4aeffe385081eaf8ea245d078633a7324c11c5ec4b2011bb76d
+  languageName: node
+  linkType: hard
+
 "@hapi/hoek@npm:^9.0.0":
   version: 9.3.0
   resolution: "@hapi/hoek@npm:9.3.0"
@@ -13352,21 +13463,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"p-limit@npm:3.1.0, p-limit@npm:^3.0.2":
+  version: 3.1.0
+  resolution: "p-limit@npm:3.1.0"
+  dependencies:
+    yocto-queue: ^0.1.0
+  checksum: 7c3690c4dbf62ef625671e20b7bdf1cbc9534e83352a2780f165b0d3ceba21907e77ad63401708145ca4e25bfc51636588d89a8c0aeb715e6c37d1c066430360
+  languageName: node
+  linkType: hard
+
 "p-limit@npm:^2.0.0, p-limit@npm:^2.2.0":
   version: 2.3.0
   resolution: "p-limit@npm:2.3.0"
   dependencies:
     p-try: ^2.0.0
   checksum: 84ff17f1a38126c3314e91ecfe56aecbf36430940e2873dadaa773ffe072dc23b7af8e46d4b6485d302a11673fe94c6b67ca2cfbb60c989848b02100d0594ac1
-  languageName: node
-  linkType: hard
-
-"p-limit@npm:^3.0.2":
-  version: 3.1.0
-  resolution: "p-limit@npm:3.1.0"
-  dependencies:
-    yocto-queue: ^0.1.0
-  checksum: 7c3690c4dbf62ef625671e20b7bdf1cbc9534e83352a2780f165b0d3ceba21907e77ad63401708145ca4e25bfc51636588d89a8c0aeb715e6c37d1c066430360
   languageName: node
   linkType: hard
 
@@ -17812,6 +17923,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"value-or-promise@npm:^1.0.12":
+  version: 1.0.12
+  resolution: "value-or-promise@npm:1.0.12"
+  checksum: f53a66c75b7447c90bbaf946a757ca09c094629cb80ba742f59c980ec3a69be0a385a0e75505dedb4e757862f1a994ca4beaf083a831f24d3ffb3d4bb18cd1e1
+  languageName: node
+  linkType: hard
+
 "vary@npm:~1.1.2":
   version: 1.1.2
   resolution: "vary@npm:1.1.2"
@@ -17913,6 +18031,7 @@ __metadata:
     "@emotion/react": ^11.10.5
     "@emotion/styled": ^11.10.5
     "@formatjs/ts-transformer": ^3.11.6
+    "@graphql-markdown/docusaurus": ^1.19.0
     "@heroicons/react": ^1.0.5
     "@mui/icons-material": ^5.10.3
     "@mui/lab": ^5.0.0-alpha.111
