@@ -1,4 +1,4 @@
 # Algolia-Crawler-Verif: ABF4AF2D6B508953
 User-agent: *
 Allow: /
-Sitemap: https://https://qorg.xyz//sitemap.xml
+Sitemap: https://qorg.xyz//sitemap.xml
