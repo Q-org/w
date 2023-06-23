@@ -62,7 +62,7 @@ function reverseSidebarItems(items) {
 }
 const isI18nStaging = process.env.I18N_STAGING === 'true';
 const isVersioningDisabled = !!process.env.DISABLE_VERSIONING || isI18nStaging;
-const BUILD_ID =  process.env.BUILD_ID??null
+const BUILD_ID = process.env.BUILD_ID ?? '';
 // Netlify branch deploy like "docusaurus-v2"
 const isBranchDeploy =
   !!process.env.NETLIFY && process.env.CONTEXT === 'branch-deploy';
