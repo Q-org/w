@@ -87,7 +87,7 @@ const config = {
     // String format.
     // Object format.
     {
-      src: 'https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.js"https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.js"https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.js',
+      src: 'https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.js',
       async: true,
     },
     {
@@ -287,14 +287,14 @@ const config = {
         // indexName: 'docsearch',
         // Algolia 提供的应用 ID
         // appId: 'KQGPNV3L6O',
-        appId: 'ZILQXT0BHD',
+        appId: 'CRARHG4MQ4',
         // 公开 API 密钥：提交它没有危险
         // apiKey: '6eafd6a6da222939c19d32f4067c358b',
-        apiKey: '9bbd6dc6120b973ea848dace07f57a5a',
-        indexName: 'qio',
+        apiKey: '8373811348a81fc2ea32cc36d17f6704',
+        indexName: 'qorg',
         // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
         contextualSearch: true,
-        externalUrlRegex: '(www.)?qio(\\.wiki)?',
+        externalUrlRegex: '(www.)?qorg(\\.xyz)?',
         // replaceSearchResultPathname: {
         //   from: 'docs',
         //   to: '/',

@@ -94,6 +94,7 @@
     "sanitize-html": "^2.8.1",
     "sass": "^1.57.1",
     "scrape-it": "^6.0.1",
+    "search-insights": "^2.6.0",
     "workbox-routing": "^6.5.4",
     "workbox-strategies": "^6.5.4"
   },

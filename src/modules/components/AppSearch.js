@@ -338,9 +338,9 @@ export default function AppSearch() {
         ReactDOM.createPortal(
           <DocSearchModal
             initialQuery={initialQuery}
-            appId={'ZILQXT0BHD'}
-            apiKey={'9bbd6dc6120b973ea848dace07f57a5a'}
-            indexName="material-ui"
+            appId={'CRARHG4MQ4'}
+            apiKey={'a048351648e086a48779f74d43a9f6f0'}
+            indexName="qorg"
             searchParameters={{
               facetFilters: ['version:master', facetFilterLanguage],
               optionalFilters: [`product:${productSpace}`],

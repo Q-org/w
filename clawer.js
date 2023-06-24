@@ -1,16 +1,16 @@
 new Crawler({
-  appId: 'ZILQXT0BHD',
-  apiKey: '6eafd6a6da222939c19d32f4067c358b',
+  appId: 'CRARHG4MQ4',
+  apiKey: 'a048351648e086a48779f74d43a9f6f0',
   rateLimit: 8,
   maxDepth: 10,
-  startUrls: ['https://qio/'],
-  sitemaps: ['https://qio/sitemap.xml'],
+  startUrls: ['https://qorg.xyz/'],
+  sitemaps: ['https://qorg.xyz/sitemap.xml'],
   ignoreCanonicalTo: true,
-  discoveryPatterns: ['https://qio/**'],
+  discoveryPatterns: ['https://qorg.xyz/**'],
   actions: [
     {
-      indexName: 'QORGSEARCH',
-      pathsToMatch: ['https://qio/**'],
+      indexName: 'qorg',
+      pathsToMatch: ['https://qorg.xyz/**'],
       recordExtractor: ({$, helpers}) => {
         // priority order: deepest active sub list header -> navbar active item -> 'Documentation'
         const lvl0 =

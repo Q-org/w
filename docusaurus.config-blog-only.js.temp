@@ -43,8 +43,8 @@ module.exports = {
   themeConfig: {
     image: 'img/docusaurus-social-card.jpg',
     algolia: {
-      appId: 'X1Z85QJPUV',
-      apiKey: '9bbd6dc6120b973ea848dace07f57a5a',
+      appId: 'CRARHG4MQ4',
+      apiKey: '8373811348a81fc2ea32cc36d17f6704',
       indexName: 'docusaurus-2',
       contextualSearch: true,
     },
