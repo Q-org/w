@@ -19,6 +19,7 @@ const math = import('remark-math');
 const npm2yarn = require('@docusaurus/remark-plugin-npm2yarn');
 const VersionsArchived = require('./versions.json');
 
+// @ts-ignore
 const {
   dogfoodingPluginInstances,
   dogfoodingThemeInstances,
@@ -26,6 +27,7 @@ const {
 
 const versions = require('./versions.json');
 
+// @ts-ignore
 const ArchivedVersionsDropdownItems = VersionsArchived;
 /* .splice(
   0,
@@ -47,8 +49,10 @@ function getNextBetaVersionName() {
 }
 
 // eslint-disable-next-line no-unused-vars
+// @ts-ignore
 function reverseSidebarItems(items) {
   // Reverse items in categories
+  // @ts-ignore
   const result = items.map((item) => {
     if (item.type === 'category') {
       return {...item, items: reverseSidebarItems(item.items)};
@@ -62,8 +66,8 @@ function reverseSidebarItems(items) {
 }
 const isI18nStaging = process.env.I18N_STAGING === 'true';
 const isVersioningDisabled = !!process.env.E_VERSIONING || isI18nStaging;
-const buildId = process.env.uildD_ID ?? '';
-const Build = buildId ? `<p>build: ${buildId}</p>` : '';
+const buildId = process.env.BUILD_ID ?? '';
+const Build = buildId ? `build: ${buildId}` : '';
 // Netnch deploy lik`e "docusaurus-v2"
 const isBranchDeploy =
   !!process.env.NETLIFY && process.env.CONTEXT === 'branch-deploy';
@@ -455,6 +459,7 @@ const config = {
       }),
     ],
     'docusaurus-plugin-sass',
+    // @ts-ignore
     async function myPlugin(context, options) {
       // ...
       return {
@@ -463,6 +468,7 @@ const config = {
           return 1 + 1;
         },
 
+        // @ts-ignore
         async contentLoaded({content, actions}) {
           // ...
         },
