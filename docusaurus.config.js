@@ -75,30 +75,15 @@ const isBranchDeploy =
 const config = {
   title: '微课程',
   tagline: '微课程很酷',
-  url: 0 ? 'https://qio.wiki' : 'https://qorg.xyz/',
+  url: 'https://qio.wiki',
   baseUrl: '/',
-  stylesheets: [
-    // {
-    'https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.css',
-    //   type: 'text/css',
-    // },
-  ],
-  scripts: [
-    // String format.
-    // Object format.
-    {
-      src: 'https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.js',
-      async: true,
-    },
-    {
-      src: '/algoliasearchNetlify.js',
-      async: true,
-    },
-  ],
+  stylesheets: [],
+  scripts: [],
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: '/img/favicon.ico',
   customFields: {
+    outDir: 'dist', // 指定构建目录为 dist
     admin: 'q-org',
     superman: 'lol',
     user: 'q-org',
@@ -127,22 +112,21 @@ const config = {
     'live-codeblock',
     // ...dogfoodingThemeInstances
     // ... Your other themes.
-    // "@docusaurus-theme-frontmatter",
 
-    // [
-    //   require.resolve('@easyops-cn/docusaurus-search-local'),
-    //   /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
-    //   ({
-    //     // ... Your options.
-    //     // `hashed` is recommended as long-term-cache of index file is possible.
-    //     hashed: true,
-    //     // For Docs using Chinese, The `language` is recommended to set to:
-    //     // ```
-    //     language: ['en', 'zh'],
-    //     // ```
-    //     indexPages: true,
-    //   }),
-    // ],
+    [
+      require.resolve('@easyops-cn/docusaurus-search-local'),
+      /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
+      ({
+        // ... Your options.
+        // `hashed` is recommended as long-term-cache of index file is possible.
+        hashed: true,
+        // For Docs using Chinese, The `language` is recommended to set to:
+        // ```
+        language: ['en', 'zh'],
+        // ```
+        indexPages: true,
+      }),
+    ],
   ],
   presets: [
     [
@@ -235,23 +219,43 @@ const config = {
       },
       navbar: {
         hideOnScroll: true,
-        title: '微课程',
+        title: '微微',
         logo: {
           alt: '微微 项目 Logo',
           src: 'img/logo.svg',
         },
 
         items: [
+          // {
+          //   label: '基础会计',
+          //   to: `/jc`,
+          //   position: 'left',
+          //   target: '_self',
+          //   'aria-label': 'GitHub repository',
+          // },
+          // {
+          //   label: '出纳实务',
+          //   to: `https://localhost/cn`,
+          //   position: 'left',
+          //   target: '_self',
+          //   'aria-label': 'GitHub repository',
+          // },
           {
             type: 'dropdown',
             position: 'left',
             label: '课程',
+
             /*             dropdownActiveClassDisabled: true, */
             items: [
               {
                 type: 'docSidebar',
                 sidebarId: 'courses',
                 label: '基础会计',
+              },
+              {
+                type: 'docSidebar',
+                sidebarId: 'courses',
+                label: '出纳实务',
               },
             ],
           },
@@ -268,13 +272,13 @@ const config = {
           //   label: '登录2', to: '/sign/SignIn', position: 'right',
           //   className: 'login',
           // },
-          {
-            label: '登陆',
-            to: 'http://127.0.0.1/n',
-            position: 'right',
-            target: '_self',
-            'aria-label': 'GitHub repository',
-          },
+          // {
+          //   label: '登陆',
+          //   to: 'http://127.0.0.1/n',
+          //   position: 'right',
+          //   target: '_self',
+          //   'aria-label': 'GitHub repository',
+          // },
           {
             href: 'https://github.com/Q-org',
             position: 'right',
@@ -283,29 +287,29 @@ const config = {
           },
         ],
       },
-      algolia: {
-        // indexName: 'docsearch',
-        // Algolia 提供的应用 ID
-        // appId: 'KQGPNV3L6O',
-        appId: 'CRARHG4MQ4',
-        // 公开 API 密钥：提交它没有危险
-        // apiKey: '6eafd6a6da222939c19d32f4067c358b',
-        apiKey: '8373811348a81fc2ea32cc36d17f6704',
-        indexName: 'qorg',
-        // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
-        contextualSearch: true,
-        externalUrlRegex: '(www.)?qorg(\\.xyz)?',
-        // replaceSearchResultPathname: {
-        //   from: 'docs',
-        //   to: '/',
-        // },
-        // Optional: Algolia search parameters
-        searchParameters: {},
+      // algolia: {
+      //   // indexName: 'docsearch',
+      //   // Algolia 提供的应用 ID
+      //   // appId: 'KQGPNV3L6O',
+      //   appId: 'CRARHG4MQ4',
+      //   // 公开 API 密钥：提交它没有危险
+      //   // apiKey: '6eafd6a6da222939c19d32f4067c358b',
+      //   apiKey: '8373811348a81fc2ea32cc36d17f6704',
+      //   indexName: 'qorg',
+      //   // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
+      //   contextualSearch: true,
+      //   externalUrlRegex: '(www.)?qorg(\\.xyz)?',
+      //   // replaceSearchResultPathname: {
+      //   //   from: 'docs',
+      //   //   to: '/',
+      //   // },
+      //   // Optional: Algolia search parameters
+      //   searchParameters: {},
 
-        // Optional: path for search page that enabled by default (`false` to disable it)
-        searchPagePath: 'search',
-        //... other Algolia params
-      },
+      //   // Optional: path for search page that enabled by default (`false` to disable it)
+      //   searchPagePath: 'search',
+      //   //... other Algolia params
+      // },
       footer: {
         style: 'dark',
         links: [
@@ -316,14 +320,7 @@ const config = {
                 label: '基础会计',
                 to: '/',
               },
-              {
-                label: '成本会计',
-                to: '/',
-              },
-              {
-                label: '更多课程',
-                to: '/',
-              },
+
               // {
               //   label: 'Migration from v1 to v2',
               //   to: 'docs/migration',
@@ -414,8 +411,6 @@ const config = {
           src: '/img/meta_opensource_logo_negative.svg',
           href: 'https://opensource.fb.com',
         },
-        // copyright: `Copyright © ${new Date().getFullYear()} Meta Platforms, Inc. Built with Docusaurus.`,
-
         // style: "dark",
         copyright: `版权 © ${new Date().getFullYear()} Q-org. ${Build}`,
       },

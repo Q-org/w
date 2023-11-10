@@ -1,0 +1,13 @@
+{
+  "position": 1,
+  "label": "操作手册",
+  "collapsible": true,
+  "collapsed": false,
+  "className": "red",
+  "link": {
+    "type": "generated-index"
+  },
+  "customProps": {
+    "description": "This description can be used in the swizzled DocCard"
+  }
+}

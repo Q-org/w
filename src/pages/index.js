@@ -10,109 +10,118 @@ import React from 'react';
 
 import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import FeaturesContainer, { TweetsSection, QuotesSection } from '@site/src/components/HomepageFeatures';
+import FeaturesContainer, {
+  TweetsSection,
+  QuotesSection,
+} from '@site/src/components/HomepageFeatures';
 import HeroBanner from '../components/HeroBanner';
 import styles from '@site/src/pages/styles.module.css';
 import Link from '@docusaurus/Link';
 import Productes from '@site/src/pages/productes';
-import Translate, { translate } from '@docusaurus/Translate';
-import HomepageFeatures1 from '@site/src/components/home/HomepageFeatures'
-
-import UserFeedbacks from '@site/src/components/home/UserFeedbacks.tsx'
+import Translate, {translate} from '@docusaurus/Translate';
+import HomepageFeatures1 from '@site/src/components/home/HomepageFeatures';
+import UserFeedbacks from '@site/src/components/home/UserFeedbacks.tsx';
 
 export default function Home() {
   const context = useDocusaurusContext();
-  const { siteConfig = {} } = context;
+  const {siteConfig = {}} = context;
   return (
-
     <Layout
       title={`欢迎`}
       description="Description will go into a meta tag in <head />">
       <TopBanner />
       <HeroBanner />
-      <HomepageFeatures1 />
+      {/*       <HomepageFeatures1 />
+       */}{' '}
       <div className={styles.section}>
         <FeaturesContainer />
       </div>
       <Productes />
       {/*       {() => 1 ? null : <TweetsSection />}
       {() => 1 ? null : <QuotesSection />} */}
-
     </Layout>
-
   );
 }
-
+import {课程} from '@site/src/data/课程';
+//           onClick={() => (location.href = location.href + course.href)}
+const 实训课程 = (courses) => {
+  courses = 课程;
+  return (
+    <>
+      <Link
+        onClick={() => (location.href = location.href + 'manage')}
+        className={styles.topBannerTitleText}>
+        管理会计
+      </Link>
+    </>
+  );
+};
+const 课程链接 = (courses) => {
+  courses = 课程;
+  return (
+    <>
+      {courses.map((course, index) => (
+        <span key={index}>
+          <Link
+            style={{textDecoration: 'true'}}
+            onClick={() => (location.href = location.href + course.href)}>
+            {course.name}
+          </Link>
+          {index < courses.length - 1 ? ' and ' : ' '}
+        </span>
+      ))}
+    </>
+  );
+};
 function TopBanner() {
   return (
     <div className={styles.topBanner}>
       <div className={styles.topBannerTitle}>
         {'🎉\xa0'}
-        <Link
-          onClick={() => location.href = location.href + 'jc'}
-          className={styles.topBannerTitleText}>
-
-          <Translate id="homepage.banner.launch.2.0">
-            {'会计综合实训\xa02.0 \xa0开课了!️'}
-          </Translate>
-        </Link>
+        <实训课程 />
         {'\xa0🥳'}
       </div>
-      {0 ? <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap' }}>
-        <div style={{ flex: 1, whiteSpace: 'nowrap' }}>
-          <div className={styles.topBannerDescription}>
-            We are on{' '}
-            <b>
-              <Link to="/">
-                ProductHunt
-              </Link>{' '}
-              and{' '}
-              <Link to="https://news.ycombinator.com/item?id=32303052">
-                Hacker News
-              </Link>{' '}
+      {1 ? (
+        <div style={{display: 'flex', alignItems: 'center', flexWrap: 'wrap'}}>
+          <div style={{flex: 1, whiteSpace: 'nowrap'}}>
+            <div className={styles.topBannerDescription}>
+              We are <课程链接 />
               today!
-            </b>
+            </div>
           </div>
-        </div>
-
-        <div
-          style={{
-            flexGrow: 1,
-            flexShrink: 0,
-            padding: '0.5rem',
-            display: 'flex',
-            justifyContent: 'center',
-          }}>
-          {/*           <ProductHuntCard />
+          <div
+            style={{
+              flexGrow: 1,
+              flexShrink: 0,
+              padding: '0.5rem',
+              display: 'flex',
+              justifyContent: 'center',
+            }}>
+            {/*           <ProductHuntCard />
           <HackerNewsIcon /> */}
+          </div>
+          {/*           <UserFeedbacks />
+           */}{' '}
         </div>
-        <UserFeedbacks />
-      </div>
-        : null}
+      ) : null}
     </div>
   );
 }
-
-
-
 
 const features = [
   {
     title: '简单',
     imageUrl: 'img/undraw_docusaurus_mountain.svg',
-    description: (
-      <>
-        阅读，优化和设计微课程，简单直观，可轻松扩展。易于安装。
-      </>
-    ),
+    description: <>阅读，优化和设计微课程，简单直观，可轻松扩展。易于安装。</>,
   },
   {
     title: '快速',
     imageUrl: 'img/undraw_docusaurus_tree.svg',
     description: (
       <>
-        <em>微微</em> 让您专注于您的课程，而我们会做这些家务。只需将您的课程移动到<code>docs</code>目录中,并发布。
-        并用于让课程快速启动和运行
+        <em>微微</em>{' '}
+        让您专注于您的课程，而我们会做这些家务。只需将您的课程移动到
+        <code>docs</code>目录中,并发布。 并用于让课程快速启动和运行
       </>
     ),
   },
@@ -121,7 +130,8 @@ const features = [
     imageUrl: 'img/undraw_docusaurus_react.svg',
     description: (
       <>
-        通过新的技术 扩展或自定义您的课程布局。<em>微微</em> 可以在重用相同的页面同时进行扩展.
+        通过新的技术 扩展或自定义您的课程布局。<em>微微</em>{' '}
+        可以在重用相同的页面同时进行扩展.
       </>
     ),
   },
@@ -137,15 +147,11 @@ const features = [
   {
     title: '全文搜索',
     imageUrl: 'img/undraw_algolia.svg',
-    description: (
-      <>
-        让您的社区可以轻松地在您的课程中找到他们需要的内容。
-      </>
-    ),
+    description: <>让您的社区可以轻松地在您的课程中找到他们需要的内容。</>,
   },
 ];
 
-function Feature({ imageUrl, title, description }) {
+function Feature({imageUrl, title, description}) {
   const imgUrl = useBaseUrl(imageUrl);
   return (
     <div className={clsx('col col--4', styles.feature)}>

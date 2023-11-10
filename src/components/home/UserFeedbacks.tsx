@@ -20,16 +20,20 @@ function Feedback({
   };
 }) {
   return (
-    <Box sx={{ color: '#fff' }}>
-      <Typography variant="body1" fontWeight="500" component="div" sx={{ mb: 2.5 }}>
+    <Box sx={{color: '#fff'}}>
+      <Typography
+        variant="body1"
+        fontWeight="500"
+        component="div"
+        sx={{mb: 2.5}}>
         {quote}
       </Typography>
-      <Box sx={{ display: 'flex' }}>
+      <Box sx={{display: 'flex'}}>
         <Avatar
           src={profile.avatarSrc}
           srcSet={profile.avatarSrcSet}
           alt={`Picture of ${profile.name}`}
-          imgProps={{ loading: 'lazy' }}
+          imgProps={{loading: 'lazy'}}
           sx={{
             width: 58,
             height: 58,
@@ -38,10 +42,12 @@ function Feedback({
             bgcolor: 'grey.800',
           }}
         />
-        <Box sx={{ ml: 2 }}>
-          <Typography fontWeight="500" sx={{ mb: 1 }}>
+        <Box sx={{ml: 2}}>
+          <Typography fontWeight="500" sx={{mb: 1}}>
             {profile.name},{' '}
-            <Box component="span" sx={{ color: 'grey.500', fontWeight: 'regular' }}>
+            <Box
+              component="span"
+              sx={{color: 'grey.500', fontWeight: 'regular'}}>
               {profile.role}
             </Box>
           </Typography>
@@ -114,10 +120,10 @@ const TESTIMONIALS = [
 
 export default function UserFeedbacks() {
   const [slideIndex, setSlideIndex] = React.useState(0);
-// console.log('theme.palette.primaryDark')
+  // console.log('theme.palette.primaryDark')
   return (
-    <Box sx={{ maxWidth: { md: 500 } }}>
-      <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 2 }}>
+    <Box sx={{maxWidth: {md: 500}}}>
+      <Box sx={{display: 'flex', justifyContent: 'space-between', mb: 2}}>
         <ArrowButton
           direction="left"
           disabled={slideIndex === 0}
@@ -127,7 +133,7 @@ export default function UserFeedbacks() {
           direction="right"
           disabled={slideIndex === TESTIMONIALS.length - 1}
           onClick={() => setSlideIndex((i) => i + 1)}
-          sx={{ mr: 'auto' }}
+          sx={{mr: 'auto'}}
         />
         <Box alignSelf="center">
           {TESTIMONIALS.map((item, index) => (
@@ -142,11 +148,10 @@ export default function UserFeedbacks() {
                 borderRadius: '50%',
                 p: '4px',
                 ml: index !== 0 ? '2px' : 0,
-/*                 '&:focus': {
+                /*                 '&:focus': {
                   boxShadow: (theme) =>( `0px 0px 0px 2px ${theme.palette.primaryDark[400]}`),
                 }, */
-              }}
-            >
+              }}>
               <Box
                 sx={{
                   height: '100%',
@@ -161,7 +166,9 @@ export default function UserFeedbacks() {
           ))}
         </Box>
       </Box>
-      <SwipeableViews index={slideIndex} onChangeIndex={(index) => setSlideIndex(index)}>
+      <SwipeableViews
+        index={slideIndex}
+        onChangeIndex={(index) => setSlideIndex(index)}>
         {TESTIMONIALS.map((item) => (
           <Feedback key={item.profile.name} {...item} />
         ))}

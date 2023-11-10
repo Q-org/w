@@ -13,7 +13,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Translate from '@docusaurus/Translate';
-// import { GoogleLogin } from 'react-google-login';
+import { GoogleLogin } from 'react-google-login';
 // import Link from 'httpnext/link';
 
 import { Email, Password, LastName, FirstName, UserId, Copyright } from './fileds';
